@@ -1,0 +1,32 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFFFFF;
+  --color-light-alt: #FEFEFE;
+
+  --color-dark: #3D3D3D;
+
+  --colog-gray: #F2F3F4;
+
+  --color-blue: #DFF5FF;
+  --color-blue-dark: #1D5191;
+  --color-blue-dark-2: #005A9C;
+
+  --color-accent: #FF791C;
+
+  --radius-regular: #{rem(5)};
+  --radius-medium: #{rem(8)};
+
+  --border: 1px solid var(--colog-gray);
+
+  --font-family-base: 'Roboto', sans-serif;
+
+  --container-width: #{rem(1573)};
+  --container-padding-x: #{rem(40)};
+
+  --transition-duration: 0.2s;
+
+  @include laptop {
+    --container-width: #{rem(1180)};
+  }
+}
