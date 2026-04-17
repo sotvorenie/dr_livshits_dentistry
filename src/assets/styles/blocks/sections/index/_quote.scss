@@ -1,0 +1,16 @@
+@use '../../../helpers' as *;
+
+.quote {
+  background: var(--color-beige);
+
+  &__inner {
+    padding-block: fluid(32, 16);
+  }
+
+  &__title {
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}
