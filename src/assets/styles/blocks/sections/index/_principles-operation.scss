@@ -1,0 +1,60 @@
+@use '../../../helpers' as *;
+
+.principles-operation {
+  background: var(--color-blue);
+
+  &__inner {
+    padding-block: fluid(40, 24) fluid(64, 24);
+  }
+
+  &__list {
+    --row-gap: #{rem(16)};
+    --column-gap: #{rem(25)};
+  }
+
+  &__item {
+    gap: fluid(16, 8);
+
+    @include mobile {
+      flex-direction: row !important;
+    }
+  }
+
+  &__icon {
+    @include square(80);
+
+    border-radius: var(--radius-regular);
+    background: var(--color-light);
+
+    @include tablet {
+      @include square(60);
+    }
+
+    @include mobile {
+      @include square(40);
+    }
+
+    img {
+      @include square(48);
+
+      @include tablet {
+        @include square(40);
+      }
+
+      @include mobile {
+        @include square(24);
+      }
+    }
+  }
+
+  &__title {
+    @include fluid-text(18, 14);
+
+    margin-bottom: rem(8);
+  }
+
+  &__text {
+
+    @include fluid-text(16, 12);
+  }
+}

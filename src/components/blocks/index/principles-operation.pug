@@ -1,0 +1,14 @@
+
+section.principles-operation.section-mb-112
+    div.principles-operation__inner.container
+        h2.principles-operation__title.section__title Наши принципы работы
+
+        ul.principles-operation__list.row
+            each item in principlesOperations
+                li.principles-operation__item.col-12.mb-col-6.ls-col-3.flex.flex-column
+                    div.principles-operation__icon.flex-center
+                        img(src=item.img alt=item.title)
+
+                    div.principles-operation__text-block
+                        p.principles-operation__title.text-w500= item.title
+                        p.principles-operation__text= item.text

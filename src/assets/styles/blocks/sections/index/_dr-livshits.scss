@@ -1,4 +1,4 @@
-@use '../../helpers' as *;
+@use '../../../helpers' as *;
 
 .dr-livshits {
 
@@ -177,6 +177,13 @@
 
       @include mobile {
         @include square(16);
+      }
+    }
+
+    span {
+
+      @include mobile {
+        color: currentColor;
       }
     }
   }

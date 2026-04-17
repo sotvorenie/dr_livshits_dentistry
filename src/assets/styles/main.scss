@@ -12,5 +12,6 @@
 @use 'blocks/header';
 @use 'blocks/burger-menu';
 
-@use 'blocks/sections/awards';
-@use 'blocks/sections/dr-livshits';
+@use 'blocks/sections/index/awards';
+@use 'blocks/sections/index/dr-livshits';
+@use 'blocks/sections/index/principles-operation';
