@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .header {
+  margin-bottom: fluid(106, 54);
 
   &__logo {
     width: rem(295);

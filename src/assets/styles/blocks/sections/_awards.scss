@@ -1,0 +1,43 @@
+@use '../../helpers' as *;
+
+.awards {
+
+  &__header, &__top {
+    gap: fluid(16, 8);
+  }
+
+  &__header {
+    margin-bottom: fluid(24, 17);
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__stars {
+    color: var(--color-accent-alt);
+    gap: rem(4);
+
+    svg {
+      @include square(34);
+
+      @include tablet {
+        @include square(28);
+      }
+
+      @include mobile {
+        @include square(16);
+      }
+    }
+  }
+
+  &__list {
+    gap: rem(16);
+    margin-bottom: rem(1);
+    max-width: 49%;
+
+    @include mobile {
+      max-width: 83%;
+    }
+  }
+}

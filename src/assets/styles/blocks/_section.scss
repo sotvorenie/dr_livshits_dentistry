@@ -1,0 +1,8 @@
+@use '../helpers' as *;
+
+.section {
+
+  &-mb-112 {
+    margin-bottom: fluid(112, 40);
+  }
+}
