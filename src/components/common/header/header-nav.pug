@@ -1,0 +1,24 @@
+
+nav.header__menu.hidden-tablet
+    div.header__menu_inner.container.flex.flex-align-center.flex-justify-center
+        ul.header__list.flex.flex-align-center
+            each link in links
+                li.header__item(class=link.submenu ? 'header__item--has-submenu' : '').position-relative
+                    a(href="#").header__link(class=link.submenu ? 'header__link--has-submenu' : '').text-nowrap.text-upper.text-w500= link.title
+                    if link.submenu
+                        ul.header__submenu.position-absolute.z-10
+                            each sub in link.submenu
+                                li.header__submenu-item.text-center.position-relative.flex.flex-align-center
+                                    div.header__submenu-img-container.img-container
+                                        img(src=sub.img alt=sub.title loading="lazy")
+                                    a.header__submenu-link(href="#").text-w500= sub.title
+                                    if sub.submenu
+                                        ul.header__submenu-2.position-absolute.z-10
+                                            each subsub in sub.submenu
+                                                li.header__submenu-2-item.text-center.text-nowrap
+                                                    a.header__submenu-2-link.text-w500(href="#")= subsub
+
+        a(href="#").header__btn.text-upper.text-w500.text-center
+            | Записаться
+            br
+            | на консультацию

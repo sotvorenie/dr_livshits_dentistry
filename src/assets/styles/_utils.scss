@@ -10,6 +10,18 @@
   @include visually-hidden;
 }
 
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
+
 .hidden-mobile {
   @include mobile {
     display: none !important;
@@ -19,6 +31,18 @@
 .visible-mobile {
   @include mobile-above {
     display: none !important;
+  }
+}
+
+.img-container {
+  @include flex-center();
+
+  overflow: hidden;
+
+  img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -56,4 +80,11 @@
   @include hover() {
     color: var(--color-accent) !important;
   }
+}
+
+.line-link {
+  text-decoration: underline !important;
+}
+.color-accent {
+  color: var(--color-accent);
 }

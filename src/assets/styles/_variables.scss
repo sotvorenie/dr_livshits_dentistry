@@ -5,6 +5,7 @@
   --color-light-alt: #FEFEFE;
 
   --color-dark: #3D3D3D;
+  --color-dark-alt: #424242;
 
   --colog-gray: #F2F3F4;
 
@@ -16,12 +17,15 @@
 
   --radius-regular: #{rem(5)};
   --radius-medium: #{rem(8)};
+  --radius-big: #{rem(10)};
 
   --border: 1px solid var(--colog-gray);
 
+  --shadow: -2px 8px 20px 0 #4C4C4C1A;
+
   --font-family-base: 'Roboto', sans-serif;
 
-  --container-width: #{rem(1573)};
+  --container-width: #{rem(1574)};
   --container-padding-x: #{rem(40)};
 
   --transition-duration: 0.2s;
