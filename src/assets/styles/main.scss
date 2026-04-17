@@ -6,8 +6,11 @@
 @use 'classes';
 
 @use 'blocks/accordion';
+@use 'blocks/section';
+@use 'blocks/video-play-btn';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
 
 @use 'blocks/sections/awards';
+@use 'blocks/sections/dr-livshits';

@@ -1,0 +1,183 @@
+@use '../../helpers' as *;
+
+.dr-livshits {
+
+  &__title {
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 680fr 480fr;
+    gap: rem(20);
+
+    @include laptop-s {
+      grid-template-columns: 1fr;
+      gap: rem(16);
+    }
+  }
+
+  &__left {
+    --bg: '';
+
+    @include mobile-above {
+      border-radius: var(--radius-big);
+      background: var(--bg) center/cover no-repeat;
+      padding: rem(24) fluid(56, 34);
+    }
+  }
+
+  &__info {
+    gap: fluid(44, 0);
+
+    &-bottom {
+      flex-grow: 1;
+
+      @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+        background: var(--color-blue);
+        border-radius: 0 0 var(--radius-big) var(--radius-big);
+      }
+    }
+  }
+
+  &__quote {
+    max-width: rem(273);
+
+    @include mobile {
+      text-align: center;
+      margin: 0 auto rem(24);
+      max-width: 61%;
+    }
+
+    &::before, &::after {
+      --top: #{rem(6)};
+      --left: #{rem(12)};
+
+      content: '';
+      position: absolute;
+      background: url("/icons/index/dr-livshits-quote.svg") center/contain no-repeat;
+      width: rem(16);
+      height: rem(12);
+
+      @include mobile {
+        --top: 0;
+      }
+    }
+    &::before {
+      top: var(--top);
+      right: calc(100% + var(--left));
+    }
+    &::after {
+      bottom: var(--top);
+      left: calc(100% + var(--left));
+      rotate: 180deg;
+    }
+
+    h3 {
+
+      @include mobile-above {
+        margin-bottom: rem(8);
+      }
+    }
+
+    p {
+      font-size: rem(16);
+    }
+  }
+
+  &__about {
+
+    @include mobile-above {
+      width: 60%;
+      margin-bottom: fluid(62, 0);
+    }
+
+    @include mobile {
+      padding: rem(14);
+      text-align: center;
+    }
+  }
+
+  &__name {
+    font-size: rem(16);
+    margin-bottom: rem(8);
+
+    @include mobile-above {
+      color: var(--color-blue-dark);
+    }
+
+    @include mobile-s {
+      font-size: rem(14);
+    }
+  }
+
+  &__job {
+    font-size: rem(14);
+
+    @include mobile-s {
+      font-size: rem(10);
+      font-weight: 400 !important;
+    }
+  }
+
+  &__video {
+    border-radius: var(--radius-big);
+    aspect-ratio: 267/143;
+
+    @include mobile-above {
+      width: 47%;
+    }
+
+    @include mobile {
+      aspect-ratio: 280/158;
+    }
+
+    .video-play-btn.is-playing ~ .dr-livshits__video-info {
+      display: none;
+    }
+
+    &-info {
+      bottom: rem(8);
+      right: rem(8);
+      background: var(--color-light);
+      font-size: rem(10);
+      line-height: 1.6;
+      border: var(--border);
+      border-radius: var(--radius-big);
+      padding: rem(8) rem(14);
+      max-width: rem(185);
+    }
+  }
+
+  &__person {
+    right: 0;
+    top: 0;
+  }
+
+  &__item {
+    @include fluid-text(18, 12);
+
+    gap: rem(8);
+
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+
+      @include mobile {
+        margin-bottom: rem(16);
+      }
+    }
+
+    img {
+      @include square(24);
+
+      @include mobile {
+        @include square(16);
+      }
+    }
+  }
+}
