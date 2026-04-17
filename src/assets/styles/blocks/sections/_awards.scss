@@ -11,6 +11,7 @@
 
     @include tablet {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -34,10 +35,14 @@
   &__list {
     gap: rem(16);
     margin-bottom: rem(1);
-    max-width: 49%;
+    width: min(49%, #{rem(600)});
 
     @include mobile {
-      max-width: 83%;
+      width: 83%;
     }
+  }
+
+  &__item {
+    flex-grow: 1;
   }
 }
