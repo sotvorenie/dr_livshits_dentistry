@@ -1,0 +1,67 @@
+@use '../../../helpers' as *;
+
+.contacts {
+  margin-bottom: fluid(120, 39);
+
+  &__inner {
+    padding-top: fluid(112, 40);
+    border-top: var(--border);
+  }
+
+  &__content {
+    background: var(--color-beige);
+    border-radius: var(--radius-big);
+    padding: fluid(24, 16);
+  }
+
+  &__title {
+    margin-bottom: fluid(24, 16);
+  }
+
+  &__bottom {
+    gap: fluid(32, 22);
+
+    @include tablet {
+      flex-direction: column-reverse !important;
+    }
+  }
+
+  &__list {
+    gap: rem(20);
+
+    @include tablet {
+      flex-direction: column;
+      gap: rem(16);
+    }
+  }
+
+  &__subtitle {
+    @include fluid-text(16, 14);
+
+    margin-bottom: rem(8);
+  }
+
+  &__text, &__link {
+    @include fluid-text(14, 12);
+
+    color: currentColor !important;
+    display: block;
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: rem(5);
+  }
+  &__link:not(:last-child) {
+    margin-bottom: fluid(8, 5);
+  }
+
+  &__map {
+    border-radius: var(--radius-big);
+    height: auto;
+    aspect-ratio: 1132/234;
+
+    @include tablet {
+      aspect-ratio: 248/147;
+    }
+  }
+}
