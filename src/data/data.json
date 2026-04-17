@@ -167,5 +167,10 @@
       "text": "Совместно с пациентом выбираем план лечения",
       "img": "/icons/index/principles-operation-4.svg"
     }
+  ],
+  "proudReviews": [
+    "/images/index/proud-reviews-1.png",
+    "/images/index/proud-reviews-2.png",
+    "/images/index/proud-reviews-3.png"
   ]
 }

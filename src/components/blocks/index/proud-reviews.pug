@@ -1,0 +1,34 @@
+
+section.proud-reviews.section-mb-112
+    div.proud-reviews__inner.container
+        h2.proud-reviews__title.section__title Гордимся отзывами наших пациентов
+
+        div.proud-reviews__slider-container.position-relative
+            div.proud-reviews__slider.swiper
+                div.swiper-wrapper
+                    each item in proudReviews
+                        div.proud-reviews__card.position-relative.swiper-slide
+                            div.proud-reviews__img-container.flex-center
+                                img(src=item alt=item).proud-reviews__img
+
+                            div.proud-reviews__info
+                                p.proud-reviews__name Стоматологическая клиника Доктора Лившиц
+
+                                div.proud-reviews__rating.flex-center
+                                    div.proud-reviews__stars
+                                        include ../../icons/index/arrow-reviews
+                                        include ../../icons/index/arrow-reviews
+                                        include ../../icons/index/arrow-reviews
+                                        include ../../icons/index/arrow-reviews
+                                        include ../../icons/index/arrow-reviews
+
+                                    span 859
+
+                                p.proud-reviews__place 2 место из 1259 в Санкт-Петербурге
+
+                                a(href="#").proud-reviews__link.line-link Читать отзывы
+
+            button(type="button" aria-label="Предыдущий слайд").proud-reviews__btn.prev.swiper-arrow.visible-tablet
+                include ../../icons/swiper-arrow
+            button(type="button" aria-label="Следующий слайд").proud-reviews__btn.next.swiper-arrow.visible-tablet
+                include ../../icons/swiper-arrow

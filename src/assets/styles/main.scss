@@ -8,6 +8,7 @@
 @use 'blocks/accordion';
 @use 'blocks/section';
 @use 'blocks/video-play-btn';
+@use 'blocks/swiper-arrow';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
@@ -15,3 +16,4 @@
 @use 'blocks/sections/index/awards';
 @use 'blocks/sections/index/dr-livshits';
 @use 'blocks/sections/index/principles-operation';
+@use 'blocks/sections/index/proud-reviews';

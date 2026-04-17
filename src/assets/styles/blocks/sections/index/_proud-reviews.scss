@@ -1,0 +1,73 @@
+@use '../../../helpers' as *;
+
+.proud-reviews {
+
+  &__slider {
+    padding: rem(28) rem(1) rem(1) 0 !important;
+
+    @include mobile {
+      padding-top: rem(16) !important;
+    }
+  }
+
+  &__card {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    padding: rem(60) rem(76) rem(36);
+    text-align: center;
+
+    @include mobile {
+      padding: rem(24) rem(26) rem(16);
+    }
+
+    &::before {
+      @include abs-x;
+      @include square(64);
+
+      content: '';
+      top: rem(-28);
+      border: var(--border);
+      border-radius: var(--radius-big);
+      background: var(--color-light) url("/icons/index/quote.svg") center/24px no-repeat;
+
+      @include mobile {
+        @include square(32);
+
+        top: rem(-16);
+        background-size: 12px;
+      }
+    }
+  }
+
+  &__img-container, &__name, &__rating {
+    margin-bottom: fluid(16, 8);
+  }
+
+  &__img-container {
+    height: rem(54);
+  }
+
+  &__name {
+    @include fluid-text(16, 12);
+  }
+
+  &__rating, &__place, &__link {
+    @include fluid-text(12, 10);
+  }
+
+  &__rating {
+    gap: rem(8);
+  }
+
+  &__stars {
+    color: var(--color-accent-alt);
+
+    svg {
+      @include square(24);
+    }
+  }
+
+  &__link {
+    color: var(--color-blue-dark);
+  }
+}
