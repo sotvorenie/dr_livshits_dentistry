@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.button {
+  @include flex-center();
+
+  padding-block: rem(16);
+  border-radius: var(--radius-medium);
+  text-align: center;
+  color: var(--color-light) !important;
+  font-weight: 500;
+  width: fit-content;
+  transition: filter var(--transition-duration);
+
+  @include hover {
+    filter: brightness(1.2);
+  }
+
+  &.dark {
+    background: var(--color-blue-dark);
+  }
+  &.accent {
+    background: var(--color-accent);
+  }
+}

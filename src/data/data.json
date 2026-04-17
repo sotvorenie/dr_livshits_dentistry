@@ -172,5 +172,43 @@
     "/images/index/proud-reviews-1.png",
     "/images/index/proud-reviews-2.png",
     "/images/index/proud-reviews-3.png"
+  ],
+  "teamDentists": [
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    },
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    },
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    },
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    },
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    },
+    {
+      "name": "Лившиц Татьяна Львовна",
+      "experience": "Опыт работы 28 лет",
+      "job": "Стоматолог-терапевт-ортопед, Специальность 1, Специальность 2",
+      "img": "/images/index/team-dentists-person.png"
+    }
   ]
 }

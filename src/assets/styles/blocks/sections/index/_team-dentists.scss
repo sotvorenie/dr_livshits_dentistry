@@ -1,0 +1,84 @@
+@use '../../../helpers' as *;
+
+.team-dentists {
+  background: var(--color-blue);
+
+  &__inner {
+    padding-block: fluid(48, 16) fluid(48, 24);
+  }
+
+  &__title, &__subtitle {
+    @include fluid-text(24, 14);
+  }
+
+  &__title {
+    margin-bottom: fluid(48, 16);
+  }
+
+  &__subtitle, &__slider {
+    margin-bottom: fluid(48, 29);
+  }
+
+  &__slider {
+    padding-right: 1px !important;
+  }
+
+  &__card {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    padding: rem(16);
+    background: var(--color-light);
+  }
+
+  &__img-container {
+    aspect-ratio: 248/220;
+    margin-bottom: rem(15);
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  &__info {
+    gap: rem(30);
+  }
+
+  &__text-block {
+    flex-grow: 1;
+  }
+
+  &__name {
+    font-size: rem(14);
+    margin-bottom: rem(10);
+    color: var(--color-blue-dark);
+  }
+
+  &__experience, &__job {
+    font-size: rem(12);
+  }
+
+  &__experience {
+    margin-bottom: rem(16);
+  }
+
+  &__job {
+    color: var(--color-accent);
+  }
+
+  &__link, &__more {
+    @include fluid-text(16, 14);
+  }
+
+  &__link {
+
+    @include tablet {
+      @include full-link;
+    }
+  }
+
+  &__more {
+    padding-inline: rem(20);
+    min-width: rem(250);
+  }
+}

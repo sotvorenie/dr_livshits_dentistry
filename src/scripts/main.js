@@ -6,3 +6,4 @@ import './header.js'
 import './video.js'
 
 import './proudReviews.js'
+import './teamDentists.js'

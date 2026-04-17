@@ -10,8 +10,9 @@
   border: var(--border);
   border-radius: var(--radius-regular);
   color: var(--color-blue-dark-2);
+  background: var(--color-light);
 
-  @include tablet {
+  @include laptop-s {
     --left: #{rem(-35)};
 
     @include square(32);
@@ -28,8 +29,12 @@
   svg {
     @include square(16);
 
-    @include tablet {
+    @include laptop-s {
       @include square(11);
     }
+  }
+
+  &.swiper-button-disabled {
+    opacity: .6;
   }
 }

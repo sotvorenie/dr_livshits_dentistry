@@ -9,6 +9,7 @@
 @use 'blocks/section';
 @use 'blocks/video-play-btn';
 @use 'blocks/swiper-arrow';
+@use 'blocks/button';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
@@ -18,3 +19,4 @@
 @use 'blocks/sections/index/principles-operation';
 @use 'blocks/sections/index/proud-reviews';
 @use 'blocks/sections/index/quote';
+@use 'blocks/sections/index/team-dentists';

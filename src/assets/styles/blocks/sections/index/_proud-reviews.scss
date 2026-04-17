@@ -69,5 +69,9 @@
 
   &__link {
     color: var(--color-blue-dark);
+
+    @include tablet {
+      @include full-link;
+    }
   }
 }
