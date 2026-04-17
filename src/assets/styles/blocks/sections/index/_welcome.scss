@@ -1,0 +1,18 @@
+@use '../../../helpers' as *;
+
+.welcome {
+
+  &__title {
+    margin-bottom: fluid(48, 24);
+  }
+
+  &__video {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    aspect-ratio: 1180/384;
+
+    @include mobile {
+      aspect-ratio: 280/119;
+    }
+  }
+}

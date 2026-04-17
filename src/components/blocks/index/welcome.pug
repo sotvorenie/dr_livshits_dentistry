@@ -1,0 +1,10 @@
+include ../../common/video-btn
+
+section.welcome.section-mblok-112
+    div.welcome__inner.container
+        h2.welcome__title.section__title Ждем Вас в нашей уютной клинике!
+
+        div.welcome__video.img-container.video-player.position-relative.w-100
+            video(src="/videos/video.mp4" playsinline).js-video-player
+
+            +video-btn()
