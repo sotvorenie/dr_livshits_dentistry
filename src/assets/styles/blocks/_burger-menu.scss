@@ -1,5 +1,63 @@
 @use '../helpers' as *;
 
 .burger-menu {
+  --top: #{rem(193)};
 
+  background: var(--colog-gray);
+  opacity: 0;
+  top: var(--top);
+  height: calc(100% - var(--top));
+  bottom: 0;
+  transform: translateX(100%);
+  transition:
+          opacity var(--transition-duration),
+          transform var(--transition-duration);
+  overflow-y: auto;
+
+  &.is-open {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__btn span {
+    @include flex-center();
+  }
+
+  &__inner {
+    padding-block: rem(16);
+  }
+
+  &__top {
+    gap: rem(10);
+  }
+
+  &__links {
+    padding-left: rem(15);
+
+    &-link {
+      font-size: rem(12);
+      padding: rem(12) rem(15);
+      border-radius: var(--radius-medium);
+
+      @include hover {
+        background: var(--color-blue);
+      }
+    }
+  }
+
+  .accordion__header {
+    padding: rem(10) rem(15);
+    transition: background var(--transition-duration);
+    border-radius: var(--radius-big);
+
+    @include hover {
+      background: var(--color-blue);
+    }
+  }
+  .accordion__toggle {
+    color: var(--color-blue-dark);
+  }
+  .accordion__hidden {
+    --padding-top: #{rem(4)};
+  }
 }

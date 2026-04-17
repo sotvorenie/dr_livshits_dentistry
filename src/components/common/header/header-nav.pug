@@ -8,10 +8,10 @@ nav.header__menu.hidden-tablet
                     if link.submenu
                         ul.header__submenu.position-absolute.z-10
                             each sub in link.submenu
-                                li.header__submenu-item.text-center.position-relative.flex.flex-align-center
-                                    div.header__submenu-img-container.img-container
+                                li.header__submenu-item.header__block.text-center.position-relative
+                                    div.header__block-img-container.img-container
                                         img(src=sub.img alt=sub.title loading="lazy")
-                                    a.header__submenu-link(href="#").text-w500= sub.title
+                                    a.header__submenu-link.header__block-link(href="#")= sub.title
                                     if sub.submenu
                                         ul.header__submenu-2.position-absolute.z-10
                                             each subsub in sub.submenu

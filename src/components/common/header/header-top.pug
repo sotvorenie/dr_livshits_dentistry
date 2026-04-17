@@ -1,8 +1,11 @@
 
 div.header__top
     div.header__top_inner.container.flex.flex-justify-between
-        button(type="button").burger-menu__open.header__icon.visible-tablet
-            include ../../icons/header/burger-menu
+        button(type="button").burger-menu__open.header__icon.burger-menu__btn.visible-tablet
+            span.open
+                include ../../icons/header/burger-menu
+            span.close.visually-hidden
+                include ../../icons/header/burger-menu-close
 
 
         a(href="#").header__logo

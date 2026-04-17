@@ -205,18 +205,8 @@
       }
     }
 
-    &-img-container {
-      width: rem(34);
-      height: rem(36);
-      border-radius: var(--radius-regular);
-    }
-
     &-link {
       @include full-link;
-
-      font-size: rem(14);
-      max-width: rem(170);
-      line-height: 1.57;
     }
   }
 
@@ -266,6 +256,10 @@
 
     &-btn-bar {
       gap: rem(4);
+
+      @include mobile-s {
+        justify-content: space-between !important;
+      }
     }
 
     &-link {
@@ -286,6 +280,29 @@
         background: var(--color-accent);
         font-size: rem(9);
       }
+
+      @include mobile-s {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    &-img-container {
+      width: rem(34);
+      height: rem(36);
+      border-radius: var(--radius-regular);
+    }
+
+    &-link {
+      font-size: rem(14);
+      max-width: rem(170);
+      line-height: 1.57;
+      font-weight: 500;
     }
   }
 }
