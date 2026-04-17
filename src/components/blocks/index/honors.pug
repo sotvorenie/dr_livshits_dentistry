@@ -1,0 +1,18 @@
+
+section.honors.section-mb-112
+    div.honors__iner.container
+        h2.honors__title.section__title Наши награды
+
+        div.honors__slider-container.position-relative
+            div.honors__slider.swiper
+                div.swiper-wrapper
+                    each item in honors
+                        div.honors__card.swiper-slide.position-relative
+                            img(src="/images/index/honor.svg" alt="" width="77" height="75" loading="lazy").honors__img.position-absolute
+
+                            p.honors__name.text-w500= item
+
+            button(type="button" aria-label="Предыдущий слайд").honors__btn.prev.swiper-arrow
+                include ../../icons/swiper-arrow
+            button(type="button" aria-label="Следующий слайд").honors__btn.next.swiper-arrow
+                include ../../icons/swiper-arrow

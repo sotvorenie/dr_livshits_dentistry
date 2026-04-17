@@ -28,6 +28,8 @@
     border-radius: var(--radius-big);
     padding: rem(16);
     background: var(--color-light);
+    display: flex !important;
+    flex-direction: column;
   }
 
   &__img-container {
@@ -42,6 +44,7 @@
 
   &__info {
     gap: rem(30);
+    flex-grow: 1;
   }
 
   &__text-block {

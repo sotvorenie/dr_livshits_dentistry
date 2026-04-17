@@ -7,3 +7,4 @@ import './video.js'
 
 import './proudReviews.js'
 import './teamDentists.js'
+import './honors.js'

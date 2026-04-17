@@ -15,6 +15,8 @@
     border-radius: var(--radius-big);
     padding: rem(60) rem(76) rem(36);
     text-align: center;
+    display: flex !important;
+    flex-direction: column;
 
     @include mobile {
       padding: rem(24) rem(26) rem(16);
@@ -47,8 +49,14 @@
     height: rem(54);
   }
 
+  &__info {
+    flex-grow: 1;
+  }
+
   &__name {
     @include fluid-text(16, 12);
+
+    flex-grow: 1;
   }
 
   &__rating, &__place, &__link {
@@ -65,6 +73,10 @@
     svg {
       @include square(24);
     }
+  }
+
+  &__place {
+    margin-bottom: rem(8);
   }
 
   &__link {

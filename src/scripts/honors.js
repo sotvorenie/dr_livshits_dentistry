@@ -5,7 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.proud-reviews__slider', {
+    const swiper = new Swiper('.honors__slider', {
         modules: [Navigation],
         slidesPerView: 1,
         spaceBetween: 10,
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
         allowTouchMove: true,
 
         navigation: {
-            nextEl: '.proud-reviews__btn.next',
-            prevEl: '.proud-reviews__btn.prev',
+            nextEl: '.honors__btn.next',
+            prevEl: '.honors__btn.prev',
         },
 
         breakpoints: {
