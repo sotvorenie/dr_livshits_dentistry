@@ -1,0 +1,7 @@
+include footer-top
+
+mixin footer(activeIndex)
+    footer.footer
+        +footer-top(activeIndex)
+
+        include footer-bottom

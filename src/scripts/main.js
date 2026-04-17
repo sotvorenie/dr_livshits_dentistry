@@ -4,6 +4,7 @@ import './accordion.js'
 import './burgerMenu.js'
 import './header.js'
 import './video.js'
+import './footer.js'
 
 import './proudReviews.js'
 import './teamDentists.js'

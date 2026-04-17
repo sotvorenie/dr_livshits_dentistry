@@ -1,0 +1,172 @@
+@use '../helpers' as *;
+
+.footer {
+
+  &__logo {
+    width: rem(244);
+    height: rem(38);
+
+    @include mobile {
+      width: rem(130);
+      height: rem(21);
+    }
+  }
+
+  &-top {
+    background: var(--color-blue);
+
+    &__inner {
+      padding-block: fluid(24, 10) fluid(68, 21);
+    }
+
+    &__header {
+      gap: rem(30);
+      margin-bottom: rem(70);
+
+      @include mobile {
+        margin-bottom: rem(24);
+      }
+    }
+
+    &__actions {
+      gap: rem(56);
+    }
+
+    &__content {
+      gap: fluid(191, 0);
+      margin-bottom: rem(16);
+
+      @include mobile {
+        gap: rem(16);
+        flex-direction: column;
+      }
+    }
+
+    &__left {
+
+      @include mobile-above {
+        max-width: rem(310);
+      }
+    }
+    &__right {
+
+      @include mobile-above {
+        max-width: rem(579);
+      }
+    }
+  }
+
+  &__request {
+    @include fluid-text(16, 14);
+
+    padding-inline: rem(12);
+
+    @include mobile {
+      width: 100%;
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__up {
+    @include square(56);
+
+    background: var(--color-light);
+    border-radius: var(--radius-regular);
+    color: var(--color-blue-dark);
+    transition: filter var(--transition-duration);
+
+    @include hover() {
+      filter: brightness(.9);
+    }
+
+    @include mobile {
+      @include square(40);
+
+      border: 1px solid var(--color-blue-dark);
+    }
+
+    svg {
+      @include square(32);
+
+      @include tablet {
+        @include square(24);
+      }
+    }
+  }
+
+  &__title {
+    padding: rem(10);
+    margin-bottom: fluid(24, 10);
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: rem(20);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: rem(8);
+    }
+  }
+
+  &__item {
+
+    @include mobile-above {
+      margin-bottom: rem(8);
+    }
+
+    &.is-here {
+      pointer-events: none;
+      color: var(--color-blue-dark);
+    }
+  }
+
+  &__link {
+    @include fluid-text(16, 14);
+
+    padding: rem(10);
+  }
+
+  &__policy {
+    @include fluid-text(14, 12);
+
+    padding: rem(10);
+  }
+
+  &-bottom {
+    background: var(--color-blue-dark);
+    color: var(--color-light);
+
+    &__inner {
+      padding-block: fluid(24, 16) fluid(16, 10);
+    }
+
+    &__content {
+      margin-bottom: fluid(40, 24);
+
+      @include tablet-above {
+        padding-inline: rem(39);
+      }
+    }
+
+    &__text, &__about {
+
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+
+    &__text {
+      @include fluid-text(14, 12);
+    }
+
+    &__about {
+      @include fluid-text(10, 8);
+    }
+  }
+
+  &__copyright {
+    @include fluid-text(10, 8);
+  }
+}

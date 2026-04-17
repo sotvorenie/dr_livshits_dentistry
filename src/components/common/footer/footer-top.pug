@@ -1,0 +1,35 @@
+mixin footer-top(activeIndex)
+    div.footer-top
+        div.footer-top__inner.container
+            div.footer-top__header.flex.flex-align-center.flex-justify-between
+                a(href="#").footer__logo
+                    img(src="/icons/logo.svg" alt="Стоматология доктора Лившиц" width="244" height="38")
+
+                div.footer-top__actions.flex.flex-align-center
+                    a(href="#").footer__request.button.accent.hidden-mobile Записаться на консультацию
+
+                    button(type="button" aria-label="Перейти в начало страницы").footer__up.flex-center
+                        include ../../icons/footer/arrow
+
+            a(href="#").footer__request.button.accent.visible-mobile Записаться на консультацию
+
+            div.footer-top__content.flex
+                div.footer-top__left
+                    p.footer__title.text-w500 Разделы
+
+                    div.footer__list-bar
+                        ul.footer__list
+                            each link, index in footer.sections
+                                li.footer__item(class=activeIndex === index ? 'is-here' : '')
+                                    a(href="#").footer__link.text-w500.w-100= link
+
+                div.footer-top__right
+                    p.footer__title.text-w500 Услуги
+
+                        div.footer__list-bar
+                            ul.footer__list
+                                each link in footer.services
+                                    li.footer__item
+                                        a(href="#").footer__link.text-w500.w-100= link
+
+            a(href="#").footer__policy.line-link Политика конфиденциальности

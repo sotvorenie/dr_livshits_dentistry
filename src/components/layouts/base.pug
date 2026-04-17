@@ -1,3 +1,5 @@
+include ../common/footer/footer
+
 doctype html
 html(lang="ru")
     head
@@ -11,5 +13,8 @@ html(lang="ru")
 
         main
             block content
+
+        block footer
+            +footer
 
         script(type="module" src="/src/scripts/main.js")
