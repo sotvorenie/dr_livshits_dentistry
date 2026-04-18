@@ -29,11 +29,7 @@
   --font-family-base: 'Roboto', sans-serif;
 
   --container-width: #{rem(1308)};
-  --container-padding-x: #{rem(104)};
+  --container-padding-x: #{rem(40)};
 
   --transition-duration: 0.2s;
-
-  @include tablet {
-    --container-padding-x: #{rem(40)};
-  }
 }
