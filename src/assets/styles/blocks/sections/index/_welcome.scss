@@ -1,6 +1,19 @@
 @use '../../../helpers' as *;
 
 .welcome {
+  border-bottom: var(--border);
+
+  @include mobile {
+    border-top: var(--border);
+  }
+
+  &__inner {
+    padding-bottom: fluid(112, 40);
+
+    @include mobile {
+      padding-top: fluid(112, 40);
+    }
+  }
 
   &__title {
     margin-bottom: fluid(48, 24);

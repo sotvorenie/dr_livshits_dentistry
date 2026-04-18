@@ -2,11 +2,6 @@
 
 .contacts {
   margin-bottom: fluid(120, 39);
-  border-top: var(--border);
-
-  &__inner {
-    padding-top: fluid(112, 40);
-  }
 
   &__content {
     background: var(--color-beige);
