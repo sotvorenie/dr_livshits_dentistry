@@ -1,0 +1,64 @@
+@use '../helpers' as *;
+
+.input {
+  height: rem(45);
+  border-radius: var(--radius-big);
+  padding-inline: rem(44) rem(15);
+  transition: padding var(--transition-duration);
+  border: var(--border);
+  width: 100%;
+  font-size: rem(16);
+  color: var(--color-dark);
+
+  @include mobile {
+    padding-inline: rem(36) rem(15);
+  }
+
+  &::placeholder {
+    @include fluid-text(12, 10);
+
+    color: var(--color-dark);
+  }
+
+  &:focus {
+    padding-inline: rem(15);
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: fluid(16, 8);
+    }
+
+    &:focus-within::before {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    &:has(input[name="name"])::before {
+      background: url("/icons/user.svg") center/contain no-repeat;
+    }
+    &:has(input[name="phone"])::before {
+      background: url("/icons/phone.svg") center/contain no-repeat;
+    }
+
+    &::before {
+      @include abs-y;
+      @include square(24);
+
+      content: '';
+      left: rem(10);
+      color: var(--colog-gray-alt);
+      pointer-events: none;
+      transition:
+              transform var(--transition-duration),
+              opacity var(--transition-duration);
+
+      @include mobile {
+        @include square(16);
+      }
+    }
+  }
+}

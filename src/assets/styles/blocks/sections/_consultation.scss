@@ -1,0 +1,61 @@
+@use '../../helpers' as *;
+
+.consultation {
+
+  &__content {
+    display: grid;
+    grid-template-columns: 754fr 380fr;
+    gap: rem(46);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: rem(16);
+    }
+  }
+
+  &__line {
+    width: 70.68%;
+    aspect-ratio: 834/313;
+    border: 1px solid var(--color-dark);
+    border-radius: var(--radius-big);
+    left: rem(50);
+    top: rem(55);
+    z-index: -1;
+  }
+
+  &__left {
+    gap: rem(92);
+
+    @include tablet-above {
+      margin-top: rem(16);
+    }
+
+    @include tablet {
+      gap: rem(32);
+    }
+  }
+
+  &__title {
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    padding: rem(24) rem(32);
+    box-shadow: var(--shadow);
+    width: fit-content;
+
+    @include mobile {
+      width: 100%;
+      padding: rem(16);
+    }
+  }
+
+  &__img {
+    border-radius: var(--radius-big);
+  }
+
+  &__form {
+
+    @include tablet {
+      margin-inline: auto;
+    }
+  }
+}

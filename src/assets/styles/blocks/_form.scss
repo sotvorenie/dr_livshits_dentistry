@@ -1,0 +1,36 @@
+@use '../helpers' as *;
+
+.form {
+  background: var(--color-blue-dark);
+  border-radius: var(--radius-big);
+  padding: fluid(32, 24) fluid(24, 15);
+  color: var(--color-light);
+  max-width: rem(380);
+
+  &__title, &__inputs-block {
+    margin-bottom: fluid(40, 24);
+  }
+
+  &__title {
+
+    @include mobile-above {
+      text-align: center;
+    }
+  }
+
+  &__submit {
+    @include fluid-text(16, 14);
+
+    width: 100%;
+    padding-inline: rem(15);
+    margin-bottom: fluid(16, 8);
+  }
+
+  &__info {
+    @include fluid-text(10, 8);
+
+    @include mobile-above {
+      line-height: 1.6;
+    }
+  }
+}

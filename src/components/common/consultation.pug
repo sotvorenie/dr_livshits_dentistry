@@ -1,0 +1,13 @@
+include form
+section.consultation.section-mb-112
+    div.consultation__inner.container
+
+        div.consultation__content.position-relative
+            div.consultation__line.position-absolute.hidden-tablet
+
+            div.consultation__left.flex.flex-column.flex-align-center
+                h3.consultation__title.text-center #[span.color-accent Лечение] начинается с консультации
+
+                img(src="/images/consultation-team.png" alt="" loading="lazy").consultation__img.w-100
+
+            +form('Предложим удобное время для Вашего визита к нам', 'Записаться на консультацию', 'consultation__form')

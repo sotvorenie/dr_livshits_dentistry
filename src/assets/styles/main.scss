@@ -10,10 +10,14 @@
 @use 'blocks/video-play-btn';
 @use 'blocks/swiper-arrow';
 @use 'blocks/button';
+@use 'blocks/input';
+@use 'blocks/form';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
 @use 'blocks/footer';
+
+@use 'blocks/sections/consultation';
 
 @use 'blocks/sections/index/awards';
 @use 'blocks/sections/index/dr-livshits';
