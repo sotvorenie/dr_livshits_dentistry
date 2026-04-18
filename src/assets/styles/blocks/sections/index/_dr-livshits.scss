@@ -92,6 +92,8 @@
 
   &__about {
 
+    flex-grow: 1;
+
     @include mobile-above {
       width: 60%;
       margin-bottom: fluid(62, 0);

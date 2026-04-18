@@ -28,12 +28,12 @@
 
   --font-family-base: 'Roboto', sans-serif;
 
-  --container-width: #{rem(1744)};
-  --container-padding-x: #{rem(40)};
+  --container-width: #{rem(1308)};
+  --container-padding-x: #{rem(104)};
 
   --transition-duration: 0.2s;
 
-  @include laptop {
-    --container-width: #{rem(1308)};
+  @include tablet {
+    --container-padding-x: #{rem(40)};
   }
 }
