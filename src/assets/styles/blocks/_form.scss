@@ -33,5 +33,9 @@
     @include mobile-above {
       line-height: 1.6;
     }
+
+    a {
+      display: inline;
+    }
   }
 }
