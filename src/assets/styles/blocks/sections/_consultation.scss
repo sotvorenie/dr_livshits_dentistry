@@ -46,6 +46,10 @@
     width: fit-content;
     margin-inline: auto rem(26);
 
+    @include tablet {
+      margin-inline: auto;
+    }
+
     @include mobile {
       width: 100%;
       padding: rem(16);

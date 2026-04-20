@@ -73,6 +73,10 @@
       bottom: var(--top);
       right: rem(80);
       rotate: 180deg;
+
+      @include mobile {
+        left: calc(100% + var(--left));
+      }
     }
 
     h3 {
