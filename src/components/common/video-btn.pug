@@ -1,5 +1,5 @@
-mixin video-btn()
-    button(type="button" aria-label="Play").video-play-btn.js-video-btn
+mixin video-btn(className = '')
+    button.video-play-btn.js-video-btn(type="button" aria-label="Play" class=className)
         svg(
             width="48"
             height="48"

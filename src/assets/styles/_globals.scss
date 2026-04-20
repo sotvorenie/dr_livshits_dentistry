@@ -6,16 +6,6 @@ html {
   }
 }
 
-//@media (min-width: 1920px) {
-//  html {
-//    font-size: clamp(
-//            16px,
-//            calc(16px + (100vw - 1920px) / 100),
-//            20px
-//    );
-//  }
-//}
-
 body {
   @include fluid-text(16, 14);
 
@@ -32,7 +22,7 @@ body {
 main {
   flex-grow: 1;
   position: relative;
-  padding-top: rem(72);
+  padding-top: fluid(106, 54);
 
   @include mobile {
     padding-top: rem(70);

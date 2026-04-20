@@ -6,8 +6,8 @@
 
   --color-dark: #505050;
 
-  --colog-gray: #F2F3F4;
-  --colog-gray-alt: #D8D6D6;
+  --color-gray: #F2F3F4;
+  --color-gray-alt: #D8D6D6;
 
   --color-blue: #F2FBFE;
   --color-blue-dark: #005A9C;
@@ -20,8 +20,9 @@
   --radius-medium: #{rem(8)};
   --radius-big: #{rem(10)};
 
-  --border: 1px solid var(--colog-gray);
-  --border-alt: 1px solid var(--colog-gray-alt);
+  --border: 1px solid var(--color-gray);
+  --border-alt: 1px solid var(--color-gray-alt);
+  --border-blue: 1px solid var(--color-blue-dark);
 
   --shadow: -2px 8px 20px 0 #4C4C4C1A;
 

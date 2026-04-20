@@ -1,0 +1,138 @@
+@use '../../helpers' as *;
+
+.banner {
+
+  &__text-block {
+    margin-bottom: fluid(24, 16);
+  }
+
+  &__title:not(:last-child), &__subtitle:not(:last-child) {
+    margin-bottom: fluid(16, 8);
+  }
+
+  &__title {
+    @include fluid-text(52, 40);
+
+    line-height: 100%;
+  }
+  
+  &__subtitle {
+    @include fluid-text(32, 18);
+  }
+
+  &__img-container {
+    aspect-ratio: 1180/442;
+    margin-bottom: rem(48);
+
+    @include mobile {
+      margin-bottom: 0;
+    }
+
+    img {
+      object-position: top center;
+    }
+  }
+
+  &__list {
+    --column-gap: #{rem(20)};
+
+    margin-bottom: fluid(48, 24);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mobile-above {
+      border: var(--border-blue);
+      border-radius: var(--radius-big);
+    }
+  }
+
+  &__quote {
+    @include fluid-text(18, 14);
+
+    padding: fluid(24, 0);
+    font-family: var(--font-family-accent);
+
+    &-content {
+
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        background: url("/icons/index/quote.svg") center/contain no-repeat;
+        width: rem(16);
+        height: rem(12);
+      }
+      &::before {
+        top: 0;
+        left: rem(-6);
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+        rotate: 180deg;
+      }
+    }
+  }
+
+  &__person {
+    padding: fluid(22, 0) fluid(16, 0);
+    display: grid;
+    grid-template-columns: 160fr 176fr;
+    align-items: center;
+    gap: rem(10);
+
+    &-name {
+      @include fluid-text(18, 14);
+
+      margin-bottom: rem(8);
+    }
+
+    &-job {
+      font-size: rem(10);
+      line-height: 1.6;
+    }
+
+    &-video {
+      aspect-ratio: 176/84;
+      border-radius: var(--radius-big);
+      border: var(--border);
+    }
+  }
+
+  &__awards {
+    padding: rem(21) rem(77);
+    font-family: var(--font-family-accent);
+
+    @include mobile {
+      padding: 0 rem(27);
+      margin-top: rem(-4);
+    }
+
+    &-img, &-text {
+      margin-bottom: rem(8);
+    }
+
+    &-img {
+
+      @include mobile-above {
+        max-width: rem(170);
+      }
+
+      @include mobile {
+        width: 84%;
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &__link {
+    padding-inline: rem(24);
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

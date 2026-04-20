@@ -9,6 +9,14 @@
   border-radius: 50%;
   transition: opacity var(--transition-duration);
 
+  @include mobile {
+    @include square(24);
+  }
+
+  &.small {
+    @include square(24);
+  }
+
   circle {
     fill: var(--color-accent);
   }

@@ -1,0 +1,23 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+
+block title
+    | Хирургия
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Хирургия"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue
+                    | Бережное удаление зубов
+                    br
+                    |любой степени сложности
+
+                h2.banner__subtitle с использованием лазера VarioSurg, а так же
+                h2.banner__subtitle.color-accent весь спектр операций в области хирургической стоматологии
+                h2.banner__subtitle.color-blue от опытных врачей, которые входят в ТОП-5 лучших стоматологов-хирургов СПб!
+
+            include ../components/blocks/banner-content

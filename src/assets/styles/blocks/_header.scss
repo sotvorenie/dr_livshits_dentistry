@@ -16,7 +16,7 @@
   }
 
   &__top {
-    background: var(--colog-gray);
+    background: var(--color-gray);
 
     &_inner {
       gap: fluid(50, 35);
@@ -201,6 +201,10 @@
             transform var(--transition-duration);
     transform: translateY(-10px);
     padding-block: rem(16) rem(20);
+
+    &:not(.is-active) {
+      pointer-events: none;
+    }
 
     &.is-active {
       opacity: 1;

@@ -1,0 +1,36 @@
+include ../common/video-btn
+
+div.banner__content
+    div.banner__img-container.img-container.w-100
+        img(src="/images/banner-img.png" alt="")
+
+    ul.banner__list.row
+        li.banner__item.banner__quote.text-center.col-6.ls-col-4.hidden-mobile
+            div.banner__quote-content.position-relative
+                p.banner__quote-title.color-accent.text-w800 Не все стоматологи одинаковы.
+                p.banner__quote-mobile.text-w500
+                    | Узнайте за 1 минуту видео
+                    br
+                    | #[span.color-accent.text-upper.text-w800 чем] мы отличаемся от других.
+
+        li.banner__item.banner__person.col-4.hidden-tablet
+            div.banner__person-info
+                p.banner__person-name.text-w700.color-blue
+                    | Лившиц
+                    br
+                    | Татьяна Львовна
+                p.banner__person-job.text-w500 Главный врач «Стоматологии доктора Лившиц»,стоматолог-терапевт-ортопед со стажем 28 лет
+
+            div.banner__person-video.img-container.video-player.position-relative.w-100
+                video(src="/videos/video.mp4" playsinline).js-video-player
+
+                +video-btn('small')
+
+        li.banner__item.banner__awards.col-12.mb-col-6.ls-col-4.flex-center
+            img(src="/images/banner-awards.png" alt="").banner__awards-img
+
+            p.banner__awards-text Победители премии
+
+            img(src="/images/banner-award.png" alt="ПроДокторов").banner__awards-award.w-100
+
+    a(href="#").banner__link.button.accent.text-w600.m-auto Записаться на консультацию
