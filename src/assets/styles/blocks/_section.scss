@@ -1,12 +1,17 @@
 @use '../helpers' as *;
 
 .section {
+  padding-block: fluid(72, 40);
 
-  &-mb-112 {
-    margin-bottom: fluid(112, 40);
+  &-mb-72 {
+    margin-bottom: fluid(72, 40);
+  }
+  &-mt-72 {
+    margin-bottom: fluid(72, 40);
   }
 
   &__title {
+    text-align: center;
     margin-bottom: fluid(48, 16);
   }
 }

@@ -17,7 +17,7 @@ html {
 //}
 
 body {
-  @include fluid-text(18, 16);
+  @include fluid-text(16, 14);
 
   display: flex;
   flex-direction: column;
@@ -31,35 +31,34 @@ body {
 
 main {
   flex-grow: 1;
+  position: relative;
+  padding-top: rem(72);
+
+  @include mobile {
+    padding-top: rem(70);
+  }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: 500;
+  font-family: var(--font-family-accent);
+  font-weight: 700;
   margin: 0;
 }
 
 h1, .h1 {
-  @include fluid-text(40, 16);
-
-  line-height: 1.225;
+  @include fluid-text(42, 27);
 }
 
 h2, .h2 {
-  @include fluid-text(32, 16);
-
-  line-height: 1.25;
+  @include fluid-text(36, 16);
 }
 
 h3, .h3 {
   @include fluid-text(24, 16);
-
-  line-height: 1.25;
 }
 
 h4, .h4 {
   @include fluid-text(20, 14);
-
-  line-height: 100%;
 }
 
 a,
@@ -96,6 +95,7 @@ button {
   background: transparent;
   border: none;
   color: currentColor;
+  padding: 0;
 }
 button[disabled] {
   cursor: default;

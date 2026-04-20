@@ -25,6 +25,7 @@
     @include flex-center();
 
     height: rem(20);
+    transition: rotate var(--transition-duration);
 
     svg {
       height: 100%;
@@ -32,7 +33,7 @@
   }
 
   &__hidden {
-    --padding-top: #{rem(5)};
+    --padding-top: 0;
 
     display: grid;
     grid-template-rows: 0fr;

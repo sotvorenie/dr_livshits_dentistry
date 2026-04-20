@@ -2,21 +2,22 @@
 
 .team-dentists {
   background: var(--color-blue);
+  border-block: var(--border-alt);
 
   &__inner {
     padding-block: fluid(48, 16) fluid(48, 24);
   }
 
-  &__title, &__subtitle {
-    @include fluid-text(24, 14);
+  &__subtitle, &__slider {
+    margin-bottom: fluid(48, 29);
   }
 
   &__title {
     margin-bottom: fluid(48, 16);
   }
 
-  &__subtitle, &__slider {
-    margin-bottom: fluid(48, 29);
+  &__subtitle {
+    line-height: 0.71;
   }
 
   &__slider {
@@ -26,7 +27,7 @@
   &__card {
     border: var(--border);
     border-radius: var(--radius-big);
-    padding: rem(16);
+    padding: rem(8) rem(16) rem(16);
     background: var(--color-light);
     display: flex !important;
     flex-direction: column;
@@ -34,7 +35,7 @@
 
   &__img-container {
     aspect-ratio: 248/220;
-    margin-bottom: rem(15);
+    margin-bottom: rem(16);
 
     img {
       height: 100%;
@@ -43,7 +44,7 @@
   }
 
   &__info {
-    gap: rem(30);
+    gap: rem(37);
     flex-grow: 1;
   }
 
@@ -53,8 +54,8 @@
 
   &__name {
     font-size: rem(14);
-    margin-bottom: rem(10);
     color: var(--color-blue-dark);
+    margin-bottom: rem(10);
   }
 
   &__experience, &__job {
@@ -65,14 +66,6 @@
     margin-bottom: rem(16);
   }
 
-  &__job {
-    color: var(--color-accent);
-  }
-
-  &__link, &__more {
-    @include fluid-text(16, 14);
-  }
-
   &__link {
 
     @include tablet {
@@ -81,7 +74,7 @@
   }
 
   &__more {
-    padding-inline: rem(20);
+    padding-inline: rem(33);
     min-width: rem(250);
   }
 }

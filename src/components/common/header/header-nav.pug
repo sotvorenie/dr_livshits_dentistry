@@ -1,24 +1,21 @@
+mixin header-nav(activeIndex)
+    nav.header__menu.hidden-tablet
+        div.header__menu_inner.container.flex.flex-align-center.flex-justify-center
+            ul.header__list.flex.flex-align-center
+                each link, index in links
+                    li.header__item(
+                        class=[
+                            link.hasSubmenu ? 'header__item--has-submenu' : '',
+                            index === activeIndex ? 'is-here' : '',
+                        ]
+                    ).position-relative
+                        if link.hasSubmenu
+                            button(type="button" class=link.hasSubmenu ? 'header__link--has-submenu' : '').header__link.hover-color-accent.text-nowrap.text-upper.text-w500= link.title
+                                include ../../icons/header/menu-item-arrow
+                        else
+                            a(href="#").header__link.text-nowrap.text-upper.text-w500= link.title
 
-nav.header__menu.hidden-tablet
-    div.header__menu_inner.container.flex.flex-align-center.flex-justify-center
-        ul.header__list.flex.flex-align-center
-            each link in links
-                li.header__item(class=link.submenu ? 'header__item--has-submenu' : '').position-relative
-                    a(href="#").header__link(class=link.submenu ? 'header__link--has-submenu' : '').text-nowrap.text-upper.text-w500= link.title
-                    if link.submenu
-                        ul.header__submenu.position-absolute.z-10
-                            each sub in link.submenu
-                                li.header__submenu-item.header__block.text-center.position-relative
-                                    div.header__block-img-container.img-container
-                                        img(src=sub.img alt=sub.title loading="lazy")
-                                    a.header__submenu-link.header__block-link(href="#")= sub.title
-                                    if sub.submenu
-                                        ul.header__submenu-2.position-absolute.z-10
-                                            each subsub in sub.submenu
-                                                li.header__submenu-2-item.text-center.text-nowrap
-                                                    a.header__submenu-2-link.text-w500(href="#")= subsub
-
-        a(href="#").header__btn.text-upper.text-w500.text-center
-            | Записаться
-            br
-            | на консультацию
+            a(href="#").header__btn.text-upper.text-w700.text-center
+                | Записаться
+                br
+                | на консультацию

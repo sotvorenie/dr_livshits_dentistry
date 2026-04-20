@@ -1,9 +1,12 @@
 
 section.team-dentists.section-mb-112
     div.team-dentists__inner.container
-        h3.team-dentists__title.text-w400.text-center Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге! Вас будут лечить врачи мирового уровня!
+        h3.team-dentists__title.text-center.text-w600
+            | Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
+            br
+            | Вас будут лечить врачи мирового уровня!
 
-        h3.team-dentists__subtitle.text-center Знакомьтесь! #[span.color-accent Наши врачи – наша гордость!]
+        h1.team-dentists__subtitle.text-center Знакомьтесь! #[span.color-accent Наши врачи – наша гордость!]
 
         div.team-dentists__slider-container.position-relative
             div.team-dentists__slider.swiper
@@ -15,11 +18,11 @@ section.team-dentists.section-mb-112
 
                            div.team-dentists__info.flex.flex-column
                                 div.team-dentists__text-block
-                                   p.team-dentists__name.text-w500= item.name
-                                   p.team-dentists__experience= item.experience
-                                   p.team-dentists__job.text-w500= item.job
+                                   p.team-dentists__name.text-w800= item.name
+                                   p.team-dentists__experience.text-w500= item.experience
+                                   p.team-dentists__job.text-w500.color-accent= item.job
 
-                                a(href="#").team-dentists__link.button.dark.w-100 Подробнее
+                                a(href="#").team-dentists__link.button.dark.w-100.text-w600 Подробнее
 
 
             button(type="button" aria-label="Предыдущий слайд").team-dentists__btn.prev.swiper-arrow
@@ -27,4 +30,4 @@ section.team-dentists.section-mb-112
             button(type="button" aria-label="Следующий слайд").team-dentists__btn.next.swiper-arrow
                 include ../../icons/swiper-arrow
 
-        a(href="#").team-dentists__more.button.dark.m-auto Подробнее о врачах
+        a(href="#").team-dentists__more.button.accent.text-upper.m-auto.text-w800 Подробнее о врачах

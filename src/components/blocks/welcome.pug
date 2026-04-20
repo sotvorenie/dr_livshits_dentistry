@@ -1,0 +1,13 @@
+include ../common/video-btn
+
+mixin welcome(className = '')
+    section.welcome.section-mb-112(class=className)
+        div.welcome__inner.container
+            h1.welcome__title.text-center Ждем Вас в нашей уютной клинике!
+
+            div.welcome__video.img-container.video-player.position-relative.w-100
+                video(src="/videos/video.mp4" playsinline).js-video-player
+
+                +video-btn()
+
+                p.h3.welcome__video-info.js-video-info.position-absolute Посмотрите видео и почувствуйте комфорт нашей клиники!

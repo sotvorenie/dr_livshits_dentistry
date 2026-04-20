@@ -1,10 +1,11 @@
 @use '../../../helpers' as *;
 
 .honors {
+  border-bottom: var(--border-alt);
 
   &__slider {
     padding-right: 1px !important;
-    margin-bottom: rem(32);
+    padding-bottom: 1px !important;
   }
 
   &__card {
@@ -14,7 +15,7 @@
     align-items: center;
     border: var(--border);
     border-radius: var(--radius-big);
-    padding: rem(24) rem(16) rem(24) rem(103);
+    padding: rem(24) 0 rem(24) rem(103);
     min-height: rem(94);
 
     @include mobile {
@@ -24,8 +25,8 @@
   }
 
   &__img {
-    width: rem(77);
-    height: rem(75);
+    @include square(75);
+
     top: 0;
     left: rem(10);
 

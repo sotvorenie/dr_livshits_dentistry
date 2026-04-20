@@ -1,37 +1,32 @@
 @use '../helpers' as *;
 
 .swiper-arrow {
-  --left: #{rem(-64)};
+  --left: #{rem(-66)};
 
   @include abs-y;
-  @include square(40);
+  @include square(42);
   @include flex-center();
 
-  border: var(--border);
   border-radius: var(--radius-regular);
-  color: var(--color-blue-dark-2);
-  background: var(--color-light);
+  color: var(--color-blue-dark);
 
   @include laptop-s {
-    --left: #{rem(-35)};
+    --left: #{rem(-30)};
 
-    @include square(32);
+    @include square(24);
   }
 
   &.prev {
     left: var(--left);
+    rotate: 180deg;
   }
   &.next {
     right: var(--left);
-    rotate: 180deg;
   }
 
   svg {
-    @include square(16);
-
-    @include laptop-s {
-      @include square(11);
-    }
+    height: 100%;
+    width: 100%;
   }
 
   &.swiper-button-disabled {

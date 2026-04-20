@@ -1,7 +1,6 @@
 @use '../helpers' as *;
 
 .header {
-  margin-bottom: fluid(106, 54);
 
   &__logo {
     width: rem(295);
@@ -75,7 +74,7 @@
 
     &_inner {
       padding-block: rem(8);
-      gap: rem(39);
+      gap: rem(15);
 
       @include laptop-s {
         gap: rem(10);
@@ -84,29 +83,40 @@
   }
 
   &__list {
-    gap: fluid(24, 0);
+    gap: fluid(12, 0);
+    border-radius: var();
 
     @include laptop-s {
       gap: rem(0);
     }
   }
 
-  &__item--has-submenu {
+  &__item {
+    border-radius: var(--radius-medium);
+    transition:
+            background var(--transition-duration),
+            color var(--transition-duration);
 
-    @include hover() {
+    &.is-active, &.is-here {
+      background: var(--color-blue-dark);
+      color: var(--color-light);
+    }
+    &.is-here {
+      pointer-events: none;
+    }
 
-      .header__submenu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
+    &--has-submenu svg {
+      @include abs-y;
+
+      position: absolute;
+      right: rem(20);
     }
   }
 
   &__link {
     @include fluid-text(18, 10);
 
-    padding: rem(10);
+    padding: rem(16);
     line-height: 1;
 
     @include laptop-s {
@@ -114,118 +124,7 @@
     }
 
     &--has-submenu {
-      padding: rem(16) rem(44) rem(16) rem(16);
-      background: var(--color-blue-dark);
-      color: var(--color-light);
-      border-radius: var(--radius-medium);
-      position: relative;
-
-      &::before, &::after {
-        content: '';
-        position: absolute;
-      }
-
-      &::before {
-        @include abs-y;
-
-        width: rem(13);
-        height: rem(7);
-        right: rem(20);
-        background: url("/icons/header/arrow.svg") center/contain no-repeat;
-      }
-
-      &::after {
-        height: rem(4);
-        width: 100%;
-        left: 0;
-        top: 100%;
-      }
-    }
-  }
-
-  &__submenu, &__submenu-2 {
-    padding: rem(8);
-    background: var(--colog-gray);
-    border-radius: var(--radius-big);
-    color: var(--color-dark-alt);
-    opacity: 0;
-    visibility: hidden;
-    transition:
-            transform var(--transition-duration),
-            opacity var(--transition-duration),
-            visibility var(--transition-duration);
-
-    &-item {
-
-      @include hover {
-        background: var(--color-blue);
-      }
-    }
-
-    &-link {
-      text-align: left;
-    }
-  }
-
-  &__submenu {
-    top: calc(100% + 4px);
-    left: rem(-28);
-    transform: translateY(-5px);
-
-    &-item {
-      gap: rem(10);
-      min-width: rem(280);
-      padding: rem(8) rem(50) rem(8) rem(16);
-      border-radius: var(--radius-big);
-      transition: background var(--transition-duration);
-
-      @include hover {
-        .header__submenu-2 {
-          opacity: 1;
-          visibility: visible;
-          transform: translateX(0);
-        }
-      }
-
-      &::before {
-        @include abs-y;
-
-        content: '';
-        right: rem(22);
-        width: rem(10);
-        height: rem(18);
-        pointer-events: none;
-        background: url("/icons/header/submenu-arrow.svg") center/contain no-repeat;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        left: 100%;
-        height: 100%;
-        width: rem(16);
-        top: 0;
-      }
-    }
-
-    &-link {
-      @include full-link;
-    }
-  }
-
-  &__submenu-2 {
-    left: calc(100% + 17px);
-    top: 0;
-    transform: translateX(-5px);
-
-    &-item {
-      border-radius: var(--radius-medium);
-    }
-
-    &-link {
-      width: 100%;
-      font-size: rem(12);
-      padding: rem(16);
+      padding-right: rem(44);
     }
   }
 
@@ -236,6 +135,7 @@
     background: var(--color-accent);
     border-radius: var(--radius-medium);
     transition: filter var(--transition-duration);
+    font-family: var(--font-family-accent);
 
     @include hover() {
       filter: brightness(0.9);
@@ -290,22 +190,74 @@
     }
   }
 
-  &__block {
-    display: flex;
-    align-items: center;
-    gap: rem(10);
+  &-menu {
+    --top: 0;
 
-    &-img-container {
+    background: var(--color-light-alt);
+    opacity: 0;
+    top: calc(var(--top) + #{rem(24)});
+    transition:
+            opacity var(--transition-duration),
+            transform var(--transition-duration);
+    transform: translateY(-10px);
+    padding-block: rem(16) rem(20);
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__close {
+      @include square(16);
+
+      top: rem(-16);
+      right: 0;
+      padding: 0;
+    }
+
+    &__list {
+      --row-gap: #{rem(24)};
+      --column-gap: #{rem(20)};
+    }
+
+    &__head {
+      padding: rem(8) rem(16);
+      line-height: 1.57;
+      transition: background var(--transition-duration);
+
+      @include hover() {
+        background: var(--color-blue);
+      }
+    }
+
+    &__toggle {
+      color: var(--color-blue-dark);
+    }
+
+    &__top {
+      gap: rem(10);
+      font-size: rem(14);
+    }
+
+    &__img-container {
       width: rem(34);
       height: rem(36);
       border-radius: var(--radius-regular);
     }
 
-    &-link {
-      font-size: rem(14);
-      max-width: rem(170);
-      line-height: 1.57;
-      font-weight: 500;
+    &__link {
+      padding-right: rem(28);
+    }
+
+    &__hidden {
+      --padding-top: #{rem(8)};
+
+      font-size: rem(12);
+    }
+
+    &__links {
+      gap: rem(8);
+      padding-left: rem(60);
     }
   }
 }

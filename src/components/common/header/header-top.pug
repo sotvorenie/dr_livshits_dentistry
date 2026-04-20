@@ -1,11 +1,8 @@
 
 div.header__top
     div.header__top_inner.container.flex.flex-justify-between
-        button(type="button" aria-label="Открыть/Закрыть мобильное меню").burger-menu__open.header__icon.burger-menu__btn.visible-tablet
-            span.open
-                include ../../icons/header/burger-menu
-            span.close.visually-hidden
-                include ../../icons/header/burger-menu-close
+        button(type="button" aria-label="Открыть/Закрыть мобильное меню").burger-menu__open.header__icon.visible-tablet
+            include ../../icons/header/burger-menu
 
 
         a(href="#").header__logo
@@ -16,17 +13,17 @@ div.header__top
                 div.header__icon
                     include ../../icons/header/map
                 div.header__info-right.flex.flex-column
-                    p.header__info-title.text-w500 СПб, м. Чёрная речка
+                    p.header__info-title.text-w700 СПб, м. Чёрная речка
                     p.header__info-text ул. Торжковская д.13, к.1
             li.header__info-item.flex.flex-align-center.hidden-tablet
                 div.header__icon
                     include ../../icons/header/clock
                 div.header__info-right.flex.flex-column
-                    p.header__info-title.text-w500 Часы работы:
+                    p.header__info-title.text-w700 Часы работы:
                     p.header__info-text.text-nowrap ПН-ВС 09:00–21:00
             li.header__info-item.flex.flex-align-center
                 a(href="tel:+78124051001").header__icon.header__icon--link
                     include ../../icons/header/phone
                 div.header__info-right.flex.flex-column.hidden-tablet
-                    a(href="tel:+78124051001").header__info-title.text-w500.text-nowrap +7 812 405-10-01
-                    a(href="tel:+79110030101").header__info-title.text-w500.text-nowrap +7 911 003-01-01
+                    a(href="tel:+78124051001").header__info-title.text-w700.text-nowrap +7 812 405-10-01
+                    a(href="tel:+79110030101").header__info-title.text-w700.text-nowrap +7 911 003-01-01

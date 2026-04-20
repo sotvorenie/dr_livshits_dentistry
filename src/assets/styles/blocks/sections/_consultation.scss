@@ -4,8 +4,8 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 754fr 380fr;
-    gap: rem(46);
+    grid-template-columns: 780fr 380fr;
+    gap: rem(20);
 
     @include tablet {
       grid-template-columns: 1fr;
@@ -36,11 +36,15 @@
   }
 
   &__title {
+    @include fluid-text(30, 22);
+
+    font-family: var(--font-family-accent);
     background: var(--color-light);
     border-radius: var(--radius-big);
     padding: rem(24) rem(32);
     box-shadow: var(--shadow);
     width: fit-content;
+    margin-inline: auto rem(26);
 
     @include mobile {
       width: 100%;

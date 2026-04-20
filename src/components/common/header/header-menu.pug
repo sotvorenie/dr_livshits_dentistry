@@ -1,0 +1,25 @@
+
+div.header-menu.position-absolute.w-100.z-100.hidden-tablet
+    div.header-menu__inner.container
+        div.header-menu__content.position-relative
+            button(type="button" title="Закрыть меню" aria-label="Закрыть меню").header-menu__close.hover-color-accent.position-absolute.z-100
+                include ../../icons/header/cross
+
+            ul.header-menu__list.row
+                each item in headerMenuLinks
+                    li.header-menu__item.accordion.col-4
+                        div.header-menu__head.accordion__header.flex.flex-align-center
+                            div.header-menu__top.flex.flex-align-center
+                                img(src=item.img alt=item.title loading="lazy").header-menu__img-container
+
+                                a(href="#").header-menu__link.accordion__control.text-upper.text-w500= item.title
+
+                            button(type="button").header-menu__toggle.accordion__toggle
+                                include ../../icons/header/header-menu-arrow
+
+                        div.header-menu__hidden.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.header-menu__links.flex.flex-column
+                                    each link in item.submenu
+                                        li.header-menu__links-item
+                                            a.header-menu__links-link.w-100.line-link.text-w500(href="#")= link

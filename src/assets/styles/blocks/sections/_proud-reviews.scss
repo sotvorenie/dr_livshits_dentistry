@@ -1,6 +1,7 @@
-@use '../../../helpers' as *;
+@use '../../helpers' as *;
 
 .proud-reviews {
+  border-block: var(--border-alt);
 
   &__slider {
     padding: rem(28) rem(1) rem(1) 0 !important;
@@ -13,7 +14,7 @@
   &__card {
     border: var(--border);
     border-radius: var(--radius-big);
-    padding: rem(60) rem(76) rem(36);
+    padding: rem(56) rem(76) rem(24);
     text-align: center;
     display: flex !important;
     flex-direction: column;
@@ -41,8 +42,8 @@
     }
   }
 
-  &__img-container, &__name, &__rating {
-    margin-bottom: fluid(16, 8);
+  &__img-container, &__name, &__rating, &__place, &__counter {
+    margin-bottom: rem(8);
   }
 
   &__img-container {
@@ -54,33 +55,26 @@
   }
 
   &__name {
-    @include fluid-text(16, 12);
-
     flex-grow: 1;
   }
 
-  &__rating, &__place, &__link {
+  &__rating, &__place, &__link, &__counter {
     @include fluid-text(12, 10);
   }
 
   &__rating {
-    gap: rem(8);
+    gap: rem(10);
   }
 
   &__stars {
-    color: var(--color-accent-alt);
+    color: var(--color-accent);
 
     svg {
       @include square(24);
     }
   }
 
-  &__place {
-    margin-bottom: rem(8);
-  }
-
   &__link {
-    color: var(--color-blue-dark);
 
     @include tablet {
       @include full-link;

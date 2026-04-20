@@ -9,7 +9,7 @@
 
   &__list {
     --row-gap: #{rem(16)};
-    --column-gap: #{rem(25)};
+    --column-gap: #{rem(20)};
   }
 
   &__item {
@@ -21,40 +21,19 @@
   }
 
   &__icon {
-    @include square(80);
+    @include square(50);
 
     border-radius: var(--radius-regular);
     background: var(--color-light);
 
-    @include tablet {
-      @include square(60);
-    }
-
     @include mobile {
       @include square(40);
-    }
-
-    img {
-      @include square(48);
-
-      @include tablet {
-        @include square(40);
-      }
-
-      @include mobile {
-        @include square(24);
-      }
     }
   }
 
   &__name {
     @include fluid-text(18, 14);
 
-    margin-bottom: rem(8);
-  }
-
-  &__text {
-
-    @include fluid-text(16, 12);
+    margin-bottom: rem(16);
   }
 }

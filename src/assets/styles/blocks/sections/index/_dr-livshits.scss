@@ -1,18 +1,12 @@
 @use '../../../helpers' as *;
 
 .dr-livshits {
-
-  &__title {
-
-    @include mobile {
-      text-align: center;
-    }
-  }
+  border-top: var(--border-alt);
 
   &__content {
     display: grid;
-    grid-template-columns: 680fr 480fr;
-    gap: rem(20);
+    grid-template-columns: 680fr 444fr;
+    gap: rem(56);
 
     @include laptop-s {
       grid-template-columns: 1fr;
@@ -31,7 +25,7 @@
   }
 
   &__info {
-    gap: fluid(44, 0);
+    gap: fluid(49, 0);
 
     &-bottom {
       flex-grow: 1;
@@ -46,7 +40,7 @@
   }
 
   &__quote {
-    max-width: rem(273);
+    max-width: rem(281);
 
     @include mobile {
       text-align: center;
@@ -55,7 +49,6 @@
     }
 
     &::before, &::after {
-      --top: #{rem(6)};
       --left: #{rem(12)};
 
       content: '';
@@ -69,23 +62,28 @@
       }
     }
     &::before {
+      --top: #{rem(8)};
+
       top: var(--top);
       right: calc(100% + var(--left));
     }
     &::after {
+      --top: 0;
+
       bottom: var(--top);
-      left: calc(100% + var(--left));
+      right: rem(80);
       rotate: 180deg;
     }
 
     h3 {
 
       @include mobile-above {
-        margin-bottom: rem(8);
+        margin-bottom: rem(3);
       }
     }
 
     p {
+      font-family: var(--font-family-additional);
       font-size: rem(16);
     }
   }
@@ -96,7 +94,7 @@
 
     @include mobile-above {
       width: 60%;
-      margin-bottom: fluid(62, 0);
+      margin-bottom: fluid(44, 0);
     }
 
     @include mobile {
@@ -106,8 +104,8 @@
   }
 
   &__name {
-    font-size: rem(16);
     margin-bottom: rem(8);
+    font-family: var(--font-family-base);
 
     @include mobile-above {
       color: var(--color-blue-dark);
@@ -115,15 +113,6 @@
 
     @include mobile-s {
       font-size: rem(14);
-    }
-  }
-
-  &__job {
-    font-size: rem(14);
-
-    @include mobile-s {
-      font-size: rem(10);
-      font-weight: 400 !important;
     }
   }
 
@@ -137,10 +126,6 @@
 
     @include mobile {
       aspect-ratio: 280/158;
-    }
-
-    .video-play-btn.is-playing ~ .dr-livshits__video-info {
-      display: none;
     }
 
     &-info {
@@ -164,10 +149,9 @@
   &__item {
     @include fluid-text(18, 12);
 
-    gap: rem(8);
 
     &:not(:last-child) {
-      margin-bottom: rem(12);
+      margin-bottom: rem(8);
 
       @include mobile {
         margin-bottom: rem(16);
@@ -186,6 +170,7 @@
 
       @include mobile {
         color: currentColor;
+        font-weight: 400 !important;
       }
     }
   }

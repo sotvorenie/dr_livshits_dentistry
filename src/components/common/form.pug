@@ -9,6 +9,6 @@ mixin form(titleText = '', btnText = '', className = '')
             div.form__input-wrapper.input__wrapper
                 input(type="tel" placeholder="+7 (000) 000-00-00" name="phone").form__input.input.input-tel
 
-        button(type="submit").form__submit.button.accent.text-w500= btnText
+        button(type="submit").form__submit.button.accent.text-w600= btnText
 
-        div.form__info Нажимая на кнопку, Вы принимаете #[a(href="#").line-link политику конфиденциальности] и даёте согласие на обработку персональных данных.
+        div.form__info.text-w600 Нажимая на кнопку, Вы принимаете #[a(href="#").line-link политику конфиденциальности] и даёте согласие на обработку персональных данных.

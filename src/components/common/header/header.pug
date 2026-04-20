@@ -1,9 +1,13 @@
+include header-nav
 
-header.header
-    include header-top
+mixin header(activeIndex)
+    header.header
+        include header-top
 
-    include header-nav
+        +header-nav(activeIndex)
 
-    include header-bottom
+        include header-menu
 
-    include burger-menu
+        include header-bottom
+
+        include burger-menu

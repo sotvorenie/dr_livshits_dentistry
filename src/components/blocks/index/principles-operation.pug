@@ -1,14 +1,14 @@
 
-section.principles-operation.section-mb-112
+section.principles-operation.section-mb-72
     div.principles-operation__inner.container
-        h2.principles-operation__title.section__title Наши принципы работы
+        h1.principles-operation__title.section__title Наши принципы работы
 
         ul.principles-operation__list.row
             each item in principlesOperations
-                li.principles-operation__item.col-12.mb-col-6.ls-col-3.flex.flex-column
+                li.principles-operation__item.col-12.mb-col-6.ls-col-3.flex.flex-column.flex-align-center.text-center
                     div.principles-operation__icon.flex-center
                         img(src=item.img alt=item.title)
 
                     div.principles-operation__text-block
-                        p.principles-operation__name.text-w500= item.title
+                        p.principles-operation__name.text-w700= item.title
                         p.principles-operation__text= item.text

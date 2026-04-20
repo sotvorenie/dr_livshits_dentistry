@@ -1,29 +1,29 @@
 include ../../common/video-btn
 
-section.dr-livshits.section-mb-112
+section.dr-livshits.section
     div.dr-livshits__inner.container
-        h2.dr-livshits__title.section__title Стоматология доктора Лившиц в Санкт-Петербурге
+        h1.dr-livshits__title.section__title “Стоматология доктора Лившиц” в Санкт-Петербурге
 
         div.dr-livshits__content
             div(style="--bg: url(/images/index/dr-livshits-bg.png)").dr-livshits__left.overflow-hidden.position-relative
                 div.dr-livshits__info.h-100.flex.flex-column
                     div.dr-livshits__quote.position-relative
-                        h3.color-accent Не все стоматологии одинаковы
+                        h3.color-accent.text-w800 Не все стоматологии одинаковы
 
                         p.hidden-mobile Узнайте за 1 минуту видео #[span.color-accent.text-upper.text-w500 чем] мы отличаемся от других
 
                     div.dr-livshits__info-bottom.flex.flex-column
                         div.dr-livshits__about
-                            p.dr-livshits__name.text-w500 Лившиц Татьяна Львовна
+                            p.dr-livshits__name.h4 Лившиц Татьяна Львовна
 
-                            p.dr-livshits__job.text-w500 Главный врач «Стоматологии доктора Лившиц», стоматолог-терапевт-ортопед со стажем 28 лет
+                            p.dr-livshits__job.text-w500 Главный врач «Стоматологии доктора Лившиц», стоматолог-терапевт-ортопед со стажем 29 лет
 
                         div.dr-livshits__video.img-container.video-player.position-relative
                             video(src="/videos/video.mp4" playsinline).js-video-player
 
                             +video-btn()
 
-                            p.dr-livshits__video-info.visible-mobile.position-absolute
+                            p.dr-livshits__video-info.js-video-info.visible-mobile.position-absolute
                                 | Узнайте за 1 минуту видео
                                 br
                                 | #[span.color-accent.text-upper.text-w500 чем] мы отличаемся от других
@@ -31,15 +31,13 @@ section.dr-livshits.section-mb-112
                 img(src="images/index/dr-livshits-person.png" alt="доктор Лившиц").dr-livshits__person.position-absolute.h-100.hidden-mobile
 
             ul.dr-livshits__list
-                li.dr-livshits__item.flex.flex-align-start
-                    img(src="/icons/index/dr-livshits-1.svg" alt="")
-                    p Наша стоматологическая клиника находится в Санкт-Петербурге и предоставляет весь спектр услуг в области инновационной стоматологии. Клиника оснащена самым современным стоматологическим оборудованием. В своей работе #[span.color-accent мы используем только качественные, надежные материалы] и все передовые технологии в области лечения, протезирования, имплантации зубов.
-                li.dr-livshits__item.flex.flex-align-start
-                    img(src="/icons/index/dr-livshits-2.svg" alt="")
-                    p Наша гордость - это наши пациенты. Мы смогли своей работой завоевать их доверие и любовь. #[span.color-accent 99% наших пациентов приходят к нам по рекомендации]. С особым вниманием и любовью мы лечим детей и пожилых людей.
-                li.dr-livshits__item.flex.flex-align-start
-                    img(src="/icons/index/dr-livshits-3.svg" alt="")
-                    p За 14 лет мы создали #[span.color-accent более 15 000] здоровых улыбок!
-                li.dr-livshits__item.flex.flex-align-start
-                    img(src="/icons/index/dr-livshits-4.svg" alt="")
-                    p Любим свою работу, делаем ее качественно, #[span.color-accent безболезненно] и максимально комфортно для каждого пациента!
+                li.dr-livshits__item
+                    p Наша стоматологическая клиника находится в Санкт-Петербурге и предоставляет весь спектр услуг в области инновационной стоматологии. Клиника оснащена самым современным стоматологическим оборудованием.
+                li.dr-livshits__item
+                    p В своей работе #[span.color-accent.text-w500 мы используем только качественные, надежные материалы] и все передовые технологии в области лечения, протезирования, имплантации зубов.
+                li.dr-livshits__item
+                    p Наша гордость - это наши пациенты. Мы смогли своей работой завоевать их доверие и любовь. #[span.color-accent.text-w500 99% наших пациентов приходят к нам по рекомендации].
+                li.dr-livshits__item
+                    p За 17 лет мы создали #[span.color-accent.text-w500 более 17 000] здоровых улыбок!
+                li.dr-livshits__item
+                    p Любим свою работу, делаем ее качественно, #[span.color-accent.text-w500 безболезненно] и максимально комфортно для каждого пациента!

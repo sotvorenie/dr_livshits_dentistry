@@ -12,6 +12,7 @@
   }
 
   &__title {
+    font-family: var(--font-family-base);
 
     @include mobile-above {
       text-align: center;

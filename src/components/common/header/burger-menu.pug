@@ -1,22 +1,25 @@
 
 div.burger-menu.position-fixed.visible-tablet.w-100.z-100
     div.burger-menu__inner.container
+        button(type="button" title="Закрыть меню" aria-label="Закрыть меню").burger-menu__close.hover-color-accent.position-absolute
+            include ../../icons/header/cross
+
         ul.burger-menu__list
-            each link in burgerMenuLinks
+            each link in headerMenuLinks
                 li.burger-menu__item.accordion
                     div.accordion__header.burger-menu__header.flex.flex-align-center
-                        div.burger-menu__top.flex.header__block
-                            div.header__block-img-container.img-container
+                        div.burger-menu__top.flex.flex-align-center
+                            div.burger-menu__img-container.img-container
                                 img(src=link.img alt=link.title loading="lazy")
 
-                            a.burger-menu__link.header__block-link.accordion__control(href="javascript:void(0)")= link.title
+                            a(href="#").burger-menu__link.accordion__control.text-upper.text-w500= link.title
 
                         button(type="button").accordion__toggle
-                            include ../../icons/header/burger-menu-arrow
+                            include ../../icons/header/header-menu-arrow
 
                     div.accordion__hidden
                         div.accordion__hidden-wrapper
                             ul.burger-menu__links
                                 each sub in link.submenu
                                     li.burger-menu__links-item
-                                        a.burger-menu__links-link.w-100(href="#")= sub
+                                        a.burger-menu__links-link.w-100.text-w500.line-link(href="#")= sub

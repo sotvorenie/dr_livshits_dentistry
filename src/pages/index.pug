@@ -1,5 +1,7 @@
 extends ../components/layouts/base.pug
 
+include ../components/blocks/welcome
+
 block title
     | Главная
 
@@ -10,7 +12,7 @@ block content
 
     include ../components/blocks/index/principles-operation
 
-    include ../components/blocks/index/proud-reviews
+    include ../components/blocks/proud-reviews
 
     include ../components/blocks/index/quote
 
@@ -20,7 +22,7 @@ block content
 
     include ../components/common/consultation
 
-    include ../components/blocks/index/welcome
+    +welcome('welcome--transparent')
 
     include ../components/blocks/index/contacts
 

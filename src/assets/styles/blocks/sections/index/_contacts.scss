@@ -1,7 +1,6 @@
 @use '../../../helpers' as *;
 
 .contacts {
-  margin-bottom: fluid(120, 39);
 
   &__content {
     background: var(--color-beige);
@@ -22,7 +21,7 @@
   }
 
   &__list {
-    gap: rem(20);
+    gap: rem(25);
 
     @include tablet {
       flex-direction: column;
@@ -31,8 +30,6 @@
   }
 
   &__subtitle {
-    @include fluid-text(16, 14);
-
     margin-bottom: rem(8);
   }
 

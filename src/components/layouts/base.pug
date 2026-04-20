@@ -1,3 +1,4 @@
+include ../common/header/header
 include ../common/footer/footer
 
 doctype html
@@ -9,7 +10,8 @@ html(lang="ru")
             block title
                 | Page title
     body
-        include ../common/header/header
+        block header
+            +header
 
         main
             block content

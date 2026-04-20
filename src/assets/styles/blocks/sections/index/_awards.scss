@@ -7,7 +7,7 @@
   }
 
   &__header {
-    margin-bottom: fluid(24, 17);
+    margin-bottom: fluid(48, 11);
 
     @include tablet {
       flex-direction: column;
@@ -15,8 +15,15 @@
     }
   }
 
+  &__title {
+    @include fluid-text(40, 16);
+
+    font-family: var(--font-family-accent);
+    font-weight: 700;
+  }
+
   &__stars {
-    color: var(--color-accent-alt);
+    color: var(--color-accent);
     gap: rem(4);
 
     svg {
@@ -44,5 +51,12 @@
 
   &__item {
     flex-grow: 1;
+  }
+
+  &__award-text {
+    @include fluid-text(12, 6);
+
+    top: 100%;
+    left: 10%;
   }
 }

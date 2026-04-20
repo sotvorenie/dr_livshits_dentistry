@@ -1,0 +1,40 @@
+@use '../../helpers' as *;
+
+.welcome {
+  border-bottom: var(--border);
+
+  @include mobile {
+    border-top: var(--border);
+  }
+
+  &__title {
+    margin-bottom: fluid(72, 40);
+  }
+
+  &__video {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    aspect-ratio: 1180/384;
+
+    @include mobile {
+      aspect-ratio: 280/119;
+    }
+
+    &-info {
+      padding: rem(16);
+      border-radius: var(--radius-big);
+      box-shadow: var(--shadow);
+      right: 0;
+      bottom: rem(16);
+      text-align: right;
+      max-width: rem(504);
+      background: var(--color-light);
+      line-height: 0.95;
+    }
+  }
+
+  &--transparent {
+    padding-block: fluid(72, 40);
+    border-block: var(--border-alt);
+  }
+}

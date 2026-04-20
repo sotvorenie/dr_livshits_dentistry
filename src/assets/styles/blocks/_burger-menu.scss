@@ -1,14 +1,13 @@
 @use '../helpers' as *;
 
 .burger-menu {
-  --top: #{rem(193)};
-
-  background: var(--colog-gray);
+  padding-top: rem(40);
+  top: 0;
+  background: var(--color-light-alt);
   opacity: 0;
-  top: var(--top);
-  height: calc(100% - var(--top));
+  height: 100%;
   bottom: 0;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition:
           opacity var(--transition-duration),
           transform var(--transition-duration);
@@ -27,12 +26,32 @@
     padding-block: rem(16);
   }
 
+  &__header {
+    padding: rem(14) rem(15);
+    transition: background var(--transition-duration);
+
+    @include hover {
+      background: var(--color-blue);
+    }
+  }
+
   &__top {
     gap: rem(10);
+    font-size: rem(14);
+  }
+
+  &__img-container {
+    width: rem(34);
+    min-width: rem(34);
+    height: rem(36);
+    border-radius: var(--radius-regular);
+  }
+
+  &__link {
+    padding-right: rem(10);
   }
 
   &__links {
-    padding-left: rem(15);
 
     &-link {
       font-size: rem(12);
@@ -45,19 +64,12 @@
     }
   }
 
-  .accordion__header {
-    padding: rem(10) rem(15);
-    transition: background var(--transition-duration);
-    border-radius: var(--radius-big);
-
-    @include hover {
-      background: var(--color-blue);
-    }
-  }
   .accordion__toggle {
     color: var(--color-blue-dark);
   }
-  .accordion__hidden {
-    --padding-top: #{rem(4)};
+
+  &__close {
+    top: rem(18);
+    left: calc(var(--container-padding-x) + #{rem(8)});
   }
 }

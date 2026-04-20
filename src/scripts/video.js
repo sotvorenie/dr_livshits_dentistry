@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     videoContainers.forEach(container => {
         const video = container.querySelector('.js-video-player')
         const btn = container.querySelector('.js-video-btn')
+        const videoInfo = container.querySelector('.js-video-info')
 
         if (!video || !btn) return
 
@@ -11,9 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (video.paused) {
                 video.play();
                 btn.classList.add('is-playing')
+
+                if (videoInfo) videoInfo.style.display = 'none'
             } else {
                 video.pause();
                 btn.classList.remove('is-playing')
+
+                if (videoInfo) videoInfo.style.display = 'block'
             }
         }
 

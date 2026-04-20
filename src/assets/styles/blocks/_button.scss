@@ -10,6 +10,7 @@
   font-weight: 500;
   width: fit-content;
   transition: filter var(--transition-duration);
+  font-family: var(--font-family-accent);
 
   @include hover {
     filter: brightness(1.2);

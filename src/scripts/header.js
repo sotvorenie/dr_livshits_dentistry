@@ -2,11 +2,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerMenu = document.querySelector('.burger-menu')
     const header = document.querySelector('.header')
 
-    if (!burgerMenu || !header) return
+    const headerMenu = document.querySelector('.header-menu')
+    const headerMenuBtnOpen = document.querySelector('.header__link--has-submenu')
+    const headerMenuBtnClose = document.querySelector('.header-menu__close')
+
+    if (!header) return
+
+    const classes = {
+        isActive: 'is-active',
+        isLock: 'is-lock',
+    }
 
     const setTopToBurgerMenu = () => {
         const height = header.offsetHeight
         burgerMenu.style.setProperty('--top', `${height / 16}rem`)
+        headerMenu.style.setProperty('--top', `${height / 16}rem`)
     }
     setTopToBurgerMenu()
 
@@ -20,4 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const debouncedSetTop = debounce(setTopToBurgerMenu, 250)
     window.addEventListener('resize', debouncedSetTop)
+
+    headerMenuBtnOpen.addEventListener('click', () => {
+        headerMenu.classList.toggle(classes.isActive)
+        // document.documentElement.classList.toggle(classes.isLock)
+
+        headerMenuBtnOpen.parentElement.classList.toggle(classes.isActive)
+    })
+    headerMenuBtnClose.addEventListener('click', () => {
+        headerMenu.classList.remove(classes.isActive)
+        // document.documentElement.classList.remove(classes.isLock)
+
+        headerMenuBtnOpen.parentElement.classList.remove(classes.isActive)
+    })
 })

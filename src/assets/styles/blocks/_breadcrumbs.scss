@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.breadcrumbs {
+  @include fluid-text(14, 10);
+
+  top: fluid(40, 16);
+  left: 0;
+
+  @include mobile {
+    color: #000000;
+  }
+
+  &__list {
+    gap: rem(22);
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+
+      &::after {
+        content: '/';
+        position: absolute;
+        bottom: 0;
+        right: rem(-14);
+      }
+    }
+
+    &.is-here {
+      pointer-events: none;
+    }
+  }
+}

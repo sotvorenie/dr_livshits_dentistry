@@ -21,7 +21,7 @@
 
     &__header {
       gap: rem(30);
-      margin-bottom: rem(70);
+      margin-bottom: rem(68);
 
       @include mobile {
         margin-bottom: rem(24);
@@ -57,9 +57,7 @@
   }
 
   &__request {
-    @include fluid-text(16, 14);
-
-    padding-inline: rem(12);
+    padding-inline: rem(49);
 
     @include mobile {
       width: 100%;
@@ -123,8 +121,6 @@
   }
 
   &__link {
-    @include fluid-text(16, 14);
-
     padding: rem(10);
   }
 
