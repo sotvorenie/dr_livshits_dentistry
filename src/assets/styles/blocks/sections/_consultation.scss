@@ -2,6 +2,30 @@
 
 .consultation {
 
+  &:not(.is-on-line) {
+
+    .consultation__line {
+      height: calc(100% - #{rem(89)} - #{rem(55)});
+    }
+  }
+
+  &.is-on-line {
+
+    .consultation__line {
+      height: calc(100% - #{rem(43)} - #{rem(55)});
+    }
+
+    .consultation__img {
+
+      @include tablet-above {
+        position: absolute;
+        width: 95%;
+        right: 0;
+        bottom: rem(43);
+      }
+    }
+  }
+
   &__content {
     display: grid;
     grid-template-columns: 780fr 380fr;
@@ -15,7 +39,6 @@
 
   &__line {
     width: 70.68%;
-    aspect-ratio: 834/313;
     border: 1px solid var(--color-dark);
     border-radius: var(--radius-big);
     left: rem(50);
@@ -61,16 +84,6 @@
     object-fit: cover;
     max-height: rem(252);
     object-position: top center;
-
-    &.is-on-line {
-
-      @include tablet-above {
-        position: absolute;
-        width: 95%;
-        right: 0;
-        bottom: rem(92);
-      }
-    }
   }
 
   &__form {

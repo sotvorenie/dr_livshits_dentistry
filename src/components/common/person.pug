@@ -36,11 +36,14 @@ mixin person(item, isLeft = true)
                             span Отзыв проверен
 
                     div.person__review-right
-                        div.person__review-block
-                            p.person__review-title.text-w500 История пациента
-                            p.person__review-message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
-                        div.person__review-block
-                            p.person__review-title.text-w500 Понравилось
-                            p.person__review-message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+                        div.person__review-expandable
+                            div.person__review-block
+                                p.person__review-title.text-w500 История пациента
+                                p.person__review-message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
+                            div.person__review-block
+                                p.person__review-title.text-w500 Понравилось
+                                p.person__review-message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+
+                        button(type="button").person__review-more.color-blue.visible-mobile.text-w500 Читать полностью
 
         a(href="#").person__link.button.dark(class= isLeft ? '' : 'is-right') Подробнее о враче

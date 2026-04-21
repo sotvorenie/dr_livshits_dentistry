@@ -91,6 +91,7 @@
 
   &__img-container {
     width: 59%;
+    height: 100%;
     aspect-ratio: 341/356;
     max-height: 100%;
     bottom: 0;
@@ -100,7 +101,7 @@
     }
 
     @include mobile {
-      width: 59%;
+      width: 50%;
     }
 
     img {
@@ -109,12 +110,8 @@
   }
 
   &__text-block {
-    max-width: 57%;
+    max-width: 52%;
     height: 100%;
-
-    @include mobile {
-      max-width: 45%;
-    }
   }
 
   &__name {
@@ -243,8 +240,52 @@
       line-height: 1;
     }
 
+    &-expandable {
+
+      @include mobile {
+
+        &:not(.is-expanded) {
+          .person__review-block:not(:first-child) {
+            display: none;
+          }
+
+          .person__review-block:first-child {
+            margin-bottom: 0;
+          }
+          .person__review-block:first-child .person__review-message {
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+
+        }
+
+        &.is-expanded {
+
+          .person__review-block:not(:first-child) {
+            display: block;
+          }
+
+          .person__review-block:first-child .person__review-message {
+            display: block;
+            -webkit-line-clamp: initial;
+          }
+        }
+      }
+    }
+
     &-message {
       line-height: 1.25;
+    }
+
+    &-more {
+      font-size: rem(12);
+      margin-top: rem(20);
+
+      .person__review-expandable.is-expanded + & {
+        display: none;
+      }
     }
   }
 

@@ -1,7 +1,7 @@
 include form
 
 mixin consultation(img = '/images/consultation-team.png', isLine = false)
-    section.consultation.section
+    section.consultation.section(class=isLine ? 'is-on-line' : '')
         div.consultation__inner.container
 
             div.consultation__content.position-relative
@@ -10,6 +10,6 @@ mixin consultation(img = '/images/consultation-team.png', isLine = false)
                 div.consultation__left.flex.flex-column.position-relative
                     p.consultation__title.text-center.text-w700 #[span.color-accent Лечение] начинается с консультации
 
-                    img(src=img alt="" loading="lazy").consultation__img(class=isLine ? 'is-on-line' : '')
+                    img(src=img alt="" loading="lazy").consultation__img
 
                 +form('Предложим удобное время для Вашего визита к нам', 'Записаться на консультацию', 'consultation__form')
