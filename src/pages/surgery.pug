@@ -1,6 +1,7 @@
 extends ../components/layouts/base.pug
 
 include ../components/common/breadcrumbs
+include ../components/blocks/prices
 
 block title
     | Хирургия
@@ -25,3 +26,5 @@ block content
     include ../components/blocks/comparison
 
     include ../components/blocks/info
+
+    +prices('Стоимость удаления зубов', surgeryArr, 'Записаться на консультацию', '', 'accent')

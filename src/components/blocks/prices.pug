@@ -1,0 +1,22 @@
+mixin prices(titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '')
+    section.prices.section
+        div.prices__inner.container
+            h2.prices__title.color-blue.text-center= titleText
+
+            ul.prices__list.flex.flex-column
+                each item in arr
+                    li.prices__item.flex.flex-align-end
+                       div.prices__name-wrapper
+                           h3.prices__name.text-w500= item.title
+
+                       div.prices__price.flex.text-nowrap
+                           if item.from
+                                h3.text-w700.color-blue от
+
+                           h3.text-w700.color-blue= item.price
+                           h3.text-w700.color-blue ₽
+
+                       if item.hasLink
+                           a(href="#" class= linksClass).prices__link.button.accent= linksText
+
+            a(href="#" class=btnClass).prices__btn.button.m-auto Посмотреть все цены

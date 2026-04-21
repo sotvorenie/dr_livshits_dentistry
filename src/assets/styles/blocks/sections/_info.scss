@@ -4,7 +4,10 @@
   --height: #{rem(64)};
 
   background: var(--color-blue);
-  border-bottom: var(--border-alt);
+
+  @include mobile-above {
+    border-bottom: var(--border-alt);
+  }
 
   @include mobile {
     --height: #{rem(40)};
