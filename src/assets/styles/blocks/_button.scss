@@ -3,7 +3,7 @@
 .button {
   @include flex-center();
 
-  padding-block: rem(16);
+  padding-block: fluid(16, 14);
   border-radius: var(--radius-medium);
   text-align: center;
   color: var(--color-light) !important;
