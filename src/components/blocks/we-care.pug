@@ -1,0 +1,13 @@
+mixin we-care(img = "/images/we-care-1.png", smallPhoto = true)
+    section.we-care.section
+        div.we-care__inner.container
+
+            div.we-care__content.position-relative
+                div.we-care__line
+
+                h1.we-care__title.color-accent.text-center Мы заботимся о долгосрочном здоровье наших пациентов
+
+                h3.we-care__subtitle.text-center и поэтому предлагаем только лучшие и современные методы лечения и сохранения зубов
+
+                div.we-care__img-container.img-container.m-auto(class= smallPhoto ? 'small' : '')
+                    img(src=img alt="" loading="lazy").we-care__img

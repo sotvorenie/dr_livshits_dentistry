@@ -1,0 +1,52 @@
+@use '../../helpers' as *;
+
+.we-care {
+
+  &__title {
+    @include fluid-text(42, 16);
+
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    padding: rem(10);
+    margin: 0 auto fluid(32, 24);
+
+    @include tablet-above {
+      max-width: 83%;
+    }
+  }
+
+  &__subtitle {
+    max-width: 59%;
+    margin: 0 auto rem(1);
+
+    @include mobile {
+      max-width: 83%;
+    }
+  }
+
+  &__img-container {
+    object-position: center top;
+    border-radius: var(--radius-big);
+
+    img {
+      object-position: top center;
+    }
+
+    &.small {
+      width: 92%;
+      aspect-ratio: 1090/348;
+    }
+  }
+
+  &__line {
+    @include abs-x;
+
+    border: 1px solid var(--color-dark);
+    border-radius: var(--radius-big);
+    width: 93%;
+    height: calc(100% - #{rem(59)});
+    top: rem(59);
+    z-index: -1;
+  }
+}

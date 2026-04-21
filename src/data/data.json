@@ -228,37 +228,37 @@
   "surgeryArr": [
     {
       "title": "Консультация хирурга",
-      "price": "1000",
+      "price": "1 000",
       "from": false,
       "hasLink": true
     },
     {
       "title": "Простое удаление коренного зуба",
-      "price": "5500",
+      "price": "5 500",
       "from": true,
       "hasLink": false
     },
     {
       "title": "Сложное удаление коренного зуба",
-      "price": "8000",
+      "price": "8 000",
       "from": true,
       "hasLink": false
     },
     {
       "title": "Сложное удаление зуба с разделением корней",
-      "price": "10000",
+      "price": "10 000",
       "from": true,
       "hasLink": false
     },
     {
       "title": "Простое удаление ретенированного зуба",
-      "price": "8000",
+      "price": "8 000",
       "from": true,
       "hasLink": false
     },
     {
       "title": "Сложное удаление ретенированного, дистопированного, сферхкомплетного зуба",
-      "price": "12000",
+      "price": "12 000",
       "from": true,
       "hasLink": false
     }
