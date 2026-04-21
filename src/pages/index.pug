@@ -1,12 +1,13 @@
 extends ../components/layouts/base.pug
 
 include ../components/blocks/welcome
+include ../components/blocks/awards
 
 block title
     | Главная
 
 block content
-    include ../components/blocks/index/awards
+    +awards
 
     include ../components/blocks/index/dr-livshits
 

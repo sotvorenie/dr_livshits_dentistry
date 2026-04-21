@@ -1,0 +1,44 @@
+mixin awards(showTeam = true)
+    section.awards.section-mb-72(class= showTeam ? '' : 'section')
+        div.awards__inner.container
+            div.awards__header(class= showTeam ? '' : 'mb-small').flex.flex-justify-center
+                div.awards__title.flex.flex-column
+                    div.awards__top.flex.flex-align-center
+                        span Лучшая
+                        div.awards__stars.flex
+                            include ../icons/award-star
+                            include ../icons/award-star
+                            include ../icons/award-star
+                            include ../icons/award-star
+                            include ../icons/award-star
+
+                    span частная стоматология в СПБ
+
+                ul.awards__list.flex.flex-align-end
+                    li.awards__item.position-relative
+                        img(src="/images/award-1.svg" alt="Гран-при").w-100
+
+                        span.awards__award-text.text-upper.position-absolute.text-w500 номинант 2024
+
+                    li.awards__item
+                        img(src="/images/award-2.svg" alt="ПроДокторов 2023").w-100
+
+            if showTeam
+                img(src="/images/index/team-awards.png" alt="Сотрудники").awards__img.w-100
+            else
+                div.awards__bottom.flex.flex-align-center.flex-justify-center
+                    img(src="/images/award-3.png" alt="ПроДокторов").awards__award
+
+                    div.awards__rating.flex.flex-align-center
+                        p.text-w700 5.0
+
+                        div.awards__stars-list.flex
+                            include ../icons/award-star-2
+                            include ../icons/award-star-2
+                            include ../icons/award-star-2
+                            include ../icons/award-star-2
+                            include ../icons/award-star-2
+
+                    p.awards__reviews.text-w700 800 отзывов
+
+                a(href="#").awards__btn.button.accent.m-auto Читать

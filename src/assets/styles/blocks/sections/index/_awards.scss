@@ -2,6 +2,10 @@
 
 .awards {
 
+  &.section {
+    border-block: var(--border-alt);
+  }
+
   &__header, &__top {
     gap: fluid(16, 8);
   }
@@ -12,6 +16,10 @@
     @include tablet {
       flex-direction: column;
       align-items: center;
+    }
+
+    &.mb-small {
+      margin-bottom: rem(24);
     }
   }
 
@@ -58,5 +66,52 @@
 
     top: 100%;
     left: 10%;
+  }
+
+  &__bottom {
+    margin-bottom: rem(24);
+    gap: fluid(48, 12);
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    p {
+      @include fluid-text(22, 14);
+    }
+  }
+
+  &__award {
+    max-width: 21%;
+
+    @include mobile {
+      max-width: 50%;
+    }
+  }
+
+  &__rating {
+    gap: rem(8);
+  }
+
+  &__stars-list {
+    gap: rem(2);
+    color: var(--color-accent);
+
+    svg {
+      @include square(24);
+
+      @include mobile {
+        @include square(16);
+      }
+    }
+  }
+
+  &__btn {
+    padding-inline: rem(15);
+    min-width: rem(250);
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
