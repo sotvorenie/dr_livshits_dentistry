@@ -1,0 +1,27 @@
+@use '../../helpers' as *;
+
+.quote-general {
+  background: var(--color-blue);
+  border-block: var(--border-alt);
+
+  &__title {
+    margin-bottom: fluid(48, 24);
+    line-height: 0.95;
+  }
+
+  &__text {
+    margin-bottom: fluid(24, 8);
+  }
+
+  &__subtitle {
+    line-height: 0.71;
+
+    @include mobile {
+      line-height: 1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: fluid(24, 8);
+    }
+  }
+}
