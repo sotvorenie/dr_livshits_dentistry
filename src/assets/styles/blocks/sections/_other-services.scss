@@ -1,0 +1,43 @@
+@use '../../helpers' as *;
+
+.other-services {
+  padding-bottom: fluid(72, 40);
+  border-bottom: var(--border-alt);
+
+  &__item, &__img-container, &__name, &__price {
+    margin-bottom: fluid(16, 8);
+  }
+
+  &__item {
+    background: var(--color-beige);
+    border-radius: var(--radius-big);
+    padding: fluid(16, 8);
+    display: flex !important;
+  }
+
+  &__img-container {
+    aspect-ratio: 348/156;
+    border-radius: var(--radius-big);
+    background: var(--color-gray-bg);
+  }
+
+  &__name {
+    @include fluid-text(22, 16);
+
+    line-height: 1.45;
+  }
+
+  &__info, &__top {
+    flex-grow: 1;
+  }
+
+  &__info {
+    gap: fluid(16, 8);
+  }
+
+  &__price {
+    @include fluid-text(26, 16);
+
+    font-family: var(--font-family-base);
+  }
+}
