@@ -5,6 +5,8 @@ include ../components/blocks/prices
 include ../components/blocks/we-care
 include ../components/blocks/awards
 include ../components/common/person
+include ../components/blocks/welcome
+include ../components/common/consultation
 
 block title
     | Хирургия
@@ -48,3 +50,7 @@ block content
     include ../components/blocks/proud-reviews
 
     include ../components/blocks/other-services
+
+    +welcome(false)
+
+    +consultation('/images/consultation-team-2.png', true)

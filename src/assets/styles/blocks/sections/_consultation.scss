@@ -58,6 +58,19 @@
 
   &__img {
     border-radius: var(--radius-big);
+    object-fit: cover;
+    max-height: rem(252);
+    object-position: top center;
+
+    &.is-on-line {
+
+      @include tablet-above {
+        position: absolute;
+        width: 95%;
+        right: 0;
+        bottom: rem(92);
+      }
+    }
   }
 
   &__form {

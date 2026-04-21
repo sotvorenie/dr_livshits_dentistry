@@ -1,7 +1,14 @@
 @use '../../helpers' as *;
 
 .welcome {
-  border-bottom: var(--border);
+
+  &.section {
+    background: var(--color-blue);
+  }
+
+  &:not(.section) {
+    border-bottom: var(--border);
+  }
 
   @include mobile {
     border-top: var(--border);

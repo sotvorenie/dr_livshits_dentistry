@@ -2,6 +2,7 @@ extends ../components/layouts/base.pug
 
 include ../components/blocks/welcome
 include ../components/blocks/awards
+include ../components/common/consultation
 
 block title
     | Главная
@@ -21,9 +22,9 @@ block content
 
     include ../components/blocks/index/honors
 
-    include ../components/common/consultation
+    +consultation()
 
-    +welcome('welcome--transparent')
+    +welcome()
 
     include ../components/blocks/index/contacts
 

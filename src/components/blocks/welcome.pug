@@ -1,9 +1,15 @@
 include ../common/video-btn
 
-mixin welcome(className = '')
-    section.welcome.section-mb-112(class=className)
+mixin welcome(isTransparent = true)
+    section.welcome.section-mb-112(class=isTransparent ? 'welcome--transparent' : 'section')
         div.welcome__inner.container
-            h1.welcome__title.text-center Ждем Вас в нашей уютной клинике!
+            if isTransparent
+                h1.welcome__title.text-center Ждем Вас в нашей уютной клинике!
+            else
+                h1.section__title.text-center
+                    | #[span.color-accent Ждем Вас]
+                    br
+                    |в нашей уютной клинике!
 
             div.welcome__video.img-container.video-player.position-relative.w-100
                 video(src="/videos/video.mp4" playsinline).js-video-player
