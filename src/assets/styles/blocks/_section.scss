@@ -10,6 +10,10 @@
     margin-bottom: fluid(72, 40);
   }
 
+  &-border-block {
+    border-block: var(--border-alt);
+  }
+
   &__title {
     text-align: center;
     margin-bottom: fluid(48, 16);

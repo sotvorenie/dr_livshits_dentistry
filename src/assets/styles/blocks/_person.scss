@@ -1,0 +1,263 @@
+@use '../helpers' as *;
+
+.person {
+
+  &:not(:last-child) {
+    margin-bottom: fluid(48, 40);
+  }
+
+  &:not(.is-right) {
+
+    .person__review {
+      border-right: 2px solid #005A9C;
+      border-radius: 0 var(--radius-big) var(--radius-big) 0;
+    }
+
+    .person__img-container {
+      left: 0;
+    }
+
+    .person__text-block {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .person__link {
+
+      @include tablet-above {
+        margin-left: rem(157);
+      }
+    }
+  }
+
+  &.is-right {
+
+    .person__card {
+      flex-direction: row-reverse;
+    }
+
+    .person__review {
+      border-left: 2px solid #005A9C;
+      border-radius: var(--radius-big) 0 0 var(--radius-big);
+    }
+
+    .person__img-container {
+      right: 0;
+    }
+
+    .person__link {
+
+      @include tablet-above {
+        margin-right: rem(157);
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__card {
+    margin-bottom: rem(24);
+    height: max(#{rem(364)}, 100%);
+
+    @include tablet {
+      flex-direction: column !important;
+    }
+  }
+
+  &__info {
+    background: #F2F2F2;
+    border-radius: var(--radius-big);
+    padding: rem(30) rem(24) rem(30) rem(10);
+    z-index: 2;
+
+    @include tablet-above {
+      flex: 0 0 49%;
+      min-height: rem(364);
+      box-shadow: var(--shadow);
+    }
+
+    @include tablet {
+      min-height: rem(385);
+    }
+
+    @include mobile {
+      padding: rem(8);
+      min-height: rem(285);
+    }
+
+    @include mobile-s {
+      min-height: rem(185);
+    }
+  }
+
+  &__img-container {
+    width: 59%;
+    aspect-ratio: 341/356;
+    max-height: 100%;
+    bottom: 0;
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 59%;
+    }
+
+    img {
+      object-position: top center;
+    }
+  }
+
+  &__text-block {
+    max-width: 57%;
+    height: 100%;
+
+    @include mobile {
+      max-width: 45%;
+    }
+  }
+
+  &__name {
+    @include fluid-text(36, 16);
+
+    flex-grow: 1;
+
+    @include mobile {
+      margin-bottom: rem(6);
+    }
+  }
+
+  &__job, &__experience {
+    @include fluid-text(20, 12);
+
+    &:not(:last-child) {
+      margin-bottom: fluid(8, 4);
+    }
+  }
+
+  &__review {
+    border-top: 2px solid #005A9C;
+    border-bottom: 2px solid #005A9C;
+    padding: rem(24);
+    height: fit-content;
+    align-self: center;
+    flex-grow: 1;
+
+    @include tablet {
+      border-top: none;
+      border-right: 2px solid #005A9C;
+      border-left: 2px solid #005A9C;
+      border-radius: 0 0 var(--radius-big) var(--radius-big) !important;
+      top: rem(-8);
+      padding: rem(20) rem(12) rem(12);
+    }
+
+    & * {
+      font-family: var(--font-family-message);
+    }
+
+    &-img {
+      top: rem(24);
+      right: rem(24);
+      width: rem(89);
+      height: auto;
+
+      @include tablet {
+        top: rem(26);
+        right: rem(12);
+        width: rem(71);
+      }
+    }
+
+    &-content {
+      display: grid;
+      grid-template-columns: 202fr 340fr;
+      gap: rem(10);
+
+      @include tablet {
+        grid-template-columns: 1fr;
+        gap: rem(20);
+      }
+    }
+
+    &-name {
+      margin-bottom: fluid(8, 6);
+    }
+
+    &-date {
+      @include fluid-text(14, 12);
+
+      margin-bottom: fluid(24, 16);
+    }
+
+    &-rating {
+      background: #E0F6EE;
+      border-radius: var(--radius-regular);
+      padding: rem(4) rem(8);
+      margin-bottom: rem(8);
+      gap: rem(8);
+      width: fit-content;
+
+      svg {
+        @include square(12);
+
+        color: var(--color-accent);
+      }
+
+      p {
+        @include fluid-text(14, 12);
+      }
+
+      span {
+        @include fluid-text(16, 12);
+
+        color: #00815A;
+      }
+    }
+
+    &-security {
+      @include fluid-text(16, 12);
+
+      background: #F6F9FF;
+      border-radius: var(--radius-regular);
+      padding: rem(4) rem(8);
+      gap: rem(8);
+      width: fit-content;
+      color: #1A5DD0;
+
+      svg {
+        fill: transparent;
+      }
+    }
+
+    &-block {
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+
+    &-title {
+      margin-bottom: rem(8);
+      font-size: rem(14);
+      line-height: 1;
+    }
+
+    &-message {
+      line-height: 1.25;
+    }
+  }
+
+  &__link {
+    padding-inline: rem(15);
+    min-width: rem(250);
+
+    @include tablet {
+      margin: auto;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

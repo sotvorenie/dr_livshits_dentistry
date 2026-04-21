@@ -1,0 +1,46 @@
+mixin person(item, isLeft = true)
+    div.person(class= isLeft ? '' : 'is-right')
+        div.person__card.flex
+            div.person__info.position-relative
+                div.person__img-container.img-container.position-absolute
+                    img(src=item.img, alt=item.name loading="lazy")
+
+                div.person__text-block.flex.flex-column
+                    h2.person__name.text-w800.color-blue= item.name
+
+                    div.person__text-block_bottom
+                        p.person__job.text-w500= item.firstJob
+                        p.person__job.text-w500= item.secondJob
+
+                        p.person__experience.text-w500.color-accent= item.experience
+
+            div.person__review.position-relative
+                img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.position-absolute
+
+                div.person__review-content
+                    div.person__review-left
+                        p.person__review-name.color-blue.text-w500 Пациент +7 938 12ХХХХХ
+
+                        p.person__review-date 25 декабря 2022 в 14:30
+
+                        div.person__review-rating.flex.flex-align-center
+                            include ../icons/person-star
+
+                            p 5.0
+
+                            span Отлично
+
+                        div.person__review-security.flex.flex-align-center
+                            include ../icons/person-security
+
+                            span Отзыв проверен
+
+                    div.person__review-right
+                        div.person__review-block
+                            p.person__review-title.text-w500 История пациента
+                            p.person__review-message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
+                        div.person__review-block
+                            p.person__review-title.text-w500 Понравилось
+                            p.person__review-message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+
+        a(href="#").person__link.button.dark(class= isLeft ? '' : 'is-right') Подробнее о враче

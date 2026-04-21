@@ -4,6 +4,7 @@ include ../components/common/breadcrumbs
 include ../components/blocks/prices
 include ../components/blocks/we-care
 include ../components/blocks/awards
+include ../components/common/person
 
 block title
     | Хирургия
@@ -36,3 +37,8 @@ block content
     +awards(false)
 
     include ../components/blocks/quote
+
+    section.person-list.section.section-mb-72.section-border-block
+        div.person-list__inner.container
+            each item, index in surgeryPersons
+                +person(item, index % 2 === 0)
