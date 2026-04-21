@@ -12,7 +12,7 @@ div.header-menu.position-absolute.w-100.z-100.hidden-tablet
                             div.header-menu__top.flex.flex-align-center
                                 img(src=item.img alt=item.title loading="lazy").header-menu__img-container
 
-                                a(href="#").header-menu__link.accordion__control.text-upper.text-w500= item.title
+                                a(href=item.href).header-menu__link.accordion__control.text-upper.text-w500= item.title
 
                             button(type="button").header-menu__toggle.accordion__toggle
                                 include ../../icons/header/header-menu-arrow

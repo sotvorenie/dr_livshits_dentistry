@@ -11,6 +11,7 @@
 
   --color-blue: #F2FBFE;
   --color-blue-dark: #005A9C;
+  --color-blue-light: #4CC9F0;
 
   --color-beige: #FBF1E5;
 
@@ -19,12 +20,14 @@
   --radius-regular: #{rem(5)};
   --radius-medium: #{rem(8)};
   --radius-big: #{rem(10)};
+  --radius-big-2: #{rem(20)};
 
   --border: 1px solid var(--color-gray);
   --border-alt: 1px solid var(--color-gray-alt);
   --border-blue: 1px solid var(--color-blue-dark);
 
   --shadow: -2px 8px 20px 0 #4C4C4C1A;
+  --shadow-alt: 0 4px 15px 0 #0000001A;
 
   --font-family-base: 'Rubik', sans-serif;
   --font-family-accent: 'Manrope', sans-serif;

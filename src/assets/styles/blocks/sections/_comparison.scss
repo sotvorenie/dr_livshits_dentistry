@@ -1,0 +1,64 @@
+@use '../../helpers' as *;
+
+.comparison {
+  border-block: var(--border-alt);
+
+  &__title {
+    margin-bottom: fluid(48, 32);
+  }
+
+  &__list {
+    border-radius: var(--radius-big-2);
+    padding: fluid(32, 0);
+    gap: fluid(16, 8);
+
+    @include tablet-above {
+      background: var(--color-beige);
+    }
+  }
+
+  &__item {
+    background: var(--color-light);
+    box-shadow: var(--shadow-alt);
+    padding: rem(15) rem(5) rem(15) rem(36);
+    border-radius: var(--radius-big);
+    gap: fluid(24, 16);
+
+    @include tablet {
+      padding: rem(8) rem(16);
+    }
+  }
+
+  &__icon {
+    --border-color: '';
+
+    @include square(36);
+
+    border-radius: var(--radius-regular);
+    border: 1px solid var(--border-color);
+    padding: rem(2);
+
+    img {
+      height: 100%;
+    }
+
+    @include tablet {
+      @include square(32);
+    }
+
+    &.blue-light {
+      --border-color: var(--color-blue-light);
+    }
+    &.blue {
+      --border-color: var(--color-blue-dark);
+    }
+    &.accent {
+      --border-color: var(--color-accent);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-base);
+    font-weight: 400;
+  }
+}

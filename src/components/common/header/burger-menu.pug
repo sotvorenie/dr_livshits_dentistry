@@ -12,7 +12,7 @@ div.burger-menu.position-fixed.visible-tablet.w-100.z-100
                             div.burger-menu__img-container.img-container
                                 img(src=link.img alt=link.title loading="lazy")
 
-                            a(href="#").burger-menu__link.accordion__control.text-upper.text-w500= link.title
+                            a(href=link.href).burger-menu__link.accordion__control.text-upper.text-w500= link.title
 
                         button(type="button").accordion__toggle
                             include ../../icons/header/header-menu-arrow
