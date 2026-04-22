@@ -13,7 +13,7 @@ mixin header-nav(activeIndex)
                             button(type="button" class=link.hasSubmenu ? 'header__link--has-submenu' : '').header__link.hover-color-accent.text-nowrap.text-upper.text-w500= link.title
                                 include ../../icons/header/menu-item-arrow
                         else
-                            a(href="#").header__link.text-nowrap.text-upper.text-w500= link.title
+                            a(href=link.href).header__link.text-nowrap.text-upper.text-w500= link.title
 
             a(href="#").header__btn.text-upper.text-w700.text-center
                 | Записаться

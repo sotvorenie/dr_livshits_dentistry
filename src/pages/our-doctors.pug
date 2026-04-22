@@ -1,0 +1,18 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/awards
+include ../components/common/person
+
+block title
+    | Врачи
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Врачи"])
+
+    +awards(true, false, '/images/index/team-awards-2.png', true, 'Наши врачи – наша гордость')
+
+    section.person-list.section-mb-72
+        div.person-list__inner.container
+            each item, index in ourDoctorsPersons
+                +person(item, index % 2 === 0)

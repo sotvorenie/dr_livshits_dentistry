@@ -1,9 +1,12 @@
-mixin awards(showTeam = true, isGray = false)
+mixin awards(showTeam = true, isGray = false, img = '/images/index/team-awards.png', showTitle = false, titleText = '')
     section.awards.section-mb-72(class= [
         showTeam ? '' : 'section',
         isGray ? 'is-gray' : ''
     ])
         div.awards__inner.container
+            if showTitle
+                h1.color-blue.section__title= titleText
+
             div.awards__header(class=[
                 showTeam ? '' : 'mb-small',
             ]).flex.flex-justify-center
@@ -29,7 +32,7 @@ mixin awards(showTeam = true, isGray = false)
                         img(src="/images/award-2.svg" alt="ПроДокторов 2023").w-100
 
             if showTeam
-                img(src="/images/index/team-awards.png" alt="Сотрудники").awards__img.w-100
+                img(src=img alt="Сотрудники").awards__img.w-100
             else
                 div.awards__bottom.flex.flex-align-center.flex-justify-center
                     img(src="/images/award-3.png" alt="ПроДокторов").awards__award
