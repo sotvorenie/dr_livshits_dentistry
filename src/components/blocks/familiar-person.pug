@@ -1,30 +1,31 @@
-section.familiar-person.section
-    div.familiar-person__inner.container
-        h1.familiar-person__title.section__title.text-w500
-            | Мы лечим #[span.color-accent.text-w700 каждого пациента]
-            br
-            | как своего самого близкого человека
+mixin familiar-person(className = '')
+    section.familiar-person(class=className)
+        div.familiar-person__inner.container
+            h1.familiar-person__title.section__title.text-w500
+                | Мы лечим #[span.color-accent.text-w700 каждого пациента]
+                br
+                | как своего самого близкого человека
 
-        div.familiar-person__content
-            div.familiar-person__card.position-relative
-                div.familiar-person__img-container.img-container.position-absolute
-                    img(src="/images/familiar-person-img.png" alt="Лившиц Татьяна Львовна" loading="lazy").hidden-mobile
+            div.familiar-person__content
+                div.familiar-person__card.position-relative
+                    div.familiar-person__img-container.img-container.position-absolute
+                        img(src="/images/familiar-person-img.png" alt="Лившиц Татьяна Львовна" loading="lazy").hidden-mobile
 
-                div.familiar-person__card-content
-                    p.familiar-person__quote.text-w500.position-relative Для каждого врача нашей клиники здоровье пациента стоит на первом месте. Поэтому мы предлагаем оптимальные для пациента методы восстановления зубов.
+                    div.familiar-person__card-content
+                        p.familiar-person__quote.text-w500.position-relative Для каждого врача нашей клиники здоровье пациента стоит на первом месте. Поэтому мы предлагаем оптимальные для пациента методы восстановления зубов.
 
-                    div.familiar-person__person.position-relative(style="--bg: url(/images/familiar-person-img.png)")
-                        h4.familiar-person__name.text-w700.color-blue Лившиц Татьяна Львовна
+                        div.familiar-person__person.position-relative(style="--bg: url(/images/familiar-person-img.png)")
+                            h4.familiar-person__name.text-w700.color-blue Лившиц Татьяна Львовна
 
-                        p.familiar-person__job Главный врач «Стоматологии доктора Лившиц», стоматолог-терапевт-ортопед со стажем 29 лет
+                            p.familiar-person__job Главный врач «Стоматологии доктора Лившиц», стоматолог-терапевт-ортопед со стажем 29 лет
 
-            ul.familiar-person__list.flex.flex-column
-                each item in familiarPerson
-                    li.familiar-person__item.flex
-                        div.familiar-person__icon.flex-center(class=item.class)
-                            img(src=item.img alt="" loading="lazy")
+                ul.familiar-person__list.flex.flex-column
+                    each item in familiarPerson
+                        li.familiar-person__item.flex
+                            div.familiar-person__icon.flex-center(class=item.class)
+                                img(src=item.img alt="" loading="lazy")
 
-                        div.familiar-person__text-block
-                            h4.familiar-person__item-title.text-w700= item.title
+                            div.familiar-person__text-block
+                                h4.familiar-person__item-title.text-w700= item.title
 
-                            p.familiar-person__item-text= item.text
+                                p.familiar-person__item-text= item.text

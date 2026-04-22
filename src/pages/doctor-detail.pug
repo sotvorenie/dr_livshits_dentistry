@@ -1,0 +1,106 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/common/person
+include ../components/common/video-btn
+include ../components/common/product-info
+
+block title
+    | Лившиц Татьяна Львовна
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лившиц Татьяна Львовна"])
+
+    section.person-list.section-mb-72
+        div.person-list__inner.container
+            each item, index in doctorDetailPersons
+                +person(item, index % 2 === 0, true)
+
+    section.about-doctor.section-border-block.section
+        div.about-doctor__inner.container.flex.flex-align-center
+            div.about-doctor__video.img-container.video-player.position-relative
+                video(src="/videos/video.mp4" playsinline).js-video-player
+
+                +video-btn()
+
+            div.about-doctor__card
+               h4.about-doctor__text.text-w500 «Мой успех – это счастливые улыбки моих пациентов. В них воплощена моя любовь к людям, к моей работе. Я постоянно учусь новому в стоматологии. Каждый день, с каждым своим пациентом я выкладываюсь на 100% своих возможностей, знаний, умений и любви».
+
+    section.education.section
+        div.education__inner.container
+            h1.education__title.section__title Образование
+
+            div.education__slider-container.position-relative
+                div.education__slider.swiper.text-center
+                    div.swiper-wrapper
+                        each item in education
+                            div.education__card.swiper-slide.position-relative
+                               div.icon
+                                   div.icon__wrapper
+                                      img(src=item.img alt=item.title)
+
+                               h4.education__name.text-w700= item.title
+
+                               p.education__text= item.text
+
+
+                button(type="button" aria-label="Предыдущий слайд").education__btn.prev.swiper-arrow
+                    include ../components/icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").education__btn.next.swiper-arrow
+                    include ../components/icons/swiper-arrow
+
+    section.certificates.section.section-border-top
+        div.certificates__inner.container
+            h1.certificates__title.section__title Дополнительное образование и сертификаты
+
+            div.certificates__slider-container.position-relative
+                div.certificates__slider.swiper.text-center
+                    div.swiper-wrapper
+                        each item in certificates
+                            div.certificates__card.swiper-slide.position-relative
+                                img(src=item alt="")
+
+
+                button(type="button" aria-label="Предыдущий слайд").certificates__btn.prev.swiper-arrow
+                    include ../components/icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").certificates__btn.next.swiper-arrow
+                    include ../components/icons/swiper-arrow
+
+    section.basic-services.section.section-border-block
+        div.basic-services__inner.container
+            h1.basic-services__title.text-center Основные услуги врача
+
+            div.basic-services__slider-container.position-relative
+                div.basic-services__slider.swiper.text-center
+                    div.swiper-wrapper
+                        each item in basicServices
+                            div.basic-services__card.swiper-slide.position-relative
+                                div.icon.icon--big
+                                    div.icon__wrapper
+                                        img(src=item.img alt="")
+
+                                h4.basic-services__name.text-w500= item.title
+
+                                a(href="#").basic-services__link.button.dark.w-100 Подробнее
+
+                button(type="button" aria-label="Предыдущий слайд").basic-services__btn.prev.swiper-arrow
+                    include ../components/icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").basic-services__btn.next.swiper-arrow
+                    include ../components/icons/swiper-arrow
+
+    section.doctor-work.section
+        div.doctor-work__inner.container
+            h1.doctor-work__title.text-center Работы врача
+
+            div.doctor-work__slider-container.position-relative
+                div.doctor-work__slider.swiper
+                    div.swiper-wrapper
+                        each item in Array(3)
+                            div.swiper-slide
+                                +product-info()
+
+
+                button(type="button" aria-label="Предыдущий слайд").doctor-work__btn.prev.swiper-arrow
+                    include ../components/icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").doctor-work__btn.next.swiper-arrow
+                    include ../components/icons/swiper-arrow

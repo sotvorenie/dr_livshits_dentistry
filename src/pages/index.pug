@@ -4,30 +4,33 @@ include ../components/blocks/welcome
 include ../components/blocks/awards
 include ../components/common/consultation
 include ../components/blocks/team-dentists
+include ../components/blocks/principles-operation
+include ../components/blocks/proud-reviews
+include ../components/blocks/index/contacts
 
 block title
     | Главная
 
 block content
-    +awards
+    +awards('section-mb-72')
 
     include ../components/blocks/index/dr-livshits
 
-    include ../components/blocks/principles-operation
+    +principles-operation('section-mb-72 section')
 
-    include ../components/blocks/proud-reviews
+    +proud-reviews('section-mb-72 section-border-block')
 
     include ../components/blocks/index/quote
 
-    +team-dentists()
+    +team-dentists('section section-border-block')
 
     include ../components/blocks/index/honors
 
-    +consultation()
+    +consultation('section')
 
-    +welcome()
+    +welcome('section section-border-block')
 
-    include ../components/blocks/index/contacts
+    +contacts('section')
 
 block footer
     +footer(0)

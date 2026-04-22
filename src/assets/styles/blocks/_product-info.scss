@@ -1,0 +1,27 @@
+@use '../helpers' as *;
+
+.product-info {
+
+  &__title {
+    @include fluid-text(27, 18);
+
+    font-family: var(--font-family-base);
+    margin-bottom: fluid(24, 16);
+  }
+
+  &__block {
+    @include fluid-text(18, 14);
+
+    line-height: 1.66;
+
+    &:not(:last-child) {
+      margin-bottom: fluid(24, 12);
+    }
+
+    a {
+      display: inline;
+      color: var(--color-blue-dark);
+      text-decoration: underline;
+    }
+  }
+}

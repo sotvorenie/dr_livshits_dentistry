@@ -1,7 +1,7 @@
-mixin awards(showTeam = true, isGray = false, img = '/images/index/team-awards.png', showTitle = false, titleText = '')
-    section.awards.section-mb-72(class= [
-        showTeam ? '' : 'section',
-        isGray ? 'is-gray' : ''
+mixin awards(className = '', showTeam = true, isGray = false, img = '/images/index/team-awards.png', showTitle = false, titleText = '')
+    section.awards(class= [
+        isGray ? 'is-gray' : '',
+        className
     ])
         div.awards__inner.container
             if showTitle

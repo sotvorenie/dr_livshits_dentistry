@@ -1,5 +1,5 @@
-mixin person(item, isLeft = true)
-    div.person(class= isLeft ? '' : 'is-right')
+mixin person(item, isLeft = true, hasAwards = false)
+    div.person(class= [isLeft ? '' : 'is-right', hasAwards ? 'has-awards' : ''])
         div.person__card.flex
             div.person__info.position-relative
                 div.person__img-container.img-container.position-absolute
@@ -19,36 +19,64 @@ mixin person(item, isLeft = true)
 
                         p.person__experience.text-w500.color-accent= item.experience
 
-            div.person__review.position-relative
-                img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.position-absolute
+            div.person__right(class= hasAwards ? 'flex flex-column' : '')
+                div.person__review.position-relative
+                    img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.position-absolute
 
-                div.person__review-content
-                    div.person__review-left
-                        p.person__review-name.color-blue.text-w500 Пациент +7 938 12ХХХХХ
+                    div.person__review-content
+                        div.person__review-left
+                            p.person__review-name.color-blue.text-w500 Пациент +7 938 12ХХХХХ
 
-                        p.person__review-date 25 декабря 2022 в 14:30
+                            p.person__review-date 25 декабря 2022 в 14:30
 
-                        div.person__review-rating.flex.flex-align-center
-                            include ../icons/person-star
+                            div.person__review-rating.flex.flex-align-center
+                                include ../icons/person-star
 
-                            p 5.0
+                                p 5.0
 
-                            span Отлично
+                                span Отлично
 
-                        div.person__review-security.flex.flex-align-center
-                            include ../icons/person-security
+                            div.person__review-security.flex.flex-align-center
+                                include ../icons/person-security
 
-                            span Отзыв проверен
+                                span Отзыв проверен
 
-                    div.person__review-right
-                        div.person__review-expandable
-                            div.person__review-block
-                                p.person__review-title.text-w500 История пациента
-                                p.person__review-message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
-                            div.person__review-block
-                                p.person__review-title.text-w500 Понравилось
-                                p.person__review-message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+                        div.person__review-right
+                            div.person__review-expandable
+                                div.person__review-block
+                                    p.person__review-title.text-w500 История пациента
+                                    p.person__review-message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
+                                div.person__review-block
+                                    p.person__review-title.text-w500 Понравилось
+                                    p.person__review-message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
 
-                        button(type="button").person__review-more.color-blue.visible-mobile.text-w500 Читать полностью
+                                if hasAwards
+                                    div.person__review-block.visible-mobile
+                                        p.person__review-title.text-w500 Не понравилось
+                                        p.person__review-message Не может что-то не нравиться, когда все идеально.
 
-        a(href="#").person__link.button.dark(class= isLeft ? '' : 'is-right') Подробнее о враче
+                                    div.person__last-reception.visible-mobile.flex
+                                        img(src="/icons/person-calendar.svg" alt="" loading="lazy" width="16" height="16")
+
+                                        div.person__last-reception-right
+                                            p.text-w500 Приём был в декабре 2022
+                                            p.text-w500 «Стоматология доктора Лившиц» - ул. Торжковская, д. 13, корп. 1
+
+                            button(type="button").person__review-more.color-blue.visible-mobile.text-w500 Читать полностью
+
+                if hasAwards
+                    ul.person__awards.flex
+                        li.person__award
+                            img(src="images/index/honor-2.svg").person__award-img
+
+                            p.person__awards-name Гран-при ПроДокторов 2023: клиники
+
+                        li.person__award
+                            img(src="images/index/honor-2.svg").person__award-img
+
+                            p.person__awards-name Гран-при ПроДокторов 2023: клиники
+
+        a(href="/doctor-detail").person__link.button.dark(class= [isLeft ? '' : 'is-right', hasAwards ? 'visually-hidden' : '']) Подробнее о враче
+
+        if hasAwards
+            a(href="#").button.accent.w-250.m-auto Записаться на прием

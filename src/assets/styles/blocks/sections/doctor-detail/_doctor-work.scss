@@ -1,0 +1,8 @@
+@use '../../../helpers' as *;
+
+.doctor-work {
+
+  &__title {
+    margin-bottom: fluid(48, 40);
+  }
+}

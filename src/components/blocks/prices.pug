@@ -1,5 +1,5 @@
-mixin prices(titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '', sectionClass = '')
-    section.prices.section(class=sectionClass)
+mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '')
+    section.prices(class=className)
         div.prices__inner.container
             h2.prices__title.color-blue.text-center= titleText
 

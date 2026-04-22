@@ -12,6 +12,9 @@
 @use 'blocks/button';
 @use 'blocks/input';
 @use 'blocks/form';
+@use 'blocks/icon';
+@use 'blocks/slider';
+@use 'blocks/product-info';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
@@ -41,3 +44,9 @@
 @use 'blocks/sections/index/quote';
 @use 'blocks/sections/index/honors';
 @use 'blocks/sections/index/contacts';
+
+@use 'blocks/sections/doctor-detail/about-doctor';
+@use 'blocks/sections/doctor-detail/education';
+@use 'blocks/sections/doctor-detail/certificates';
+@use 'blocks/sections/doctor-detail/basic-services';
+@use 'blocks/sections/doctor-detail/doctor-work';

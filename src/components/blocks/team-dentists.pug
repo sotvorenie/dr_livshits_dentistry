@@ -1,5 +1,5 @@
-mixin team-dentists(isFull = false, className = '')
-    section.team-dentists.section-mb-72(class=[className, isFull ? 'section-border-block' : ''])
+mixin team-dentists(className = '', isFull = true)
+    section.team-dentists(class=className)
         div.team-dentists__inner.container
             if isFull
                 h3.team-dentists__title.text-center.text-w600

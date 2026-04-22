@@ -1,0 +1,40 @@
+@use '../../../helpers' as *;
+
+.education {
+
+  &__title {
+    margin-bottom: fluid(48, 24);
+  }
+
+  &__slider {
+    padding-top: rem(32) !important;
+    padding-right: 1px !important;
+    padding-bottom: 1px !important;
+
+    @include mobile {
+      padding-top: rem(20) !important;
+    }
+  }
+
+  &__card {
+    border: var(--border);
+    border-radius: var(--radius-big);
+    padding: rem(48) rem(24) rem(24);
+
+    @include mobile {
+      padding: rem(36) rem(16) rem(16);
+    }
+  }
+
+  &__name {
+    @include fluid-text(22, 16);
+
+    font-family: var(--font-family-base);
+    line-height: 1.45;
+    margin-bottom: rem(16);
+  }
+
+  &__text {
+    line-height: 1.87;
+  }
+}

@@ -3,10 +3,6 @@
 .principles-operation {
   background: var(--color-blue);
 
-  &__inner {
-    padding-block: fluid(40, 24) fluid(64, 24);
-  }
-
   &__list {
     --row-gap: #{rem(16)};
     --column-gap: #{rem(20)};

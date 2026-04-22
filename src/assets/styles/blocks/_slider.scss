@@ -1,0 +1,76 @@
+@use '../helpers' as *;
+
+.slider {
+  position: relative;
+  aspect-ratio: 580/309;
+  background: var(--color-gray-bg);
+  border-radius: 0 0 var(--radius-big) var(--radius-big);
+
+  &:not(:last-child) {
+    margin-bottom: fluid(24, 17);
+  }
+
+  &__slide {
+    position: absolute;
+    inset: 0;
+
+    .slider__img {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.before {
+      z-index: 2;
+      clip-path: polygon(0 0, var(--pos) 0, var(--pos) 100%, 0 100%);
+    }
+
+    &.after {
+      z-index: 1;
+      clip-path: polygon(var(--pos) 0, 100% 0, 100% 100%, var(--pos) 100%);
+    }
+  }
+
+  &__badge {
+    @include square(65);
+
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+    &.before {
+      left: 0;
+    }
+    &.after {
+      right: 0;
+    }
+  }
+
+  &__input {
+    inset: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 20;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--pos);
+    z-index: 15;
+    pointer-events: none;
+  }
+
+  &__button {
+    @include abs-center;
+
+    width: rem(82);
+    height: rem(31);
+  }
+}

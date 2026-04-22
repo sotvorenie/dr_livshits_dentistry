@@ -1,7 +1,7 @@
 include form
 
-mixin consultation(img = '/images/consultation-team.png', isLine = false)
-    section.consultation.section(class=isLine ? 'is-on-line' : '')
+mixin consultation(className = '', img = '/images/consultation-team.png', isLine = false)
+    section.consultation(class=[className, isLine ? 'is-on-line' : ''])
         div.consultation__inner.container
 
             div.consultation__content.position-relative

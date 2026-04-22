@@ -2,16 +2,8 @@
 
 .welcome {
 
-  &.section {
+  &:not(.is-transparent) {
     background: var(--color-blue);
-  }
-
-  &:not(.section) {
-    border-bottom: var(--border);
-  }
-
-  @include mobile {
-    border-top: var(--border);
   }
 
   &__title {
@@ -39,10 +31,5 @@
       line-height: 0.95;
       z-index: 10;
     }
-  }
-
-  &--transparent {
-    padding-block: fluid(72, 40);
-    border-block: var(--border-alt);
   }
 }

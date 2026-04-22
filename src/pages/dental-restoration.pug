@@ -8,6 +8,8 @@ include ../components/blocks/with-love-2
 include ../components/common/person
 include ../components/common/consultation
 include ../components/blocks/welcome
+include ../components/blocks/comparison
+include ../components/blocks/quote
 
 block title
     | Эстетическая реставрация зубов (виниры, коронки)
@@ -25,14 +27,14 @@ block content
 
             include ../components/blocks/banner-content
 
-    include ../components/blocks/comparison
+    +comparison('section section-border-block section-mb-72')
 
     section.info.info--without-border.section.section-mb-72
         div.info__inner.container
             div.info__container
                 div.info__block
-                    div.info__icon
-                        div.info__icon-bg.flex-center.blue
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
                             img(src="/icons/info/1.svg")
 
                     div.info__content.flex.flex-align-center
@@ -44,8 +46,8 @@ block content
 
                 div.info__row.row
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/2.svg")
 
                         div.info__content
@@ -54,8 +56,8 @@ block content
                                 p восстановление зубов при помощи пломбировочного материала или при помощи композитных виниров! Как правило, применяется на жевательных зубах при сильном разрушении, ведь композитный материал не имеет естественного блеска собственных зубов.
 
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/3.svg")
 
                         div.info__content
@@ -63,21 +65,21 @@ block content
                                 p.info__name.color-accent.text-w700.text-upper Виниры керамические -
                                 p рекомендация стоматологов и «золотой стандарт» для создания эстетики в зоне улыбки! Они не только маскируют недостатки собственных зубов, но и выдерживают жевательную нагрузку!
 
-    +awards(false, true)
+    +awards('section section-mb-72', false, true)
 
-    +prices('Виды эстетической реставрации и стоимость', dentalRestorationArr, 'Узнать подробнее', 'text-upper', 'dark')
+    +prices('section section-border-block', 'Виды эстетической реставрации и стоимость', dentalRestorationArr, 'Узнать подробнее', 'text-upper', 'dark')
 
-    +we-care('/images/we-care-2.png', false)
+    +we-care('section', '/images/we-care-2.png', false)
 
-    +with-lowe-2('section-mb-72')
+    +with-lowe-2('section-pb-72 section-border-bottom section-mb-72')
 
-    include ../components/blocks/quote
+    +quote('section section-mb-72')
 
     section.person-list.section.section-border-block
         div.person-list__inner.container
             each item, index in dentalRestorationPersons
                 +person(item, index % 2 === 0)
 
-    +consultation('/images/consultation-team-3.png')
+    +consultation('section', '/images/consultation-team-3.png')
 
-    +welcome(false, 'section-mb-72')
+    +welcome('section section-mb-72', false, 'section-mb-72')

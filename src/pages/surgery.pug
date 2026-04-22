@@ -7,6 +7,11 @@ include ../components/blocks/awards
 include ../components/common/person
 include ../components/blocks/welcome
 include ../components/common/consultation
+include ../components/blocks/comparison
+include ../components/blocks/quote
+include ../components/blocks/principles-operation
+include ../components/blocks/proud-reviews
+include ../components/blocks/other-services
 
 block title
     | Хирургия
@@ -28,29 +33,157 @@ block content
 
             include ../components/blocks/banner-content
 
-    include ../components/blocks/comparison
+    +comparison('section section-mb-72 section-border-block')
 
-    include ../components/blocks/info
+    section.info.section.section-mb-72.section-border-bottom
+        div.info__inner.container
+            div.info__container
+                div.info__block
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
+                            img(src="/icons/info/1.svg")
 
-    +prices('Стоимость удаления зубов', surgeryArr, 'Записаться на консультацию', '', 'accent')
+                    div.info__content.flex.flex-align-end
+                        div.info__text-block
+                            h2.info__text.text-w500 Бережное удаление зубов в условиях нашей клиники всегда #[span.color-blue.text-w700 безболезненная процедура!]
 
-    +we-care
+                            a(href="#").info__btn.button.dark.hidden-mobile Подробнее
 
-    +awards(false)
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
 
-    include ../components/blocks/quote
+                        a(href="#").info__btn.button.dark.visible-mobile Подробнее
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/2.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p Аккуратно удаляя зубы с разделением корней, врач  «расшатывает» зуб в костной ткани, отделяя каждый корень от кости, разделяет его на несколько частей и отдельно удаляет каждую часть для того, #[span.color-accent.text-w700 чтобы максимально сохранить собственную костную ткань для последующей установки импланта.]
+
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/3.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p Удаление зуба с разделением корней в большинстве случаев позволяет обойтись без наращивания костной ткани, использования дорогостоящего искусственного компонента и долгого ожидания результата. #[span.color-accent.text-w700 Имплант можно установить сразу в день удаления! Не потребуется ожидание в два-три месяца!]
+
+            h2.info__subtitle.text-w500.text-center В каких случаях #[span.color-accent.text-w700 необходимо удаление] восьмых зубов:
+
+
+            div.info__block
+                div.icon
+                    div.icon__wrapper.flex-center.blue
+                        img(src="/icons/info/4.svg")
+
+                div.info__content.flex.flex-align-center
+                    div.info__text-block
+                        h2.info__text.text-w500 Удаление ретинированных, дистопированных, сверхкомплектных зубов требует от хирурга #[span.color-blue.text-w700 большого опыта и мастерства], поскольку восьмерки — самые сложные зубы в организме человека!
+
+                    div.info__img-container.img-container
+                        img(src="images/info-img.png" alt="")
+
+            div.info__container
+                div.info__block
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
+                            img(src="/icons/info/5.svg")
+
+                    div.info__content.flex.flex-align-center
+                        div.info__text-block
+                            h2.info__text.text-w500 Наши доктора имеют большой опыт по удалению самых сложных зубов, а так же дополнительную специализацию в области челюстно-лицевой хирургии, что позволяет им безболезненно и быстро, #[span.color-blue.text-w700 без негативных последствий удалять даже самые сложные восьмерки]!
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/6.svg")
+
+                        div.info__content.flex.flex-column
+                            div.info__text-block
+                                p.info__text--subtitle.color-accent.text-w700.text-center Зубы мудрости (восьмерки) рекомендуют к удалению, если:
+
+                                ul.info__list
+                                    li.info__item для них #[span.color-blue.text-w700 нет места в челюсти] и при прорезывании они могут образовать скученность, давить на соседние зубы и испортить прикус;
+                                    li.info__item восьмерки #[span.color-blue.text-w700 прорезаются только на половину] или на треть, некоторые выходят под наклоном или горизонтально, что затрудняет их выход и ставит под угрозу здоровье корней соседних зубов, а также травмирует слизистую и язык.
+
+                            a(href="#").info__btn.button.dark.m-auto Подробнее
+
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/7.svg")
+
+                        div.info__content.flex.flex-column
+                            div.info__text-block
+                                p.info__text--subtitle.color-accent.text-w700.text-center Зубы мудрости (восьмерки) рекомендуют к удалению, если:
+
+                                ul.info__list
+                                    li.info__item восьмерки прорезаются через очень плотный слой костной ткани, поэтому на выходе #[span.color-blue.text-w700 нередко имеют уже кариес или пульпит];
+                                    li.info__item если при прорезывании над восьмым зубом #[span.color-blue.text-w700 образовался «десневой капюшон»] и такому зубу сложно провести гигиену: под мягкими тканями остаются налет и бактерии, образуя перикоронарит — воспаление мягких тканей вокруг зуба;
+                                    li.info__item #[span.color-blue.text-w700 киста ретинированного зуба] мудрости — показание к срочному удалению.
+
+                            a(href="#").info__btn.button.dark.m-auto Подробнее
+
+            div.info__container
+                div.info__block
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
+                            img(src="/icons/info/5.svg")
+
+                    div.info__content.flex.flex-align-center
+                        div.info__text-block
+                            h2.info__text.text-w500 Для самых сложных удалений, удалений в самых труднодоступных областях #[span.color-blue.text-w700 «золотым стандартом» в хирургии] считается современная ультразвуковая хирургическая #[span.color-blue.text-w700 система VarioSurg].
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/6.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p VarioSurg предоставляет возможность стоматологу-хирургу проводить #[span.color-blue.text-w700 атравматичные удаления], без перегрева костной ткани, применяется так же с целью сохранения кости для дальнейшей имплантации. Гарантирует минимальное травмирование и максимальный комфорт пациента во время проведения сложных удалений.
+
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/7.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p Луч лазера VarioSurg обладает #[span.color-blue.text-w700 дезинфицирующими свойствами]. Соседние ткани во время процедуры не травмируются, не возникает кровотечения, наложения швов после операции не требуется.
+
+    +prices('section section-border-block', 'Стоимость удаления зубов', surgeryArr, 'Записаться на консультацию', '', 'accent')
+
+    +we-care('section')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +quote('section section-mb-72')
 
     section.person-list.section.section-mb-72.section-border-block
         div.person-list__inner.container
             each item, index in surgeryPersons
                 +person(item, index % 2 === 0)
 
-    include ../components/blocks/principles-operation
+    +principles-operation('section section-mb-72')
 
-    include ../components/blocks/proud-reviews
+    +proud-reviews('section section-border-block')
 
-    include ../components/blocks/other-services
+    +other-services('section section-border-bottom section-mb-72')
 
-    +welcome(false)
+    +welcome('section', false)
 
-    +consultation('/images/consultation-team-2.png', true)
+    +consultation('section', '/images/consultation-team-2.png', true)

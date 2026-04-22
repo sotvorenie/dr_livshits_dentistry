@@ -1,0 +1,48 @@
+@use '../../../helpers' as *;
+
+.about-doctor {
+  background: var(--color-beige);
+
+  &__inner {
+    gap: fluid(92, 16);
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__video {
+    aspect-ratio: 190/313;
+    border-radius: var(--radius-big);
+    background: var(--color-gray-bg);
+
+    @include mobile-above {
+      flex: 0 0 rem(190);
+    }
+
+    @include mobile {
+      width: rem(125);
+      aspect-ratio: 125/204;
+    }
+  }
+
+  &__card {
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    padding: fluid(43, 16) fluid(56, 16);
+    flex-grow: 1;
+
+    @include mobile-above {
+      margin-right: rem(56);
+    }
+
+    @include mobile {
+      border-top: var(--border-alt);
+      border-bottom: var(--border-alt);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family-base);
+  }
+}

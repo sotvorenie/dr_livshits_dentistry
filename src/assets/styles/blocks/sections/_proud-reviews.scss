@@ -1,7 +1,6 @@
 @use '../../helpers' as *;
 
 .proud-reviews {
-  border-block: var(--border-alt);
 
   &__slider {
     padding: rem(28) rem(1) rem(1) 0 !important;

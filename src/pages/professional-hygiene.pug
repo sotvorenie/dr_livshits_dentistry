@@ -10,6 +10,7 @@ include ../components/common/consultation
 include ../components/blocks/welcome
 include ../components/blocks/counter
 include ../components/blocks/team-dentists
+include ../components/blocks/comparison
 
 block title
     | Профессиональная гигиена полости рта
@@ -27,14 +28,14 @@ block content
 
             include ../components/blocks/banner-content
 
-    include ../components/blocks/comparison
+    +comparison('section section-border-block section-mb-72')
 
-    section.info.section.section-mb-72
+    section.info.section.section-mb-72.section-border-block
         div.info__inner.container
             div.info__container
                 div.info__block
-                    div.info__icon
-                        div.info__icon-bg.flex-center.blue
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
                             img(src="/icons/info/1.svg")
 
                     div.info__content.flex.flex-align-center
@@ -46,8 +47,8 @@ block content
 
                 div.info__row.row
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/2.svg")
 
                         div.info__content
@@ -56,8 +57,8 @@ block content
                                 p позволяет снять все твёрдые зубные отложения (зубной камень), очистить поверхность зубов от пигментированного (тёмного) налета. После её проведения зубы могут стать на два тона светлее!
 
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/3.svg")
 
                         div.info__content
@@ -65,16 +66,16 @@ block content
                                 p.info__name.color-accent.text-w700.text-upper Скейлинг –
                                 p является гигиенической процедурой, но более длительной и сложной. Помимо пяти этапов стандартной гигиены полости рта, включает чистку пародонтальных карманов, удаляет поддесневой налёт.
 
-    +counter('section-border-block section-mb-72')
+    +counter('section section-border-block section-mb-72')
 
-    +awards(false, true)
+    +awards('section section-mb-72', false, true)
 
-    section.info.section.section-mb-72.section-border-top
+    section.info.section.section-mb-72.section-border-block
         div.info__inner.container
             div.info__container
                 div.info__block
-                    div.info__icon
-                        div.info__icon-bg.flex-center.blue
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
                             img(src="/icons/info/1.svg")
 
                     div.info__content.flex.flex-align-end
@@ -90,8 +91,8 @@ block content
 
                 div.info__row.row
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/2.svg")
 
                         div.info__content
@@ -99,23 +100,23 @@ block content
                                 p В нашей клинике используется система отбеливания последнего поколения – «Philips Zoom WhiteSpeed» (Zoom-4). Забудьте о боли и чувствительности зубов! В устройство новой лампы на смену «горячему» свету пришли «холодные» светодиоды. Процедура стала совершенно безболезненна и комфортна!
 
                     div.info__col.col-12.mb-col-6
-                        div.info__icon
-                            div.info__icon-bg.flex-center.accent
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
                                 img(src="/icons/info/3.svg")
 
                         div.info__content
                             div.info__text-block.text-center
                                 p Под воздействием света лампы из геля высвобождаются молекулы активного кислорода. Они глубоко проникают в эмаль зубов с дентином и бережно устраняют даже стойкую пигментацию. Для достижения оптимального результата необходимы 3-4 подхода по 15 минут и Ваша белоснежная улыбка будет долго радовать Вас и близких!
 
-    +prices('Услуги и стоимость', professionalHygieneArr, 'Узнать подробнее', 'text-upper', 'dark')
+    +prices('section section-border-block', 'Услуги и стоимость', professionalHygieneArr, 'Узнать подробнее', 'text-upper', 'dark')
 
-    +we-care('/images/we-care-2.png', false)
+    +we-care('section', '/images/we-care-2.png', false)
 
-    +team-dentists(false)
+    +team-dentists('section section-mb-72', false)
 
     section.person-list.section.section-border-block
         div.person-list__inner.container
             each item, index in professionalHygienePersons
                 +person(item, index % 2 === 0)
 
-    +consultation('/images/consultation-team-3.png')
+    +consultation('section', '/images/consultation-team-3.png')

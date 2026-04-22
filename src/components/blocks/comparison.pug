@@ -1,25 +1,26 @@
-section.comparison.section.section-mb-72
-    div.comparison__inner.container
-        h1.comparison__title.section__title.text-center.text-w500 Вам больше не нужно искать и сравнивать, Вы нашли #[span.color-blue.text-w500 идеальное решение] и останетесь довольны результатом!
+mixin comparison(className = '')
+    section.comparison(class=className)
+        div.comparison__inner.container
+            h1.comparison__title.section__title.text-center.text-w500 Вам больше не нужно искать и сравнивать, Вы нашли #[span.color-blue.text-w500 идеальное решение] и останетесь довольны результатом!
 
-        ul.comparison__list.flex.flex-column
-            li.comparison__item.flex.flex-align-center
-                div.comparison__icon.blue-light.flex-center
-                    img(src="/icons/comparison/1.svg" alt="")
-                p.h4.comparison__text #[span.color-blue.text-w500 Лучшая цена на премиум качество]: лечение проводится строго по мировым стандартам
-            li.comparison__item.flex.flex-align-center
-                div.comparison__icon.blue.flex-center
-                    img(src="/icons/comparison/2.svg" alt="")
-                p.h4.comparison__text #[span.color-blue.text-w500 Гарантируем] бесболезненность, европейскую анестезию, стерильность и безопасность
-            li.comparison__item.flex.flex-align-center
-                div.comparison__icon.accent.flex-center
-                    img(src="/icons/comparison/3.svg" alt="")
-                p.h4.comparison__text #[span.color-blue.text-w500 Ведущие врачи СПб] с опытом работы от 12 лет работают в одной из лучших стоматологических клиник
-            li.comparison__item.flex.flex-align-center
-                div.comparison__icon.blue.flex-center
-                    img(src="/icons/comparison/4.svg" alt="")
-                p.h4.comparison__text #[span.color-accent.text-w500 1000+ отзывов] от благодарных пациентов за 17 лет работы
-            li.comparison__item.flex.flex-align-center
-                div.comparison__icon.blue-light.flex-center
-                    img(src="/icons/comparison/5.svg" alt="")
-                p.h4.comparison__text #[span.color-blue.text-w500 Рейтинг клиники 5 звезд], входит в ТОП-5 лучших стоматологий СПб в независимых рейтингах
+            ul.comparison__list.flex.flex-column
+                li.comparison__item.flex.flex-align-center
+                    div.comparison__icon.blue-light.flex-center
+                        img(src="/icons/comparison/1.svg" alt="")
+                    p.h4.comparison__text #[span.color-blue.text-w500 Лучшая цена на премиум качество]: лечение проводится строго по мировым стандартам
+                li.comparison__item.flex.flex-align-center
+                    div.comparison__icon.blue.flex-center
+                        img(src="/icons/comparison/2.svg" alt="")
+                    p.h4.comparison__text #[span.color-blue.text-w500 Гарантируем] бесболезненность, европейскую анестезию, стерильность и безопасность
+                li.comparison__item.flex.flex-align-center
+                    div.comparison__icon.accent.flex-center
+                        img(src="/icons/comparison/3.svg" alt="")
+                    p.h4.comparison__text #[span.color-blue.text-w500 Ведущие врачи СПб] с опытом работы от 12 лет работают в одной из лучших стоматологических клиник
+                li.comparison__item.flex.flex-align-center
+                    div.comparison__icon.blue.flex-center
+                        img(src="/icons/comparison/4.svg" alt="")
+                    p.h4.comparison__text #[span.color-accent.text-w500 1000+ отзывов] от благодарных пациентов за 17 лет работы
+                li.comparison__item.flex.flex-align-center
+                    div.comparison__icon.blue-light.flex-center
+                        img(src="/icons/comparison/5.svg" alt="")
+                    p.h4.comparison__text #[span.color-blue.text-w500 Рейтинг клиники 5 звезд], входит в ТОП-5 лучших стоматологий СПб в независимых рейтингах

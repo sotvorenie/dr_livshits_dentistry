@@ -1,30 +1,31 @@
-section.other-services.section-mb-72
-    div.other-services__inner.container
-        h1.other-services__title.section__title.text-center
-            | #[span.text-w700.color-blue Другие услуги]
-            br
-            |хирургической стоматологии
+mixin other-services(className = '')
+    section.other-services(class=className)
+        div.other-services__inner.container
+            h1.other-services__title.section__title.text-center
+                | #[span.text-w700.color-blue Другие услуги]
+                br
+                |хирургической стоматологии
 
-        div.other-services__slider-container.position-relative
-            div.other-services__slider.swiper
-                div.swiper-wrapper
-                    each item in otherServices
-                        li.other-services__item.flex-column.swiper-slide
-                            div.other-services__img-container.img-container.w-100
+            div.other-services__slider-container.position-relative
+                div.other-services__slider.swiper
+                    div.swiper-wrapper
+                        each item in otherServices
+                            li.other-services__item.flex-column.swiper-slide
+                                div.other-services__img-container.img-container.w-100
 
 
-                            div.other-services__info.flex.flex-column
-                                div.other-services__top
-                                    h4.other-services__name.text-center= item.title
+                                div.other-services__info.flex.flex-column
+                                    div.other-services__top
+                                        h4.other-services__name.text-center= item.title
 
-                                    p.other-services__text.text-center= item.text
+                                        p.other-services__text.text-center= item.text
 
-                                div.other-services__bottom
-                                    h3.other-services__price.text-w700.color-blue.text-center= item.price
+                                    div.other-services__bottom
+                                        h3.other-services__price.text-w700.color-blue.text-center= item.price
 
-                                    a(href="#").other-services__link.button.dark.w-100 Подробнее
+                                        a(href="#").other-services__link.button.dark.w-100 Подробнее
 
-            button(type="button" aria-label="Предыдущий слайд").other-services__btn.prev.swiper-arrow
-                include ../icons/swiper-arrow
-            button(type="button" aria-label="Следующий слайд").other-services__btn.next.swiper-arrow
-                include ../icons/swiper-arrow
+                button(type="button" aria-label="Предыдущий слайд").other-services__btn.prev.swiper-arrow
+                    include ../icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").other-services__btn.next.swiper-arrow
+                    include ../icons/swiper-arrow

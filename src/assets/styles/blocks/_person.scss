@@ -54,8 +54,34 @@
     }
   }
 
+  &:not(.has-awards) {
+
+    .person__card {
+      margin-bottom: rem(24);
+    }
+
+    .person__right {
+      align-self: center;
+    }
+  }
+
+  &.has-awards {
+
+    .person__card {
+      margin-bottom: fluid(56, 24);
+    }
+
+    .person__review {
+      margin-top: rem(10);
+    }
+
+    .person__img-container img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
   &__card {
-    margin-bottom: rem(24);
     height: max(#{rem(364)}, 100%);
 
     @include tablet {
@@ -90,8 +116,8 @@
   }
 
   &__img-container {
-    width: 59%;
-    height: 100%;
+    width: 58%;
+    height: calc(100% - #{rem(18)});
     aspect-ratio: 341/356;
     max-height: 100%;
     bottom: 0;
@@ -137,7 +163,6 @@
     border-bottom: 2px solid #005A9C;
     padding: rem(24);
     height: fit-content;
-    align-self: center;
     flex-grow: 1;
 
     @include tablet {
@@ -259,6 +284,9 @@
             overflow: hidden;
           }
 
+          .person__last-reception {
+            display: none;
+          }
         }
 
         &.is-expanded {
@@ -299,6 +327,72 @@
 
     @include mobile {
       width: 100%;
+    }
+  }
+
+  &__awards {
+    gap: rem(12);
+
+    @include mobile-above {
+      margin-left: rem(12);
+      margin-top: rem(12);
+      height: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(5);
+    }
+  }
+
+  &__award {
+    height: 100%;
+    position: relative;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-big);
+    padding: rem(16) rem(82) rem(16) rem(16);
+    font-weight: 500;
+    font-family: var(--font-family-accent);
+    min-height: rem(72);
+    display: flex;
+    align-items: center;
+
+    @include mobile-above {
+      flex: 0 0 calc(50% - #{rem(6)});
+    }
+
+    @include mobile {
+      min-height: rem(78);
+      padding: rem(25) rem(95) rem(25) rem(16);
+    }
+
+    img {
+      @include square(64);
+
+      position: absolute;
+      top: 0;
+      right: rem(10);
+
+      @include mobile {
+        right: rem(16);
+      }
+    }
+  }
+
+  &__last-reception {
+    gap: rem(8);
+    padding-top: rem(13);
+
+    img {
+      @include square(16);
+    }
+
+    p {
+      font-size: rem(12);
+
+      &:not(:last-child) {
+        margin-bottom: rem(6);
+      }
     }
   }
 }

@@ -3,10 +3,6 @@
 .team-dentists {
   background: var(--color-blue);
 
-  &__inner {
-    padding-block: fluid(48, 16) fluid(48, 24);
-  }
-
   &__subtitle, &__slider {
     margin-bottom: fluid(48, 29);
   }

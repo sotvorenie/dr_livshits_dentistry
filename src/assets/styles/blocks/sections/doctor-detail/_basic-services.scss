@@ -1,0 +1,36 @@
+@use '../../../helpers' as *;
+
+.basic-services {
+  background: var(--color-blue);
+
+  &__title {
+    margin-bottom: fluid(48, 40);
+  }
+
+  &__slider {
+    padding-top: rem(32) !important;
+    padding-right: 1px !important;
+    padding-bottom: 1px !important;
+  }
+
+  &__card {
+    background: var(--color-light);
+    border: var(--border);
+    padding: rem(56) rem(16) rem(24);
+    display: flex !important;
+    flex-direction: column;
+    gap: fluid(40, 16);
+    border-radius: var(--radius-big);
+
+    @include mobile {
+      padding: rem(48) rem(16) rem(16);
+    }
+  }
+
+  &__name {
+    @include fluid-text(22, 18);
+
+    font-family: var(--font-family-base);
+    flex-grow: 1;
+  }
+}

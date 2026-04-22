@@ -1,7 +1,6 @@
 @use '../../helpers' as *;
 
 .comparison {
-  border-block: var(--border-alt);
 
   &__title {
     margin-bottom: fluid(48, 32);

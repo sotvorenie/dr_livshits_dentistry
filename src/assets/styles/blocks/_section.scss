@@ -10,11 +10,18 @@
     margin-bottom: fluid(72, 40);
   }
 
+  &-pb-72 {
+    padding-bottom: fluid(72, 40);
+  }
+
   &-border-block {
     border-block: var(--border-alt);
   }
   &-border-top {
     border-top: var(--border-alt);
+  }
+  &-border-bottom {
+    border-bottom: var(--border-alt);
   }
 
   &__title {

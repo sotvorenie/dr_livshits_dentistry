@@ -22,4 +22,9 @@
   &.accent {
     background: var(--color-accent);
   }
+
+  &.w-250 {
+    padding-inline: rem(10);
+    min-width: rem(250);
+  }
 }

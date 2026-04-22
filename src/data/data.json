@@ -576,5 +576,58 @@
       "firstJob": "Гигиенист стоматологический",
       "experience": "Опыт работы 13 лет"
     }
+  ],
+  "doctorDetailPersons": [
+    {
+      "img": "/images/person-livshits.png",
+      "name": "Лившиц Татьяна Львовна",
+      "mainJob": "Главный врач и основатель клиники «Стоматология доктора Лившиц»",
+      "firstJob": "Стоматолог-терапевт-ортопед",
+      "secondJob": "Врач высшей категории",
+      "experience": "Опыт работы 28 лет"
+    }
+  ],
+  "education": [
+    {
+      "title": "Основное образование",
+      "text": "СПБГМУ им.ак. И.П.Павлова «Санкт-Петербургский государственный университет», медицинский факультет (специальность «стоматология» Диплом (ЭВ № 456898. от 26.06.1995) с 01.09.1989 по 01.07.1995",
+      "img": "/icons/doctor-detail/education-1.svg"
+    },
+    {
+      "title": "Профессиональная переподготовка",
+      "text": "Профессиональная переподготовка по специальности «стоматология терапевтическая» в ЧОУДПО «Санкт-Петербургский институт стоматологии и постдипломного образования» (сертификат о профессиональной переподготовке 78040007367 №2381) от 29 мая 2018 года",
+      "img": "/icons/doctor-detail/education-2.svg"
+    },
+    {
+      "title": "Профессиональная переподготовка",
+      "text": "Профессиональная переподготовка по специальности «стоматология терапевтическая» в ЧОУДПО «Санкт-Петербургский институт стоматологии и постдипломного образования» (сертификат о профессиональной переподготовке 78040007367 №2381) от 29 мая 2018 года",
+      "img": "/icons/doctor-detail/education-3.svg"
+    }
+  ],
+  "certificates": [
+    "/images/doctor-detail/certificates-1.png",
+    "/images/doctor-detail/certificates-2.png",
+    "/images/doctor-detail/certificates-3.png",
+    "/images/doctor-detail/certificates-4.png",
+    "/images/doctor-detail/certificates-4.png",
+    "/images/doctor-detail/certificates-4.png"
+  ],
+  "basicServices": [
+    {
+      "title": "Название первой услуги в две строки",
+      "img": "/icons/doctor-detail/basic-services-1.svg"
+    },
+    {
+      "title": "Название ещё одной услуги длинное в три строки",
+      "img": "/icons/doctor-detail/basic-services-2.svg"
+    },
+    {
+      "title": "Название ещё одной услуги длинное уже в три большие строки",
+      "img": "/icons/doctor-detail/basic-services-3.svg"
+    },
+    {
+      "title": "Название одной услуги ",
+      "img": "/icons/doctor-detail/basic-services-4.svg"
+    }
   ]
 }

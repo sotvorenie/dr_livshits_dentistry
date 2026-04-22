@@ -1,7 +1,6 @@
 @use '../../helpers' as *;
 
 .familiar-person {
-  border-bottom: var(--border-alt);
 
   &__content {
     gap: fluid(72, 48);

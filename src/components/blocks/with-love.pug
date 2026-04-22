@@ -1,12 +1,9 @@
-include with-love-2
+mixin with-love(className = '')
+    section.with-love(class=className)
+        div.with-love__inner.container
+            h1.with-love__title.text-center Относимся к своим пациентам
+            h1.with-love__subtitle.text-center
+                | #[span.color-accent с уважением и любовью:]
+                | #[span.text-w500 мы не продаем планы лечения, а возвращаем здоровье!]
 
-section.with-love.section
-    div.with-love__inner.container
-        h1.with-love__title.text-center Относимся к своим пациентам
-        h1.with-love__subtitle.text-center
-            | #[span.color-accent с уважением и любовью:]
-            | #[span.text-w500 мы не продаем планы лечения, а возвращаем здоровье!]
-
-        img(src="/images/with-love-img.png" alt="" loading="lazy").with-love__img.w-100
-
-+with-lowe-2()
+            img(src="/images/with-love-img.png" alt="" loading="lazy").with-love__img.w-100
