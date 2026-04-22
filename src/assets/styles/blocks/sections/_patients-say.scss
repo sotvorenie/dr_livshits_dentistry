@@ -1,0 +1,99 @@
+@use '../../helpers' as *;
+
+.patients-say {
+  background: var(--color-beige);
+
+  &__title {
+    margin-bottom: rem(12);
+    line-height: 0.71;
+  }
+
+  &__subtitle {
+    margin-bottom: fluid(24, 12);
+  }
+
+  &__card {
+    background: var(--color-light);
+    border-radius: var(--radius-big-2);
+    padding: fluid(32, 0);
+    margin-bottom: fluid(24, 12);
+
+    &-inner {
+      background: #EFEFEF80;
+      border-radius: var(--radius-big);
+      padding: rem(24) rem(28);
+      box-shadow: 2px -2px 10px 0 #00000026;
+    }
+  }
+
+  &__review, &__message {
+    font-family: var(--font-family-base);
+  }
+
+  &__review {
+    @include fluid-text(26, 16);
+
+    margin-bottom: fluid(52, 16);
+  }
+
+  &__message {
+    @include fluid-text(22, 16);
+
+    font-weight: 400;
+  }
+
+  &__list {
+    gap: fluid(70, 16);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    border-radius: var(--radius-big);
+    box-shadow: -2px 8px 20px 0 #4C4C4C1A;
+    padding: fluid(16, 8) rem(26);
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+    align-items: center;
+    background: var(--color-light);
+  }
+
+  &__img-container {
+    @include flex-center();
+
+    width: 100%;
+    height: rem(45);
+
+    img {
+      max-height: 100%;
+    }
+
+    @include mobile {
+      height: rem(39);
+    }
+  }
+
+  &__rating {
+    gap: rem(8);
+  }
+
+  &__stars {
+    color: var(--color-accent);
+    gap: rem(2);
+
+    svg {
+      @include square(20);
+
+      @include mobile {
+        @include square(16);
+      }
+    }
+  }
+
+  &__reviews-counter {
+    @include fluid-text(12, 10);
+  }
+}

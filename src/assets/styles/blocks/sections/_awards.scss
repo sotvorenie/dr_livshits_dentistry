@@ -2,8 +2,12 @@
 
 .awards {
 
-  &.section {
+  &.section:not(.is-gray) {
     border-block: var(--border-alt);
+  }
+
+  &.is-gray {
+    background: var(--color-gray);
   }
 
   &__header, &__top {

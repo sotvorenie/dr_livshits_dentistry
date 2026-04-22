@@ -1,0 +1,18 @@
+include ../common/form
+
+section.with-love.section.section-border-block
+    div.with-love__inner.container
+        h1.with-love__title.text-center Относимся к своим пациентам
+        h1.with-love__subtitle.text-center
+            | #[span.color-accent с уважением и любовью:]
+            | #[span.text-w500 мы не продаем планы лечения, а возвращаем здоровье!]
+
+        img(src="/images/with-love-img.png" alt="" loading="lazy").with-love__img.w-100
+
+        div.with-love__content.flex.flex-justify-between
+            ul.with-love__list.flex.flex-column
+                li.with-love__item Не заманиваем пациентов скидками и самой низкой ценой, потому что #[span.text-w700.color-accent несём ответственность] за долгосрочный результат нашей работы!
+                li.with-love__item Дешевле протезирование сделать можно, #[span.text-w700.color-accent но может пострадать и качество] и, возможно, здоровье пациента!
+                li.with-love__item Многолетний опыт работы наших стоматологов-ортопедов, собственная цифровая лаборатория, высокопрофессиональный техник в клинике – всё это позволяет нам в кратчайшие сроки гарантировать безупречный результат, которым Вы останетесь довольны!
+
+            +form('Запишитесь на консультацию', 'Записаться на консультацию', 'with-love__form', 'где мы совместно с Вами выберем оптимальный план лечения под Вашу ситуацию', true)

@@ -1,6 +1,10 @@
-mixin form(titleText = '', btnText = '', className = '')
-    form.form(class=className)
-        h3.form__title= titleText
+mixin form(titleText = '', btnText = '', className = '', aboutText = '', isSmall = false)
+    form.form(class=[className, isSmall ? 'is-small' : ''])
+        div.form__top.flex.flex-column
+            h3.form__title= titleText
+
+            if aboutText
+                p.form__about= aboutText
 
         div.form__inputs-block
             div.form__input-wrapper.input__wrapper

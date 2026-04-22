@@ -6,17 +6,39 @@
   padding: fluid(32, 24) fluid(24, 15);
   color: var(--color-light);
   max-width: rem(380);
+  width: 100%;
 
-  &__title, &__inputs-block {
-    margin-bottom: fluid(40, 24);
+  &:not(.is-small) {
+
+    .form__top, .form__inputs-block {
+      margin-bottom: fluid(40, 24);
+    }
   }
 
-  &__title {
-    font-family: var(--font-family-base);
+  &.is-small {
+
+    .form__top, .form__inputs-block {
+      margin-bottom: fluid(32, 24);
+    }
+  }
+
+  &__top {
+    gap: rem(8);
+  }
+
+  &__title, &__about {
 
     @include mobile-above {
       text-align: center;
     }
+  }
+
+  &__title {
+    font-family: var(--font-family-base);
+  }
+
+  &__about {
+    @include fluid-text(14, 12);
   }
 
   &__submit {

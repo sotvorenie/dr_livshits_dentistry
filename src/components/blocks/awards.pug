@@ -1,7 +1,12 @@
-mixin awards(showTeam = true)
-    section.awards.section-mb-72(class= showTeam ? '' : 'section')
+mixin awards(showTeam = true, isGray = false)
+    section.awards.section-mb-72(class= [
+        showTeam ? '' : 'section',
+        isGray ? 'is-gray' : ''
+    ])
         div.awards__inner.container
-            div.awards__header(class= showTeam ? '' : 'mb-small').flex.flex-justify-center
+            div.awards__header(class=[
+                showTeam ? '' : 'mb-small',
+            ]).flex.flex-justify-center
                 div.awards__title.flex.flex-column
                     div.awards__top.flex.flex-align-center
                         span Лучшая

@@ -30,28 +30,45 @@
   }
 
   &__name-wrapper {
-
     @include tablet-above {
       flex: 1;
-      padding-right: 26%;
+      display: flex;
+      align-items: flex-end; // Прижимаем цену и точки к низу последней строки
+
       background-image: radial-gradient(circle, var(--color-dark) 1px, transparent 1px);
       background-position: bottom 6px left;
       background-size: 6px 1px;
       background-repeat: repeat-x;
     }
+  }
 
-    @include tablet {
-      text-align: center;
+  &__name-inner {
+
+    @include tablet-above {
+      max-width: rem(750);
+      background: transparent;
     }
   }
 
-  &__name {
+  &__name, &__about {
 
     @include tablet-above {
       display: inline;
       background: var(--color-blue);
       padding-right: rem(8);
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
     }
+  }
+
+  &__name {
+    @include fluid-text(26, 16);
+  }
+
+  &__about {
+    @include fluid-text(17, 14);
+
+    margin-top: rem(9);
   }
 
   &__price {

@@ -1,0 +1,67 @@
+@use '../../helpers' as *;
+
+.with-love {
+
+  &__title, &__subtitle {
+    max-width: 80%;
+    margin-inline: auto;
+  }
+
+  &__subtitle {
+    margin-bottom: fluid(48, 16);
+  }
+
+  &__img {
+    margin-bottom: fluid(72, 40);
+  }
+
+  &__content {
+    gap: fluid(30, 20);
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    line-height: 1.77;
+    gap: fluid(32, 10);
+    margin-top: rem(44);
+
+    @include mobile-above {
+      max-width: 55%;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    @include fluid-text(18, 14);
+
+    padding-left: fluid(52, 32);
+    position: relative;
+
+    &::before {
+      @include square(32);
+
+      content: '';
+      position: absolute;
+      background: url("/icons/with-love/before-icon.svg") center/contain no-repeat;
+      left: 0;
+      top: 0;
+
+      @include mobile {
+        @include square(22);
+      }
+    }
+  }
+
+  &__form {
+
+    @include mobile {
+      margin-inline: auto;
+    }
+  }
+}

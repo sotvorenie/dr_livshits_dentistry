@@ -1,0 +1,158 @@
+@use '../../helpers' as *;
+
+.familiar-person {
+  border-bottom: var(--border-alt);
+
+  &__content {
+    gap: fluid(72, 48);
+    display: grid;
+    grid-template-columns: 559fr 495fr;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    background: var(--color-beige);
+    border-radius: var(--radius-big);
+    padding: rem(46) rem(24) rem(24) 0;
+
+    @include mobile {
+      padding: rem(16) rem(10);
+    }
+
+    &-content {
+
+      @include mobile-above {
+        width: 55%;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__img-container {
+    max-height: calc(100% - #{rem(30)});
+    max-width: 47%;
+    aspect-ratio: 267/348;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__quote {
+    @include fluid-text(18, 14);
+
+    margin-bottom: rem(46);
+    max-width: rem(242);
+    margin-inline: auto;
+
+    @include mobile {
+      margin-inline: 0;
+      margin-left: auto;
+      max-width: 50%;
+    }
+
+    &::before, &::after {
+      --left: #{rem(-28)};
+
+      content: '';
+      position: absolute;
+      width: rem(16);
+      height: rem(12);
+      background: url("/icons/blue-quote.svg") center/contain no-repeat;
+
+      @include mobile {
+        --left: #{rem(-19)};
+      }
+    }
+
+    &::before {
+      top: 0;
+      left: var(--left);
+    }
+    &::after {
+      bottom: 0;
+      right: var(--left);
+      rotate: 180deg;
+
+      @include laptop-s {
+        right: rem(-12);
+      }
+
+      @include mobile {
+        right: 0;
+        top: 100%;
+      }
+    }
+  }
+
+  &__person {
+    --bg: '';
+
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    padding: rem(16);
+
+    @include mobile {
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        background: var(--bg) center/cover no-repeat;
+        width: rem(116);
+        height: rem(154);
+      }
+    }
+  }
+
+  &__name {
+    margin-bottom: rem(8);
+    line-height: 1;
+    font-family: var(--font-family-base);
+  }
+
+  &__job {
+    @include fluid-text(14, 12);
+  }
+
+  &__list {
+    gap: fluid(23, 12);
+  }
+
+  &__item {
+    gap: fluid(24, 12);
+
+    &-title {
+      margin-bottom: fluid(8, 4);
+      font-family: var(--font-family-base);
+    }
+
+    &-text {
+      line-height: 1.87;
+    }
+  }
+
+  &__icon {
+    @include square(38);
+
+    border-radius: var(--radius-big);
+    padding: rem(3);
+
+    @include mobile {
+      @include square(32);
+    }
+
+    img {
+      max-height: 100%;
+    }
+
+    &.blue-light {
+      background: var(--color-blue-light);
+    }
+    &.blue {
+      background: var(--color-blue-dark);
+    }
+  }
+}

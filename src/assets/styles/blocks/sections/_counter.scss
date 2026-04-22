@@ -1,0 +1,31 @@
+@use '../../helpers' as *;
+
+.counter {
+
+  &__content {
+    background: var(--color-blue-dark);
+    padding: fluid(32, 16);
+
+    @include mobile-above {
+      border-radius: var(--radius-big);
+    }
+
+    @include mobile {
+      width: 100vw;
+      margin-left: calc(var(--container-padding-x) * -1);
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    font-family: var(--font-family-base);
+    line-height: 1.38;
+
+    &:not(.color-accent) {
+      color: var(--color-light);
+    }
+  }
+}
