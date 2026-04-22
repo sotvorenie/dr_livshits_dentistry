@@ -13,7 +13,9 @@ mixin person(item, isLeft = true)
                             p.person__job.text-w500.color-accent= item.mainJob
 
                         p.person__job.text-w500= item.firstJob
-                        p.person__job.text-w500= item.secondJob
+
+                        if item.secondJob
+                            p.person__job.text-w500= item.secondJob
 
                         p.person__experience.text-w500.color-accent= item.experience
 

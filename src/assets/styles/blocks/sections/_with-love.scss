@@ -1,6 +1,7 @@
 @use '../../helpers' as *;
 
 .with-love {
+  border-top: var(--border-alt);
 
   &__title, &__subtitle {
     max-width: 80%;
@@ -9,18 +10,6 @@
 
   &__subtitle {
     margin-bottom: fluid(48, 16);
-  }
-
-  &__img {
-    margin-bottom: fluid(72, 40);
-  }
-
-  &__content {
-    gap: fluid(30, 20);
-
-    @include mobile {
-      flex-direction: column;
-    }
   }
 
   &__list {
@@ -62,6 +51,19 @@
 
     @include mobile {
       margin-inline: auto;
+    }
+  }
+
+  &-content {
+    border-bottom: var(--border-alt);
+    padding-bottom: fluid(72, 40);
+
+    &__content {
+      gap: fluid(30, 20);
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
   }
 }

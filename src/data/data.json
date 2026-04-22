@@ -79,7 +79,7 @@
   {
     "title": "Эстетическая реставрация зубов",
     "img": "/images/header/service-4.png",
-    "href": "#",
+    "href": "/dental-restoration",
     "submenu": [
       "Реставрация зубов",
       "Виниры",
@@ -409,6 +409,54 @@
       "text": "Каждый врач успешно вылечил и восстановил здоровье более 10 000 зубов и имеет в распоряжении технологии, которые гарантируют ювелирную точность работы",
       "img": "/icons/familiar-person/3.svg",
       "class": "blue-light"
+    }
+  ],
+  "dentalRestorationArr": [
+    {
+      "title": "Керамические виниры",
+      "price": "30 000",
+      "from": false,
+      "hasLink": true
+    },
+    {
+      "title": "Копозитные виниры",
+      "price": "10 800",
+      "from": false,
+      "hasLink": true
+    },
+    {
+      "title": "Реставрация зубов при наличии корня",
+      "price": "12 500",
+      "from": true,
+      "hasLink": true
+    },
+    {
+      "title": "«Голливудская улыбка»",
+      "price": "1 000 000",
+      "from": true,
+      "hasLink": true
+    }
+  ],
+  "dentalRestorationPersons": [
+    {
+      "img": "/images/person-livshits.png",
+      "name": "Лившиц Татьяна Львовна",
+      "mainJob": "Главный врач и основатель клиники «Стоматология доктора Лившиц»",
+      "firstJob": "Стоматолог-терапевт-ортопед",
+      "secondJob": "Врач высшей категории",
+      "experience": "Опыт работы 28 лет"
+    },
+    {
+      "img": "/images/person-asryan.png",
+      "name": "Асрян Артём Ашотович",
+      "firstJob": "Стоматолог терапевт, ортопед",
+      "experience": "Опыт работы 13 лет"
+    },
+    {
+      "img": "/images/person-samsonov.png",
+      "name": "Самсонов Дмитрий Романович",
+      "firstJob": "Стоматолог общей практики, ортопед",
+      "experience": "Опыт работы 5 лет"
     }
   ]
 }

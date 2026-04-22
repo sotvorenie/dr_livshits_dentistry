@@ -1,0 +1,83 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/we-care
+include ../components/blocks/awards
+include ../components/blocks/prices
+include ../components/blocks/with-love-2
+include ../components/common/person
+include ../components/common/consultation
+include ../components/blocks/welcome
+
+block title
+    | Эстетическая реставрация зубов (виниры, коронки)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Эстетическая реставрация зубов (виниры, коронки)"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Все виды эстетической реставрации зубов
+
+                h2.banner__subtitle (виниры керамические и композитные, коронки из керамики и циркония, создание «голливудской улыбки»)
+                h2.banner__subtitle.color-accent от стоматологов-ортопедов, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    include ../components/blocks/comparison
+
+    section.info.info--without-border.section.section-mb-72
+        div.info__inner.container
+            div.info__container
+                div.info__block
+                    div.info__icon
+                        div.info__icon-bg.flex-center.blue
+                            img(src="/icons/info/1.svg")
+
+                    div.info__content.flex.flex-align-center
+                        div.info__text-block
+                            h2.info__text.text-w500 Если Вы хотите изменить форму зубов, потемнела эмаль, на эмали появились пятна, то #[span.text-w700.color-blue эстетическая реставрация зубов поможет избавиться от всех этих недостатков]!
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/2.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p.info__name.color-blue.text-w700 Композитные виниры -
+                                p восстановление зубов при помощи пломбировочного материала или при помощи композитных виниров! Как правило, применяется на жевательных зубах при сильном разрушении, ведь композитный материал не имеет естественного блеска собственных зубов.
+
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/3.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p.info__name.color-accent.text-w700.text-upper Виниры керамические -
+                                p рекомендация стоматологов и «золотой стандарт» для создания эстетики в зоне улыбки! Они не только маскируют недостатки собственных зубов, но и выдерживают жевательную нагрузку!
+
+    +awards(false, true)
+
+    +prices('Виды эстетической реставрации и стоимость', dentalRestorationArr, 'Узнать подробнее', 'text-upper', 'dark')
+
+    +we-care('/images/we-care-2.png', false)
+
+    +with-lowe-2('section-mb-72')
+
+    include ../components/blocks/quote
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in dentalRestorationPersons
+                +person(item, index % 2 === 0)
+
+    +consultation('/images/consultation-team-3.png')
+
+    +welcome(false, 'section-mb-72')

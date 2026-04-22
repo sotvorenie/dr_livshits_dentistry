@@ -1,0 +1,12 @@
+include ../common/form
+
+mixin with-lowe-2(className = '')
+    section.with-love-content(class=className)
+        div.wit-love-content__inner.container
+            div.with-love-content__content.flex.flex-justify-between
+                ul.with-love__list.flex.flex-column
+                    li.with-love__item Не заманиваем пациентов скидками и самой низкой ценой, потому что #[span.text-w700.color-accent несём ответственность] за долгосрочный результат нашей работы!
+                    li.with-love__item Дешевле протезирование сделать можно, #[span.text-w700.color-accent но может пострадать и качество] и, возможно, здоровье пациента!
+                    li.with-love__item Многолетний опыт работы наших стоматологов-ортопедов, собственная цифровая лаборатория, высокопрофессиональный техник в клинике – всё это позволяет нам в кратчайшие сроки гарантировать безупречный результат, которым Вы останетесь довольны!
+
+                +form('Запишитесь на консультацию', 'Записаться на консультацию', 'with-love__form', 'где мы совместно с Вами выберем оптимальный план лечения под Вашу ситуацию', true)
