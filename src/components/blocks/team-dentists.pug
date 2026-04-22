@@ -1,0 +1,41 @@
+mixin team-dentists(isFull = false, className = '')
+    section.team-dentists.section-mb-72(class=[className, isFull ? 'section-border-block' : ''])
+        div.team-dentists__inner.container
+            if isFull
+                h3.team-dentists__title.text-center.text-w600
+                    | Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
+                    br
+                    | Вас будут лечить врачи мирового уровня!
+
+                h1.team-dentists__subtitle.text-center Знакомьтесь! #[span.color-accent Наши врачи – наша гордость!]
+            else
+                h3.team-dentists__title.text-center.text-w600 Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
+
+                h1.team-dentists__subtitle.text-center
+                    | Знакомьтесь!
+                    | #[span.color-blue Наши врачи – наша гордость!]
+
+            if isFull
+                div.team-dentists__slider-container.position-relative
+                    div.team-dentists__slider.swiper
+                        div.swiper-wrapper
+                            each item in teamDentists
+                                div.team-dentists__card.swiper-slide
+                                   div.team-dentists__img-container.img-container.w-100
+                                       img(src=item.img alt=item.name loading="lazy")
+
+                                   div.team-dentists__info.flex.flex-column
+                                        div.team-dentists__text-block
+                                           p.team-dentists__name.text-w800= item.name
+                                           p.team-dentists__experience.text-w500= item.experience
+                                           p.team-dentists__job.text-w500.color-accent= item.job
+
+                                        a(href="#").team-dentists__link.button.dark.w-100.text-w600 Подробнее
+
+
+                    button(type="button" aria-label="Предыдущий слайд").team-dentists__btn.prev.swiper-arrow
+                        include ../icons/swiper-arrow
+                    button(type="button" aria-label="Следующий слайд").team-dentists__btn.next.swiper-arrow
+                        include ../icons/swiper-arrow
+
+                a(href="#").team-dentists__more.button.accent.text-upper.m-auto.text-w800 Подробнее о врачах

@@ -1,8 +1,7 @@
-@use '../../../helpers' as *;
+@use '../../helpers' as *;
 
 .team-dentists {
   background: var(--color-blue);
-  border-block: var(--border-alt);
 
   &__inner {
     padding-block: fluid(48, 16) fluid(48, 24);

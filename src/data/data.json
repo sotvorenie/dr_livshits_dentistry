@@ -92,7 +92,7 @@
   {
     "title": "Профессиональная гигиена полости рта",
     "img": "/images/header/service-5.png",
-    "href": "#",
+    "href": "/professional-hygiene",
     "submenu": [
       "Профессиональная пятиэтапная гигиена полости рта",
       "Ультразвуковая чистка зубов",
@@ -457,6 +457,49 @@
       "name": "Самсонов Дмитрий Романович",
       "firstJob": "Стоматолог общей практики, ортопед",
       "experience": "Опыт работы 5 лет"
+    }
+  ],
+  "professionalHygieneArr": [
+    {
+      "title": "Профессиональная гигиена полости рта",
+      "price": "8 000",
+      "from": false,
+      "hasLink": true
+    },
+    {
+      "title": "Скейлинг одной челюсти",
+      "price": "4 500",
+      "from": false,
+      "hasLink": true
+    },
+    {
+      "title": "Фторирование зубов",
+      "price": "3 000",
+      "from": false,
+      "hasLink": true
+    },
+    {
+      "title": "Отбеливание «Philips Zoom WhiteSpeed» (Zoom-4)",
+      "price": "37 000",
+      "from": false,
+      "hasLink": true
+    }
+  ],
+  "professionalHygienePersons": [
+    {
+      "img": "/images/person-livshits.png",
+      "name": "Лившиц Татьяна Львовна",
+      "mainJob": "Главный врач и основатель клиники «Стоматология доктора Лившиц»",
+      "firstJob": "Стоматолог-терапевт-ортопед",
+      "secondJob": "Врач высшей категории",
+      "experience": "Опыт работы 28 лет"
+    },
+    {
+      "img": "/images/person-lebedev.png",
+      "name": "Лебедев Дмитрий Валерьевич",
+      "firstJob": "Стоматолог-хирург-имплантолог, челюстно-лицевой хирург",
+      "secondJob": "Врач высшей категории",
+      "experience": "Опыт работы 19 лет"
     }
   ]
 }

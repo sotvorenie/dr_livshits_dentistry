@@ -3,6 +3,7 @@ extends ../components/layouts/base.pug
 include ../components/blocks/welcome
 include ../components/blocks/awards
 include ../components/common/consultation
+include ../components/blocks/team-dentists
 
 block title
     | Главная
@@ -18,7 +19,7 @@ block content
 
     include ../components/blocks/index/quote
 
-    include ../components/blocks/index/team-dentists
+    +team-dentists()
 
     include ../components/blocks/index/honors
 

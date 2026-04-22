@@ -1,0 +1,121 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/we-care
+include ../components/blocks/awards
+include ../components/blocks/prices
+include ../components/blocks/with-love-2
+include ../components/common/person
+include ../components/common/consultation
+include ../components/blocks/welcome
+include ../components/blocks/counter
+include ../components/blocks/team-dentists
+
+block title
+    | Профессиональная гигиена полости рта
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Профессиональная гигиена полости рта"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Проведение всех видов профессиональной гигиены полости рта,
+
+                h2.banner__subtitle включая отбеливание зубов «Zoom-4»,
+                h2.banner__subtitle.color-accent от стоматологов-терапевтов и гигиенистов, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    include ../components/blocks/comparison
+
+    section.info.section.section-mb-72
+        div.info__inner.container
+            div.info__container
+                div.info__block
+                    div.info__icon
+                        div.info__icon-bg.flex-center.blue
+                            img(src="/icons/info/1.svg")
+
+                    div.info__content.flex.flex-align-center
+                        div.info__text-block
+                            h2.info__text.text-w500 Профессиональная гигиена зубов и полости рта – это безболезненная профилактическая процедура, которая #[span.color-blue рекомендуется для прохождения всем людям один раз в 6 месяцев] и является серьезной профилактикой, предотвращающей кариес и различного рода заболевания дёсен.
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/2.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p.info__name.color-blue.text-w700 Профессиональная гигиена полости рта включает пять этапов:
+                                p позволяет снять все твёрдые зубные отложения (зубной камень), очистить поверхность зубов от пигментированного (тёмного) налета. После её проведения зубы могут стать на два тона светлее!
+
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/3.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p.info__name.color-accent.text-w700.text-upper Скейлинг –
+                                p является гигиенической процедурой, но более длительной и сложной. Помимо пяти этапов стандартной гигиены полости рта, включает чистку пародонтальных карманов, удаляет поддесневой налёт.
+
+    +counter('section-border-block section-mb-72')
+
+    +awards(false, true)
+
+    section.info.section.section-mb-72.section-border-top
+        div.info__inner.container
+            div.info__container
+                div.info__block
+                    div.info__icon
+                        div.info__icon-bg.flex-center.blue
+                            img(src="/icons/info/1.svg")
+
+                    div.info__content.flex.flex-align-end
+                        div.info__text-block
+                            h2.info__text.text-w500 Профессиональное кабинетное отбеливание «Zoom-4» (США) – #[span.color-accent зубы светлее до 8 тонов!]
+
+                            a(href="#").info__btn.button.dark.hidden-mobile Подробнее
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                        a(href="#").info__btn.button.dark.visible-mobile Подробнее
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/2.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p В нашей клинике используется система отбеливания последнего поколения – «Philips Zoom WhiteSpeed» (Zoom-4). Забудьте о боли и чувствительности зубов! В устройство новой лампы на смену «горячему» свету пришли «холодные» светодиоды. Процедура стала совершенно безболезненна и комфортна!
+
+                    div.info__col.col-12.mb-col-6
+                        div.info__icon
+                            div.info__icon-bg.flex-center.accent
+                                img(src="/icons/info/3.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p Под воздействием света лампы из геля высвобождаются молекулы активного кислорода. Они глубоко проникают в эмаль зубов с дентином и бережно устраняют даже стойкую пигментацию. Для достижения оптимального результата необходимы 3-4 подхода по 15 минут и Ваша белоснежная улыбка будет долго радовать Вас и близких!
+
+    +prices('Услуги и стоимость', professionalHygieneArr, 'Узнать подробнее', 'text-upper', 'dark')
+
+    +we-care('/images/we-care-2.png', false)
+
+    +team-dentists(false)
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in professionalHygienePersons
+                +person(item, index % 2 === 0)
+
+    +consultation('/images/consultation-team-3.png')
