@@ -2,8 +2,20 @@
 
 .article {
 
-  &__header {
+  &__header, &__date, &__about, &-content__empty, &__block:not(:last-child) {
     margin-bottom: fluid(40, 16);
+  }
+
+  &__text-block:not(:last-child), &__subtitle {
+    margin-bottom: fluid(24, 12);
+    margin-bottom: fluid(24, 12);
+  }
+
+  &__date *, &__about, &__subtitle {
+    font-family: var(--font-family-base);
+  }
+
+  &__header {
     gap: fluid(17, 8);
   }
 
@@ -20,16 +32,11 @@
 
   &__date {
     gap: fluid(32, 16);
-
-    & * {
-      font-family: var(--font-family-base);
-    }
   }
 
   &__about {
     max-width: rem(880);
-    font-family: var(--font-family-base);
-    margin-bottom: fluid(40, 16);
+    line-height: 1.41;
   }
 
   &__empty {
@@ -47,16 +54,11 @@
 
     &__empty {
       aspect-ratio: 1180/323;
-      margin-bottom: fluid(40, 16);
     }
   }
 
   &__block {
     max-width: rem(782);
-
-    &:not(:last-child) {
-      margin-bottom: fluid(40, 16);
-    }
   }
 
   &__text-block {
@@ -65,18 +67,9 @@
     flex-direction: column;
     gap: rem(8);
 
-    &:not(:last-child) {
-      margin-bottom: fluid(24, 12);
-    }
-
     & * {
       @include fluid-text(18, 14);
     }
-  }
-
-  &__subtitle {
-    font-family: var(--font-family-base);
-    margin-bottom: fluid(24, 12);
   }
 
   &__list {
