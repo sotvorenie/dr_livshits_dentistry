@@ -8,13 +8,25 @@
     grid-auto-rows: 1fr;
     max-width: rem(790);
     margin-inline: auto;
-    gap: rem(20);
+    gap: fluid(20, 10);
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__link {
     @include fluid-text(18, 14);
 
     padding-inline: rem(8);
+
+    &.is-active {
+      pointer-events: none;
+    }
   }
 
   &__header, &__btn-bar {
@@ -52,6 +64,11 @@
 
   &__btn-bar {
     gap: rem(8);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__info {

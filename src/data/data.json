@@ -681,7 +681,7 @@
     },
     {
       "title": "Имплантация зубов",
-      "href": "/prices-dental-treatment"
+      "href": "/prices-implantation"
     },
     {
       "title": "Хирургия",
@@ -782,6 +782,148 @@
     },
     {
       "title": "Консультация стоматолога",
+      "price": "1 500",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    }
+  ],
+  "pricesImplantation": [
+    {
+      "title": "Установка импланта Neobiotech + коронка из диоксида циркония",
+      "about": "(В стоимость входит: имплант бизнес-класса NeoBiotech + операция по установке импланта + установка формирователя десны + контрольный осмотр + установка постоянной коронки из диоксида циркония).",
+      "price": "48 900",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "52 900"
+    },
+    {
+      "title": "Установка импланта Neobiotech «под ключ»",
+      "about": "(В стоимость входит: имплант NeoBoiteck + операция + контрольный осмотр)",
+      "price": "26 900",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка формирователя десны",
+      "price": "4 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка коронок керамических на имплант",
+      "about": "(в зависимости от фиксации)",
+      "price": "27 000 - 32 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка коронок на основе диоксида циркония на имплант",
+      "about": "(в зависимости от фиксации)",
+      "price": "27 000 - 32 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Одномоментная имплантация",
+      "about": "(В стоимость входит: удаление зуба + имплант NeoBoiteck + операция + контрольный осмотр)",
+      "price": "31 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Ankylos «под ключ»",
+      "about": "(В стоимость входит: имплант Ankylos + операция + контрольный осмотр)",
+      "price": "41 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Имплантация зубов All on 4 – все на четырех имплантах - одна челюсть",
+      "about": "(В стоимость входит: установка 4-х имплантов NeoBiotech, временный несъемный зубной протез, постоянный несъемный зубной протез)",
+      "price": "327 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Имплантация зубов All on 4 – все на четырех имплантах - одна челюсть",
+      "about": "(В стоимость входит: установка 4-х имплантов Nobel Grovi, временный несъемный зубной протез, постоянный несъемный зубной протез)",
+      "price": "440 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Nobel «под ключ»",
+      "about": "(В стоимость входит: имплант Nobel Select + операция по установке импланта + контрольный осмотр)",
+      "price": "55 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Nobel Groove «под ключ»",
+      "about": "(В стоимость входит: имплант Nobel Groove + операция по установке импланта + контрольный осмотр)",
+      "price": "55 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Nobel Active «под ключ»",
+      "about": "(В стоимость входит: имплант Nobel Groove + операция по установке импланта + контрольный осмотр)",
+      "price": "55 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Nobel Speedy Groove «под ключ»",
+      "about": "(В стоимость входит: имплант Nobel Groove + операция по установке импланта + контрольный осмотр)",
+      "price": "55 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Установка импланта Nobel Conical Connection «под ключ»",
+      "about": "(В стоимость входит: имплант Nobel Groove + операция по установке импланта + контрольный осмотр)",
+      "price": "55 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Открытый синус-лифтинг",
+      "price": "24 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Закрытый синус-лифтинг",
+      "price": "17 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Удаление импланта",
+      "price": "20 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Консультация имплантолога",
       "price": "1 500",
       "from": false,
       "hasLink": false,
