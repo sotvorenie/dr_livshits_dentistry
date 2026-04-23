@@ -1,0 +1,43 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+
+block title
+    | Акции и скидки
+
+block header
+    +header(5)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Акции и скидки"])
+
+    section.discounts.section-mb-72
+        div.discounts__inner.container
+            h1.discounts__title.section__title.color-blue Постоянные скидки
+
+
+            div.discounts__slider-container.position-relative.section-mb-72
+                div.discounts__slider.swiper.text-center
+                    div.swiper-wrapper
+                        each item in discounts
+                            div.discounts__card.swiper-slide.overflow-hidden
+                                div.discounts__img-container.img-container.w-100
+                                    img(src=item.img alt=item.title)
+
+                                div.discounts__bottom.flex.flex-column
+                                    div.discounts__text-block
+                                        h2.discounts__name.color-blue= item.title
+
+                                        p.discounts__text= item.text
+
+                                    if item.visibleLink
+                                        a(href="#").discounts__link.button.dark Подробнее
+
+
+
+                button(type="button" aria-label="Предыдущий слайд").discounts__btn.prev.swiper-arrow
+                    include ../components/icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").discounts__btn.next.swiper-arrow
+                    include ../components/icons/swiper-arrow
+
+            h3.discounts__subtitle.text-center СКИДКИ НЕ РАСПРОСТРАНЯЮТСЯ НА СТОИМОСТЬ УСЛУГ С ПОМЕТКОЙ АКЦИЯ
