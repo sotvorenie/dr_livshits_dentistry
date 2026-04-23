@@ -6,7 +6,8 @@ mixin header-nav(activeIndex)
                     li.header__item(
                         class=[
                             link.hasSubmenu ? 'header__item--has-submenu' : '',
-                            index === activeIndex ? 'is-here' : '',
+                            index === activeIndex && index === 1 ? 'is-active' : '',
+                            index === activeIndex && index !== 1 ? 'is-here' : '',
                         ]
                     ).position-relative
                         if link.hasSubmenu

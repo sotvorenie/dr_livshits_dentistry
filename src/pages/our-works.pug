@@ -1,0 +1,39 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/awards
+include ../components/common/product-info
+
+block title
+    | Наши работы
+
+block header
+    +header(4)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Наши работы"])
+
+    +awards('section-mb-72', true, false, '/images/index/team-awards-2.png', true, 'Наши работы')
+
+    section.our-works.section-mb-72
+        div.our-works__inner.container
+            div.our-works__header.section-mb-72
+                h1.our-works__title.section__title Работы наших врачей
+
+                div.our-works__selects-block.flex
+                    select.select
+                        option(value="all_doctors" selected) Все врачи
+                        option(value="doctor_1") Врач 1
+                        option(value="doctor_2") Врач 2
+
+                    select.select
+                        option(value="all_services" selected) Все услуги
+                        option(value="service_1") Услуга 1
+                        option(value="service_2") Услуга 2
+
+            ul.our-works__list.row.section-mb-72
+                each item in Array(8)
+                    li.our-works__item.col-12.mb-col-6
+                        +product-info(true)
+
+            button(type="button").our-works__btn.button.dark.w-250.m-auto Показать еще

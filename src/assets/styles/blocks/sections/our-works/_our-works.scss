@@ -1,0 +1,21 @@
+@use '../../../helpers' as *;
+
+.our-works {
+
+  &__selects-block {
+    gap: fluid(20, 12);
+  }
+
+  &__list {
+    --column-gap: #{rem(19)};
+    --row-gap: #{rem(72)};
+
+    @include tablet {
+      --row-gap: #{rem(42)};
+    }
+
+    @include mobile {
+      --row-gap: #{rem(22)};
+    }
+  }
+}

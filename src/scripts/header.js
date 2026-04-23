@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const classes = {
         isActive: 'is-active',
+        isOpen: 'is-open',
         isLock: 'is-lock',
     }
 
@@ -33,13 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     headerMenuBtnOpen.addEventListener('click', () => {
         headerMenu.classList.toggle(classes.isActive)
-        // document.documentElement.classList.toggle(classes.isLock)
 
-        headerMenuBtnOpen.parentElement.classList.toggle(classes.isActive)
+        if (headerMenu.classList.contains(classes.isActive)) {
+            headerMenuBtnOpen.parentElement.classList.add(classes.isOpen)
+        } else {
+            headerMenuBtnOpen.parentElement.classList.remove(classes.isOpen)
+        }
     })
     headerMenuBtnClose.addEventListener('click', () => {
         headerMenu.classList.remove(classes.isActive)
-        // document.documentElement.classList.remove(classes.isLock)
 
         headerMenuBtnOpen.parentElement.classList.remove(classes.isActive)
     })
