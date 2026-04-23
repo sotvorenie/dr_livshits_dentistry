@@ -693,7 +693,7 @@
     },
     {
       "title": "Профессиональная гигиена полости рта",
-      "href": "/prices-dental-treatment"
+      "href": "/prices-hygiene"
     },
     {
       "title": "Протезирование зубов",
@@ -1006,6 +1006,39 @@
     {
       "title": "Керамические виниры",
       "price": "35 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    }
+  ],
+  "pricesPageHygiene": [
+    {
+      "title": "Профессиональная гигиена полости рта",
+      "about": "(Процедура включает: ультразвуковая чистка, чистка Air Flow, медикоментозная обработка, фторирование, полировка. Длительность процедуры от 30 до 60 минут. )",
+      "price": "6 050",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "8 000"
+    },
+    {
+      "title": "Чистка зубов Air Flow",
+      "price": "6 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Удаление зубного камня",
+      "about": "(Один зуб)",
+      "price": "400",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Фторирование зубов",
+      "price": "3 000",
       "from": false,
       "hasLink": false,
       "isBlue": false
