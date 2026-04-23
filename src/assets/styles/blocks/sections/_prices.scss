@@ -1,7 +1,21 @@
 @use '../../helpers' as *;
 
 .prices {
-  background: var(--color-blue);
+
+  &.is-blue {
+    background: var(--color-blue);
+
+    .prices__name, .prices__about {
+      background: var(--color-blue);
+    }
+  }
+
+  &:not(.is-blue) {
+
+    .prices__name, .prices__about {
+      background: var(--color-light);
+    }
+  }
 
   &__title {
     margin-bottom: fluid(72, 24);
@@ -9,7 +23,6 @@
 
   &__list {
     gap: fluid(45, 12);
-    margin-bottom: fluid(72, 24);
   }
 
   &__item {
@@ -53,7 +66,6 @@
 
     @include tablet-above {
       display: inline;
-      background: var(--color-blue);
       padding-right: rem(8);
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
@@ -62,6 +74,10 @@
 
   &__name {
     @include fluid-text(26, 16);
+
+    &.is-accent {
+      color: var(--color-blue-dark);
+    }
   }
 
   &__about {
@@ -80,6 +96,10 @@
         margin-right: rem(8);
       }
     }
+
+    h3:not(.prices__discount) {
+      @include fluid-text(28, 16);
+    }
   }
 
   &__link {
@@ -91,7 +111,13 @@
   }
 
   &__btn {
+    margin: fluid(72, 24) auto 0;
     padding-inline: rem(15);
     min-width: rem(250);
+  }
+
+  &__discount {
+    text-decoration: line-through;
+    margin-right: rem(3);
   }
 }

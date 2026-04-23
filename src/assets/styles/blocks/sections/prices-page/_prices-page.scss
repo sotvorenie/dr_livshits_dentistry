@@ -1,0 +1,64 @@
+@use '../../../helpers' as *;
+
+.prices-page {
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    max-width: rem(790);
+    margin-inline: auto;
+    gap: rem(20);
+  }
+
+  &__link {
+    @include fluid-text(18, 14);
+
+    padding-inline: rem(8);
+  }
+
+  &__header, &__btn-bar {
+    margin-bottom: fluid(24, 12);
+  }
+
+  &__header {
+    gap: rem(12);
+  }
+
+  &__subtitle {
+    font-family: var(--font-family-base);
+  }
+
+  &__line {
+    height: 1px;
+    background: var(--color-blue-dark);
+    flex-grow: 1;
+  }
+
+  &__list {
+    @include fluid-text(18, 14);
+
+    line-height: 1.66;
+    display: flex;
+    flex-direction: column;
+    gap: rem(6);
+    padding-left: fluid(17, 12);
+    list-style-type: disc;
+
+    li::marker {
+      color: var(--color-blue-dark);
+    }
+  }
+
+  &__btn-bar {
+    gap: rem(8);
+  }
+
+  &__info {
+    @include fluid-text(14, 12);
+
+    max-width: rem(700);
+    margin-inline: auto;
+    line-height: 1.42;
+  }
+}

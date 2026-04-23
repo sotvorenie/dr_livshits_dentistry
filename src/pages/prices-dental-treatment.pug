@@ -1,0 +1,44 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+
+block title
+    | Цены
+
+block header
+    +header(2)
+
+block content
+    +breadcrumbs(["Главная", "Цены"])
+
+    section.prices-page
+        div.prices-page__inner.container
+            h1.prices-page__title.section-mb-72.color-accent.text-center Цены на стоматологические услуги
+
+            div.prices-page__links.section-mb-72
+                each item, index in pricesPageList
+                    a(href=item.href).prices-page__link(class= index === 0 ? 'is-active accent' : 'dark').button.text-upper.w-100= item.title
+
+            div.prices-page__header.flex.flex-align-center
+                h3.prices-page__subtitle.color-blue.text-upper.text-w600 Лечение зубов
+
+                div.prices-page__line
+
+            ul.prices-page__list
+                li.prices-page__item Спасаем даже самые безнадежные зубы
+                li.prices-page__item Лечим кариес, пульпит и периодонтит по международным стандартам — под микроскопом и с изоляцией рабочего поля коффердамом
+                li.prices-page__item Тщательно восстанавливаем все функциональные и эстетические особенности каждого зуба
+                li.prices-page__item Специализируемся на лечении и перелечивании сложных корневых каналов
+
+    +prices('section', '', pricesPageDentalTreatment, '', '', '', false)
+
+    section.prices-page.section-mb-72
+        div.prices-page__inner.container
+            div.prices-page__btn-bar.flex.flex-justify-center
+                a(href="#").prices-page__btn.button.dark.w-250 Задать вопрос
+                a(href="#").prices-page__btn.button.accent.w-250 Записаться на приём
+
+            p.prices-page__info.text-center * Указанные на сайте цены не являются публичной офертой. Точную стоимость лечения возможно определить только на приеме у врача.
+            p.prices-page__info.text-center ** Цена с пометкой "Акция" распространяется  при лечении у специалистов, утвержденных руководством ООО "Клиника доктора Лившиц". При записи на прием требуется уточнение  у администраторов клиники. Количество возможных мест и наличие свободного времени ограничено.
+            p.prices-page__info.text-center *** Стоимость лечения у Главного врача ООО "Клиника доктора Лившиц" Лившиц Т.Л. может отличаться от цен, указанных на сайте.

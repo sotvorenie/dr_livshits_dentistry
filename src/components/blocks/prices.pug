@@ -1,19 +1,22 @@
-mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '')
-    section.prices(class=className)
+mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '', isBlue = true)
+    section.prices(class=[className, isBlue ? 'is-blue' : ''])
         div.prices__inner.container
-            h2.prices__title.color-blue.text-center= titleText
+            if titleText
+                h2.prices__title.color-blue.text-center= titleText
 
             ul.prices__list.flex.flex-column
                 each item in arr
                     li.prices__item.flex.flex-align-end
                         div.prices__name-wrapper
                             div.prices__name-inner
-                                h3.prices__name.text-w500= item.title
+                                h3.prices__name.text-w500(class= item.isBlue ? 'is-accent' : '')= item.title
                                 if item.about
                                     br
                                     p.prices__about.text-w400= item.about
 
-                        div.prices__price.flex.text-nowrap
+                        div.prices__price.flex.flex-align-end.text-nowrap
+                            if item.discount
+                                h3.prices__discount.text-w400= `${item.discount} ₽`
                             if item.from
                                 h3.text-w700.color-blue от
                             h3.text-w700.color-blue= item.price
@@ -22,4 +25,5 @@ mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClas
                         if item.hasLink
                             a(href="#" class= linksClass).prices__link.button.accent= linksText
 
-            a(href="#" class=btnClass).prices__btn.button.m-auto Посмотреть все цены
+            if btnClass
+                a(href="#" class=btnClass).prices__btn.button Посмотреть все цены

@@ -11,7 +11,7 @@
     },
     {
       "title": "Цены",
-      "href": "#"
+      "href": "/prices-dental-treatment"
     },
     {
       "title": "Врачи",
@@ -230,37 +230,43 @@
       "title": "Консультация хирурга",
       "price": "1 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Простое удаление коренного зуба",
       "price": "5 500",
       "from": true,
-      "hasLink": false
+      "hasLink": false,
+      "isBlue": false
     },
     {
       "title": "Сложное удаление коренного зуба",
       "price": "8 000",
       "from": true,
-      "hasLink": false
+      "hasLink": false,
+      "isBlue": false
     },
     {
       "title": "Сложное удаление зуба с разделением корней",
       "price": "10 000",
       "from": true,
-      "hasLink": false
+      "hasLink": false,
+      "isBlue": false
     },
     {
       "title": "Простое удаление ретенированного зуба",
       "price": "8 000",
       "from": true,
-      "hasLink": false
+      "hasLink": false,
+      "isBlue": false
     },
     {
       "title": "Сложное удаление ретенированного, дистопированного, сферхкомплетного зуба",
       "price": "12 000",
       "from": true,
-      "hasLink": false
+      "hasLink": false,
+      "isBlue": false
     }
   ],
   "surgeryPersons": [
@@ -308,63 +314,73 @@
       "title": "Протезирование при полном отсутствии зубов",
       "price": "30 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Съемные нейлоновые протезы",
       "about": "(частичные и полные)",
       "price": "14 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Съемные акриловые протезы",
       "price": "25 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Бюгельные протезы",
       "price": "47 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Съемный зубной протез «Acry Free»",
       "price": "48 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Съемные протезы с опорой на импланты",
       "price": "112 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Несъемное протезирование на имплантах",
       "about": "(при полном отсутствии зубов, импланты включены в стоимость",
       "price": "327 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Коронки на собственные зубы",
       "price": "6 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Микропротезирование (Инлей, Оверлей)",
       "price": "27 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Коронки на импланты",
       "price": "14 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     }
   ],
   "dentalProstheticsPersons": [
@@ -416,25 +432,29 @@
       "title": "Керамические виниры",
       "price": "30 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Копозитные виниры",
       "price": "10 800",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Реставрация зубов при наличии корня",
       "price": "12 500",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "«Голливудская улыбка»",
       "price": "1 000 000",
       "from": true,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     }
   ],
   "dentalRestorationPersons": [
@@ -464,25 +484,29 @@
       "title": "Профессиональная гигиена полости рта",
       "price": "8 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Скейлинг одной челюсти",
       "price": "4 500",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Фторирование зубов",
       "price": "3 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     },
     {
       "title": "Отбеливание «Philips Zoom WhiteSpeed» (Zoom-4)",
       "price": "37 000",
       "from": false,
-      "hasLink": true
+      "hasLink": true,
+      "isBlue": false
     }
   ],
   "professionalHygienePersons": [
@@ -648,6 +672,120 @@
       "text": "Скидка 10% на удаление зубов.\u2028Действует при предъявлении пенсионного удостоверения или паспорта. *",
       "img": "/images/discounts/3.png",
       "visibleLink": false
+    }
+  ],
+  "pricesPageList": [
+    {
+      "title": "Лечение зубов",
+      "href": "/prices-dental-treatment"
+    },
+    {
+      "title": "Имплантация зубов",
+      "href": "/prices-dental-treatment"
+    },
+    {
+      "title": "Хирургия",
+      "href": "/prices-dental-treatment"
+    },
+    {
+      "title": "Эстетическая реставрация зубов",
+      "href": "/prices-dental-treatment"
+    },
+    {
+      "title": "Профессиональная гигиена полости рта",
+      "href": "/prices-dental-treatment"
+    },
+    {
+      "title": "Протезирование зубов",
+      "href": "/prices-dental-treatment"
+    }
+  ],
+  "pricesPageDentalTreatment": [
+    {
+      "title": "Лечение кариеса системой Icon",
+      "about": "в стадии пятна",
+      "price": "5 100",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Лечение поверхностного кариеса",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "7 210",
+      "from": true,
+      "hasLink": false,
+      "isBlue": true,
+      "discount": "от 10 300"
+    },
+    {
+      "title": "Лечение среднего кариеса",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "8 050",
+      "from": true,
+      "hasLink": false,
+      "isBlue": true,
+      "discount": "от 11 500"
+    },
+    {
+      "title": "Лечение глубокого кариеса",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "8 890",
+      "from": true,
+      "hasLink": false,
+      "isBlue": true,
+      "discount": "от 12 700"
+    },
+    {
+      "title": "Лечение пульпита",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "11 200",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "от 16 000"
+    },
+    {
+      "title": "Лечение/чистка каналов",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "11 200",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "от 16 000"
+    },
+    {
+      "title": "Лечение/удаление кисты",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "23 660",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "от 33 800"
+    },
+    {
+      "title": "Фиксация стекловолоконного штифта",
+      "price": "7 630",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "от 10 900"
+    },
+    {
+      "title": "Лечение периодонтита",
+      "about": "(с использованием дентального микроскопа)",
+      "price": "11 900",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false,
+      "discount": "от 17 000"
+    },
+    {
+      "title": "Консультация стоматолога",
+      "price": "1 500",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
     }
   ]
 }
