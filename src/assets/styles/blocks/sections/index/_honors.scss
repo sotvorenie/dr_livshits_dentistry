@@ -30,8 +30,7 @@
     left: rem(10);
 
     @include mobile {
-      width: rem(64);
-      height: rem(63);
+      @include square(64);
     }
   }
 }

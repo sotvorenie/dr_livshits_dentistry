@@ -1,0 +1,115 @@
+@use '../../../helpers' as *;
+
+.article {
+
+  &__header {
+    margin-bottom: fluid(40, 16);
+    gap: fluid(17, 8);
+  }
+
+  &__title {
+    @include fluid-text(52, 40);
+  }
+
+  &__line {
+    height: 1px;
+    background: var(--color-blue-dark);
+    flex-grow: 1;
+    margin-top: rem(12);
+  }
+
+  &__date {
+    gap: fluid(32, 16);
+
+    & * {
+      font-family: var(--font-family-base);
+    }
+  }
+
+  &__about {
+    max-width: rem(880);
+    font-family: var(--font-family-base);
+    margin-bottom: fluid(40, 16);
+  }
+
+  &__empty {
+    aspect-ratio: 1180/335;
+  }
+
+  &__img-container {
+    aspect-ratio: 1181/658;
+    top: 0;
+    left: 0;
+  }
+
+  &-content {
+    background: var(--color-blue);
+
+    &__empty {
+      aspect-ratio: 1180/323;
+      margin-bottom: fluid(40, 16);
+    }
+  }
+
+  &__block {
+    max-width: rem(782);
+
+    &:not(:last-child) {
+      margin-bottom: fluid(40, 16);
+    }
+  }
+
+  &__text-block {
+    line-height: 1.66;
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    &:not(:last-child) {
+      margin-bottom: fluid(24, 12);
+    }
+
+    & * {
+      @include fluid-text(18, 14);
+    }
+  }
+
+  &__subtitle {
+    font-family: var(--font-family-base);
+    margin-bottom: fluid(24, 12);
+  }
+
+  &__list {
+
+    &:not(.number-list) {
+      padding-left: fluid(16, 12);
+      list-style-type: disc;
+    }
+
+    &.number-list {
+      padding-left: fluid(24, 16);
+      list-style-type: decimal;
+    }
+
+    li::marker {
+      color: var(--color-blue-dark);
+      font-weight: 500;
+    }
+  }
+
+  &__btn-bar {
+    gap: fluid(72, 12);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(12);
+    }
+  }
+
+  &__btn {
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
