@@ -18,21 +18,21 @@ block content
 
             div.prices-page__links.section-mb-72
                 each item, index in pricesPageList
-                    a(href=item.href).prices-page__link(class= index === 1 ? 'is-active accent' : 'dark').button.text-upper.w-100= item.title
+                    a(href=item.href).prices-page__link(class= index === 2 ? 'is-active accent' : 'dark').button.text-upper.w-100= item.title
 
             div.prices-page__header.flex.flex-align-center
-                h3.prices-page__subtitle.color-blue.text-upper.text-w600 ИМПЛАНТАЦИЯ ЗУБОВ
+                h3.prices-page__subtitle.color-blue.text-upper.text-w600 Хирургия
 
                 div.prices-page__line
 
             ul.prices-page__list
-                li.prices-page__item Статус Центра клинического мастерства Nobel Biocare
-                li.prices-page__item Надежные системы имплантации с приживаемостью 99,3%
-                li.prices-page__item Все виды имплантации, в т. ч. одномоментная
-                li.prices-page__item Тщательное планирование имплантации
-                li.prices-page__item Применяем антистресс-подход — лечение во сне
+                li.prices-page__item В нашей команде хирург-имплантолог со стажем 20 лет, к.м.н., эксперт Nobel Biocare
+                li.prices-page__item Тщательное планирование лечения на основе КЛКТ
+                li.prices-page__item Лечение под увеличением бинокулярами или микроскопом
+                li.prices-page__item Сохраняем «безнадежные» зубы с помощью апикальной микрохирургии
+                li.prices-page__item Возможность проведения операции во сне
 
-    +prices('section', '', pricesPageImplantation, '', '', '', false)
+    +prices('section', '', pricesPageSurgery, '', '', '', false)
 
     section.prices-page.section-mb-72
         div.prices-page__inner.container

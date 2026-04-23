@@ -685,7 +685,7 @@
     },
     {
       "title": "Хирургия",
-      "href": "/prices-dental-treatment"
+      "href": "/prices-surgery"
     },
     {
       "title": "Эстетическая реставрация зубов",
@@ -788,7 +788,7 @@
       "isBlue": false
     }
   ],
-  "pricesImplantation": [
+  "pricesPageImplantation": [
     {
       "title": "Установка импланта Neobiotech + коронка из диоксида циркония",
       "about": "(В стоимость входит: имплант бизнес-класса NeoBiotech + операция по установке импланта + установка формирователя десны + контрольный осмотр + установка постоянной коронки из диоксида циркония).",
@@ -924,6 +924,43 @@
     },
     {
       "title": "Консультация имплантолога",
+      "price": "1 500",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    }
+  ],
+  "pricesPageSurgery": [
+    {
+      "title": "Удаление зуба",
+      "price": "5 500",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Удаление зуба мудрости",
+      "price": "8 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Резекция корня зуба",
+      "price": "4 800",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Пластика уздечки языка",
+      "price": "10 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Консультация хирурга",
       "price": "1 500",
       "from": false,
       "hasLink": false,
