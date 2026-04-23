@@ -697,7 +697,7 @@
     },
     {
       "title": "Протезирование зубов",
-      "href": "/prices-dental-treatment"
+      "href": "/prices-prosthetics"
     }
   ],
   "pricesPageDentalTreatment": [
@@ -1039,6 +1039,122 @@
     {
       "title": "Фторирование зубов",
       "price": "3 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    }
+  ],
+  "pricesPageProsthetics": [
+    {
+      "title": "Коронка керамическая",
+      "price": "27 000 - 35 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Коронка из циркония",
+      "price": "30 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Временная коронка",
+      "price": "6 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Временная коронка Cerec (Cad Cam)",
+      "price": "10 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Коронка керамическая",
+      "price": "27 000 - 35 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Коронка на основе диоксида циркония",
+      "price": "29 000 - 39 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Винир керамический",
+      "price": "35 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Коронка металлокерамическая - золотосодержащий сплав",
+      "price": "60 000",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Имплантация зубов All on 4 – все на четырех имплантах - одна челюсть",
+      "about": "(В стоимость входит: установка 4-х имплантов NeoBiotech, временный несъемный зубной протез, постоянный несъемный зубной протез, консультации врачей стоматолога-имплантолога и стоматолога-ортопеда)",
+      "price": "32 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Имплантация зубов All on 4 – все на четырех имплантах - одна челюсть",
+      "about": "(В стоимость входит: установка 4-х имплантов Nobel Grovi, временный несъемный зубной протез, постоянный несъемный зубной протез, консультации врачей стоматолога-имплантолога и стоматолога-ортопеда)",
+      "price": "367 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Съемный протез косметический (при отсутствии 1, 2, 3 зубов)",
+      "price": "14 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Съемный нейлоновый протез на одну челюсть (частичный и полный)",
+      "price": "35 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Частичный съемный акриловый протез",
+      "price": "25 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Полный съемный акриловый протез",
+      "price": "30 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Съемный протез ACRI FREE на одну челюсть",
+      "price": "48 000",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Постановка керамической пломбы (инлей, онлей, оверлей)",
+      "price": "27 000",
       "from": false,
       "hasLink": false,
       "isBlue": false
