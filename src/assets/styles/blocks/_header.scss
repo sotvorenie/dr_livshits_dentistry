@@ -84,7 +84,6 @@
 
   &__list {
     gap: fluid(12, 0);
-    border-radius: var();
 
     @include laptop-s {
       gap: rem(0);
