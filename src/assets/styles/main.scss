@@ -15,6 +15,7 @@
 @use 'blocks/icon';
 @use 'blocks/slider';
 @use 'blocks/product-info';
+@use 'blocks/review';
 
 @use 'blocks/header';
 @use 'blocks/burger-menu';
@@ -50,3 +51,4 @@
 @use 'blocks/sections/doctor-detail/certificates';
 @use 'blocks/sections/doctor-detail/basic-services';
 @use 'blocks/sections/doctor-detail/doctor-work';
+@use 'blocks/sections/doctor-detail/doctor-reviews';

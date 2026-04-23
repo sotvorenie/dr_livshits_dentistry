@@ -1,0 +1,28 @@
+@use '../../../helpers' as *;
+
+.doctor-reviews {
+  background: var(--color-beige);
+
+  &__list {
+    gap: rem(24);
+  }
+
+  .review {
+    border: 2px solid var(--color-blue-dark);
+    padding: fluid(24, 12) rem(12);
+    border-radius: var(--radius-big);
+
+    &__img {
+      top: fluid(31, 18);
+      right: rem(12);
+    }
+
+    &__content {
+      gap: rem(18);
+
+      @include mobile {
+        gap: rem(20);
+      }
+    }
+  }
+}

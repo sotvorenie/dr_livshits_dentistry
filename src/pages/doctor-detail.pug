@@ -104,3 +104,91 @@ block content
                     include ../components/icons/swiper-arrow
                 button(type="button" aria-label="Следующий слайд").doctor-work__btn.next.swiper-arrow
                     include ../components/icons/swiper-arrow
+
+    section.doctor-reviews.section.section-border-block
+        div.doctor-reviews__inner.container
+            div.doctor-reviews__list.flex
+                div.review.position-relative
+                    img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.review__img.position-absolute
+
+                    div.review__content
+                        div.review__left
+                            p.review__name.color-blue.text-w500 Пациент +7 938 12ХХХХХ
+
+                            p.review__date 25 декабря 2022 в 14:30
+
+                            div.review__rating.flex.flex-align-center
+                                include ../components/icons/person-star
+
+                                p 5.0
+
+                                span Отлично
+
+                            div.review__security.flex.flex-align-center
+                                include ../components/icons/person-security
+
+                                span Отзыв проверен
+
+                        div.review__right
+                            div.review__expandable
+                                div.review__block
+                                    p.review__title.text-w500 История пациента
+                                    p.review__message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
+                                div.review__block
+                                    p.review__title.text-w500 Понравилось
+                                    p.review__message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+
+                                div.review__block.visible-mobile
+                                    p.review__title.text-w500 Не понравилось
+                                    p.review__message Не может что-то не нравиться, когда все идеально.
+
+                                div.review__last-reception.visible-mobile.flex
+                                    img(src="/icons/person-calendar.svg" alt="" loading="lazy" width="16" height="16")
+
+                                    div.review__last-reception__right
+                                        p.text-w500 Приём был в декабре 2022
+                                        p.text-w500 «Стоматология доктора Лившиц» - ул. Торжковская, д. 13, корп. 1
+                            button(type="button").review__more.color-blue.visible-mobile.text-w500 Читать полностью
+
+                div.review.position-relative.hidden-tablet
+                    img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.review__img.position-absolute
+
+                    div.review__content
+                        div.review__left
+                            p.review__name.color-blue.text-w500 Пациент +7 938 12ХХХХХ
+
+                            p.review__date 25 декабря 2022 в 14:30
+
+                            div.review__rating.flex.flex-align-center
+                                include ../components/icons/person-star
+
+                                p 5.0
+
+                                span Отлично
+
+                            div.review__security.flex.flex-align-center
+                                include ../components/icons/person-security
+
+                                span Отзыв проверен
+
+                        div.review__right
+                            div.review__expandable
+                                div.review__block
+                                    p.review__title.text-w500 История пациента
+                                    p.review__message ...Хочется сказать, что Рахманов Михаил Сергеевич – виртуоз своего дела! :) Я осталась под большим впечатлением. Просто руки Бога (побывав в руках двух хирургов ранее, мне есть с чем сравнить).
+                                div.review__block
+                                    p.review__title.text-w500 Понравилось
+                                    p.review__message Михаил Сергеевич работает быстро, аккуратно, профессионально, можно даже сказать нежно.
+
+                                div.review__block.visible-mobile
+                                    p.review__title.text-w500 Не понравилось
+                                    p.review__message Не может что-то не нравиться, когда все идеально.
+
+                                div.review__last-reception.visible-mobile.flex
+                                    img(src="/icons/person-calendar.svg" alt="" loading="lazy" width="16" height="16")
+
+                                    div.review__last-reception__right
+                                        p.text-w500 Приём был в декабре 2022
+                                        p.text-w500 «Стоматология доктора Лившиц» - ул. Торжковская, д. 13, корп. 1
+
+                            button(type="button").review__more.color-blue.visible-mobile.text-w500 Читать полностью

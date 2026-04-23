@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const moreButtons = document.querySelectorAll('.person__review-more')
+    const moreButtons = document.querySelectorAll('.review__more')
 
     moreButtons.forEach(btn => {
         btn.addEventListener('click', function() {
