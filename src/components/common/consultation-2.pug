@@ -1,0 +1,26 @@
+include form
+
+mixin consultation-2(className = '', img = '/images/consultation-person.png', name = 'Лившиц Татьяна Львовна', job = 'Стоматолог-терапевт-ортопед,', experience = 'Опыт работы 29 лет')
+    section.consultation-2(class=className)
+        div.consultation-2__inner.container
+            div.consultation-2__content.flex
+
+                +form('Предложим удобное время для Вашего визита к нам', 'Записаться на консультацию', 'consultation-2__form')
+
+                div.consultation-2__right.flex.flex-column
+                    div.consultation-2__top.flex
+                        p.consultation-2__title.text-w700 #[span.color-accent Лечение] начинается с консультации
+
+                        div.consultation-2__line.top.hidden-tablet
+
+                        div.consultation-2__img-container
+                            img(src=img alt="" loading="lazy")
+
+                    div.consultation-2__bottom.flex
+                        div.consultation-2__line.bottom.hidden-tablet
+
+                        div.consultation-2__info
+                            h4.consultation-2__name.color-blue.text-w800= name
+
+                            p.consultation-2__text.text-w500= job
+                            p.consultation-2__text.text-w500= experience

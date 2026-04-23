@@ -1,0 +1,133 @@
+@use '../../helpers' as *;
+
+.consultation-2 {
+
+  &__content {
+
+    @include tablet {
+      flex-direction: column-reverse;
+      gap: rem(24);
+    }
+  }
+
+  &__form {
+
+    @include tablet {
+      margin-inline: auto;
+    }
+  }
+
+  &__right {
+    flex-grow: 1;
+  }
+
+  &__top {
+
+    @include tablet {
+      flex-direction: column;
+      gap: rem(12);
+      align-items: center;
+    }
+
+    @include mobile {
+      align-items: end;
+    }
+  }
+
+  &__bottom {
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include mobile {
+      justify-content: end;
+    }
+  }
+
+  &__title {
+    @include fluid-text(30, 18);
+
+    font-family: var(--font-family-accent);
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    padding: rem(24) rem(34);
+    box-shadow: var(--shadow);
+    height: fit-content;
+
+    @include tablet-above {
+      max-width: 50%;
+      margin-top: rem(63);
+    }
+  }
+
+  &__img-container {
+    width: rem(225);
+    aspect-ratio: 225/334;
+    border-radius: var(--radius-big);
+    position: relative;
+
+    @include mobile {
+      word-break: rem(174);
+      aspect-ratio: 174/276;
+    }
+
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      object-position: center bottom;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url("/images/consultation-bg.png") bottom/contain no-repeat;
+
+      @include mobile {
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  &__info {
+    background: var(--color-light);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-big);
+    padding: rem(16);
+    width: rem(380);
+    text-align: right;
+
+    & * {
+      font-family: var(--font-family-accent);
+      line-height: 1;
+    }
+  }
+
+  &__name {
+    margin-bottom: fluid(20, 18);
+  }
+
+  &__text:not(:last-child) {
+    margin-bottom: rem(8);
+  }
+
+  &__line {
+    height: rem(2);
+    flex-grow: 1;
+
+    &.top {
+      margin-top: rem(137);
+      background: linear-gradient(to right, rgba(0, 90, 156, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    &.bottom {
+      margin-top: rem(83);
+      background: linear-gradient(to right, rgba(31, 110, 168, 0.5) 0%, rgba(0, 90, 156, 0) 100%);
+    }
+  }
+}

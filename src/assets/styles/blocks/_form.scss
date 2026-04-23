@@ -7,6 +7,8 @@
   color: var(--color-light);
   max-width: rem(380);
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   &:not(.is-small) {
 
@@ -39,6 +41,10 @@
 
   &__about {
     @include fluid-text(14, 12);
+  }
+
+  &__inputs-block {
+    flex-grow: 1;
   }
 
   &__submit {
