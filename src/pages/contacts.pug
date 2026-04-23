@@ -1,0 +1,18 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/contacts
+include ../components/common/consultation
+
+block title
+    | Контакты
+
+block header
+    +header(6)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Контакты"])
+
+    +contacts('section-mb-72 section-pb-72 section-border-bottom')
+
+    +consultation('section-mb-72', '/images/consultation-team-3.png')
