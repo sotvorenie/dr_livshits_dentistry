@@ -689,7 +689,7 @@
     },
     {
       "title": "Эстетическая реставрация зубов",
-      "href": "/prices-dental-treatment"
+      "href": "/prices-restoration"
     },
     {
       "title": "Профессиональная гигиена полости рта",
@@ -962,6 +962,50 @@
     {
       "title": "Консультация хирурга",
       "price": "1 500",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    }
+  ],
+  "pricesPageRestoration": [
+    {
+      "title": "Реставрация зубов",
+      "price": "9 250",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Восстановление зубов",
+      "price": "6 600",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Реставрация передних зубов",
+      "price": "10 800",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Виниры на передние зубы",
+      "price": "10 800",
+      "from": true,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Композитные виниры",
+      "price": "10 800",
+      "from": false,
+      "hasLink": false,
+      "isBlue": false
+    },
+    {
+      "title": "Керамические виниры",
+      "price": "35 000",
       "from": false,
       "hasLink": false,
       "isBlue": false
