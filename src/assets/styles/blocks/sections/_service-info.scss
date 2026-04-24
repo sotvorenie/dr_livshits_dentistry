@@ -23,7 +23,7 @@
     line-height: 1.66;
   }
 
-  &__list, &__block:not(:last-child) {
+  &__block:not(:last-child) {
     margin-bottom: fluid(40, 16);
   }
 
@@ -41,7 +41,7 @@
     &.number-list {
       list-style-type: decimal;
 
-      li::marker {
+      & > li::marker {
         @include fluid-text(18, 14);
 
         font-weight: 700;
@@ -51,6 +51,10 @@
 
     &.accent-list li::marker {
       color: var(--color-blue-dark);
+    }
+
+    .service-info__list {
+      margin-left: rem(-10);
     }
   }
 
