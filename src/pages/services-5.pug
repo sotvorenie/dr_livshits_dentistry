@@ -1,0 +1,180 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+include ../components/blocks/quote
+include ../components/common/person
+include ../components/blocks/works
+include ../components/blocks/principles-operation
+include ../components/blocks/awards
+include ../components/blocks/with-love
+include ../components/blocks/with-love-2
+include ../components/blocks/proud-reviews
+include ../components/blocks/familiar-person
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation-2
+include ../components/blocks/other-services
+include ../components/blocks/articles
+include ../components/blocks/welcome
+include ../components/common/consultation
+include ../components/blocks/contacts
+
+block title
+    | Лечение кариеса
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лечение зубов", "Лечение кариеса"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Бережное лечение периодонтита –
+                h1.banner__title.color-accent эндодонтическое лечение/перелечивание корневых каналов зубов
+
+                h2.banner__subtitle
+                    | с использованием
+                    | #[span.color-accent дентального микроскопа и применением коффердама]
+                h2.banner__subtitle.color-blue от врачей, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    section.service-info.section-mb-72
+        div.service-info__inner.container
+            div.service-info__content
+                div.service-info__header
+                    h2.service-info__subtitle.text-w700.color-blue Периодонтит -
+
+                    p.service-info__about это воспаление периодонта, то есть тканей, окружающих корень зуба (связок, кости, цемента корня). Он может быть острым или хроническим и часто возникает как осложнение нелеченного пульпита или некачественного эндодонтического лечения.
+
+                div.service-info__img-container.img-container.w-100
+                    img(src="/images/article.jpg" alt="")
+
+                div.service-info__block
+                    h2.service-info__name.text-w700 #[span.color-accent Причины] возникновения периодонтита:
+
+                    ul.service-info__list.number-list
+                        li.service-info__item #[span.color-blue.text-w700 Инфекция -] проникновение бактерий из кариозной полости в пульпу, а затем в периодонт.
+                        li.service-info__item #[span.color-blue.text-w700 Травма -] удар, перегрузка зуба (например, из-за неправильного прикуса или бруксизма).
+                        li.service-info__item #[span.color-blue.text-w700 Медикаментозный фактор -] раздражение тканей агрессивными препаратами (например, при лечении пульпита).
+                        li.service-info__item #[span.color-blue.text-w700 Некачественное пломбирование каналов -] если каналы запломбированы не до верхушки или с пустотами, это может спровоцировать воспаление.
+
+                div.service-info__block
+                    h2.service-info__name.text-w700.color-accent #[span.color-blue Лечение периодонтита] #[span.color-accent с использованием дентального микроскопа] #[span.color-blue ,]
+
+                    p.service-info__text который увеличивает рабочую область в 20-40 раз, – это современный стандарт в стоматологии, обеспечивающий максимальную точность обработки каналов до 98–100%, снижая риск осложнений.
+
+                div.service-info__block
+                    div.service__accordion.accordion.is-open
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 Использование дентального микроскопа #[span.color-accent значительно повышает точность лечения] на всех этапах:
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list.number-list
+                                    li.service-info__item #[span.color-blue.text-w700.text-w700 Диагностика] – помогает обнаружить дополнительные каналы, трещины корня.
+                                    li.service-info__item #[span.color-blue.text-w700.text-w700 Очистка каналов] – под увеличением врач лучше удаляет инфицированные ткани.
+                                    li.service-info__item #[span.color-blue.text-w700.text-w700 Пломбирование] – контроль герметичности заполнения каналов гуттаперчей.
+
+                div.service-info__block
+                    div.service__accordion.accordion.is-open
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 #[span.color-blue Этапы и сроки] #[span.color-accent лечения] #[span.color-blue периодонтита]
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                p.service-info__text 1–3 визита (зависит от клинической ситуации).
+                                p.service-info__text #[span.color-blue.text-w700 1 визит] - вскрытие полости, удаление пульпы и механическая обработка корневых каналов зуба, с использованием измерения длинны каналов апекс-локатором , установка временной пломбы.
+                                p.service-info__text #[span.color-blue.text-w700 2 визит] - (через 1–2 недели): пломбирование каналов, обработка зуба под коронку.
+                                p.service-info__text #[span.color-blue.text-w700 3 визит] - установка временой или постоянной коронки.
+
+                div.service-info__block
+                    div.service__accordion.accordion.is-open
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 #[span.color-blue Почему после лечения] #[span.color-accent рекомендуют временную коронку] #[span.color-blue :]
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list.accent-list
+                                    li.service-info__item #[span.color-blue Контроль заживления] – если под коронкой снова начнется воспаление, это можно вовремя заметить.
+                                    li.service-info__item #[span.color-blue Стабилизация зуба] – периодонту нужно время для восстановления, временная коронка снижает жевательную нагрузку на зуб.
+                                    li.service-info__item #[span.color-blue Исключение рецидива] – если зуб не беспокоит через полгода, можно ставить постоянную коронку.
+
+                div.service-info__block
+                    div.service__accordion.accordion.is-open
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 #[span.color-blue Почему нужна] #[span.color-accent постоянная коронка] #[span.color-blue :]
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list.accent-list
+                                    li.service-info__item #[span.color-blue Защита от сколов] – зуб после эндодонтического лечения становится хрупким и ломким по причине того, что питательные вещества через запломбированные корневые каналы перестают поступать в коронковую часть.
+                                    li.service-info__item #[span.color-blue Герметизация] – предотвращает попадание бактерий в корневые каналы.
+                                    li.service-info__item #[span.color-blue Восстановление функции] – коронка возвращает зубу жевательную эффективность.
+
+
+    +prices('section section-border-block section-mb-72', 'Стоимость удаления зубов', services1Prices, '', '', 'dark', true, true)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in servicesPersons
+                +person(item, index % 2 === 0)
+
+    +works('section section-border-bottom section-mb-72')
+
+    +principles-operation('section section-mb-72')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +with-love('section')
+
+    +with-lowe-2('section-mb-72')
+
+    +proud-reviews('section section-border-block')
+
+    +familiar-person('section')
+
+    +recommendations('section section-border-block section-mb-72')
+
+    +complex-cases()
+
+    +consultation-2('section')
+
+    +other-services('section section-border-block', 'по восстановлению зубов', true)
+
+    +articles('section')
+
+    +welcome('section', false)
+
+    +consultation('section', '/images/consultation-team-3.png')
+
+    +contacts('section-mb-72')
