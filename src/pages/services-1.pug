@@ -1,0 +1,213 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+include ../components/blocks/we-care
+include ../components/blocks/awards
+include ../components/common/person
+include ../components/blocks/comparison
+include ../components/blocks/quote
+include ../components/blocks/with-love
+include ../components/blocks/with-love-2
+include ../components/blocks/counter
+include ../components/blocks/patients-say
+include ../components/blocks/familiar-person
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation
+include ../components/blocks/other-services
+include ../components/blocks/welcome
+
+block title
+    | Хирургия
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лечение зубов"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Бережное лечение зубов
+
+                h2.banner__subtitle (кариесы, пульпиты, периодонтиты, кисты)
+                h2.banner__subtitle
+                        | с использованием
+                        | #[span.color-accent дентального микроскопа и применением коффердама]
+                h2.banner__subtitle.color-blue от врачей, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    +comparison('section section-mb-72 section-border-block')
+
+    section.info.section.section-mb-72.section-border-bottom
+        div.info__inner.container
+            div.info__container
+                div.info__block
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
+                            img(src="/icons/info/1.svg")
+
+                    div.info__content.flex.flex-align-end
+                        div.info__text-block
+                            h2.info__text.text-w500 Лечение зубов с использованием дентального микроскопа – #[span.color-blue.text-w700 это ваш комфорт!]
+
+                            a(href="#").info__btn.button.dark.hidden-mobile Подробнее
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                        a(href="#").info__btn.button.dark.visible-mobile Подробнее
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/2.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p С появлением микроскопа в стоматологии изменилось само расположение пациента в кресле. Теперь вы не сидите в кресле врача в напряженной позе, а #[span.color-accent.text-w700 расслабленно лежите] на мягком матрасе с удобной подушкой и можете спокойно смотреть любимый фильм – врач, находясь сзади вас при лечении, не закрывает Вам обзор.
+
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/3.svg")
+
+                        div.info__content
+                            div.info__text-block.text-center
+                                p Врач, работающий без микроскопа вынужден буквально «нависать» над пациентом при сложном лечении до расстояния 10-15 сантиметров от лица пациента. С применением микроскопа увеличилось расстояние от врача до пациента – до 50 см. #[span.color-accent.text-w700 Такая удаленность действует успокаивающе], потому что врач не находится в вашей психологически допустимой зоне.
+
+            div.info__block
+                div.icon
+                    div.icon__wrapper.flex-center.blue
+                        img(src="/icons/info/4.svg")
+
+                div.info__content.flex.flex-align-center
+                    div.info__text-block
+                        h2.info__text.text-w500 Удаление ретинированных, дистопированных, сверхкомплектных зубов требует от хирурга #[span.color-blue.text-w700 большого опыта и мастерства], поскольку восьмерки — самые сложные зубы в организме человека!
+
+                    div.info__img-container.img-container
+                        img(src="images/info-img.png" alt="")
+
+            div.info__container
+                div.info__block
+                    div.icon
+                        div.icon__wrapper.flex-center.blue
+                            img(src="/icons/info/5.svg")
+
+                    div.info__content.flex.flex-align-center
+                        div.info__text-block
+                            h2.info__text.text-w500 Наши доктора имеют большой опыт по удалению самых сложных зубов, а так же дополнительную специализацию в области челюстно-лицевой хирургии, что позволяет им безболезненно и быстро, #[span.color-blue.text-w700 без негативных последствий удалять даже самые сложные восьмерки]!
+
+                        div.info__img-container.img-container
+                            img(src="images/info-img.png" alt="")
+
+                div.info__row.row
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/6.svg")
+
+                        div.info__content.flex.flex-column
+                            div.info__text-block
+                                p.info__text--subtitle.color-accent.text-w700.text-center Зубы мудрости (восьмерки) рекомендуют к удалению, если:
+
+                                ul.info__list
+                                    li.info__item для них #[span.color-blue.text-w700 нет места в челюсти] и при прорезывании они могут образовать скученность, давить на соседние зубы и испортить прикус;
+                                    li.info__item восьмерки #[span.color-blue.text-w700 прорезаются только на половину] или на треть, некоторые выходят под наклоном или горизонтально, что затрудняет их выход и ставит под угрозу здоровье корней соседних зубов, а также травмирует слизистую и язык.
+
+                            a(href="#").info__btn.button.dark.m-auto Подробнее
+
+                    div.info__col.col-12.mb-col-6
+                        div.icon
+                            div.icon__wrapper.flex-center.accent
+                                img(src="/icons/info/7.svg")
+
+                        div.info__content.flex.flex-column
+                            div.info__text-block
+                                p.info__text--subtitle.color-accent.text-w700.text-center Зубы мудрости (восьмерки) рекомендуют к удалению, если:
+
+                                ul.info__list
+                                    li.info__item восьмерки прорезаются через очень плотный слой костной ткани, поэтому на выходе #[span.color-blue.text-w700 нередко имеют уже кариес или пульпит];
+                                    li.info__item если при прорезывании над восьмым зубом #[span.color-blue.text-w700 образовался «десневой капюшон»] и такому зубу сложно провести гигиену: под мягкими тканями остаются налет и бактерии, образуя перикоронарит — воспаление мягких тканей вокруг зуба;
+                                    li.info__item #[span.color-blue.text-w700 киста ретинированного зуба] мудрости — показание к срочному удалению.
+
+                            a(href="#").info__btn.button.dark.m-auto Подробнее
+
+
+            div.info__block
+                div.icon
+                    div.icon__wrapper.flex-center.blue
+                        img(src="/icons/info/1.svg")
+
+                div.info__content.flex.flex-align-end
+                    div.info__text-block
+                        h2.info__text.text-w500 Лечение кариеса зубов с использованием дентального микроскопа – #[span.color-blue.text-w700 это точность и непревзойденное качество!]
+
+                        a(href="#").info__btn.button.dark.hidden-mobile Подробнее
+
+                    div.info__img-container.img-container
+                        img(src="images/info-img.png" alt="")
+
+                    a(href="#").info__btn.button.dark.visible-mobile Подробнее
+
+            h2.info__subtitle.text-w500.text-center Использование в процессе лечения зубов дентального микроскопа позволяет врачу #[span.color-accent.text-w700 увеличить обзор обрабатываемой поверхности в 25 раз], что гарантирует пациенту:
+
+            div.info__row.row
+                div.info__col.col-12.mb-col-6
+                    div.icon
+                        div.icon__wrapper.flex-center.accent
+                            img(src="/icons/info/6.svg")
+
+                    div.info__content
+                        div.info__text-block.text-center
+                            p.info__name.color-accent.text-w700 Максимальное сохранение собственных здоровых тканей зуба.
+                            p В то время как при лечении без микроскопа, с целью полностью удалить кариозные повреждения, врач, не имея увеличения и используя лишь собственное зрение, вынужден высверливать >и здоровые ткани зуба пациента.
+
+                div.info__col.col-12.mb-col-6
+                    div.icon
+                        div.icon__wrapper.flex-center.accent
+                            img(src="/icons/info/7.svg")
+
+                    div.info__content
+                        div.info__text-block.text-center
+                            p.info__name.color-accent.text-w700 Идеальную полировку запломбированной зоны.
+                            p Используя микроскоп, доктор обеспечит идеальную поверхность вылеченного зуба, отсутствие микротрещин и неровностей. Пломба полностью сливается с эмалью — значит, пломба прослужит долго.
+
+    +prices('section section-border-block', 'Стоимость удаления зубов', services1Prices, '', '', 'dark')
+
+    +we-care('section')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in servicesPersons
+                +person(item, index % 2 === 0)
+
+    +with-love('section')
+
+    +with-lowe-2('section-mb-72')
+
+    +counter('section section-mb-72 section-border-block')
+
+    +patients-say('section section-border-top section-mb-72')
+
+    +familiar-person('section section-border-block')
+
+    +recommendations('section')
+
+    +complex-cases()
+
+    +consultation('section section-border-bottom', '/images/consultation-team-3.png')
+
+    +other-services('section section-border-bottom section-mb-72', 'по восстановлению зубов', true)
+
+    +welcome('section', false)
+
+    +consultation('section section-border-bottom', '/images/consultation-team-3.png')

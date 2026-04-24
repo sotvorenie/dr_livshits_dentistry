@@ -1,0 +1,23 @@
+mixin recommendations(className = '')
+    section.recommendations(class=className)
+        div.recommendations__inner.container
+            h1.recommendations__title.section__title Почему #[span.color-blue 95% наших пациентов] приходят к нам по рекомендации
+
+            div.recommendations__slider-container.position-relative
+                div.recommendations__slider.swiper.text-center
+                    div.swiper-wrapper
+                        each item in recommendations
+                            div.recommendations__card.swiper-slide.position-relative
+                                div.icon
+                                    div.icon__wrapper
+                                        img(src=item.icon alt=item.title)
+
+                                h4.recommendations__name.text-w700= item.title
+
+                                p.recommendations__text= item.text
+
+
+                button(type="button" aria-label="Предыдущий слайд").recommendations__btn.prev.swiper-arrow
+                    include ../icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").recommendations__btn.next.swiper-arrow
+                    include ../icons/swiper-arrow

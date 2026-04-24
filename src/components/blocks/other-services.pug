@@ -1,10 +1,12 @@
-mixin other-services(className = '')
+mixin other-services(className = '', titleText = 'хирургической стоматологии', isAccent = false)
     section.other-services(class=className)
         div.other-services__inner.container
-            h1.other-services__title.section__title.text-center
-                | #[span.text-w700.color-blue Другие услуги]
-                br
-                |хирургической стоматологии
+            if isAccent
+                h1.other-services__title.text-center.text-w700.color-accent Другие услуги
+            else
+                h1.other-services__title.text-center.text-w700.color-blue Другие услуги
+
+            h1.other-services__title.section__title.text-center.text-w500= titleText
 
             div.other-services__slider-container.position-relative
                 div.other-services__slider.swiper
@@ -21,7 +23,10 @@ mixin other-services(className = '')
                                         p.other-services__text.text-center= item.text
 
                                     div.other-services__bottom
-                                        h3.other-services__price.text-w700.color-blue.text-center= item.price
+                                        div.other-services__price.flex.flex-align-end.flex-justify-center
+                                            p.text-w500= item.discount
+
+                                            h3.text-w700.color-blue.text-center= item.price
 
                                         a(href="#").other-services__link.button.dark.w-100 Подробнее
 

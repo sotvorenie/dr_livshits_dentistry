@@ -1,0 +1,21 @@
+@use '../../helpers' as *;
+
+.complex-cases {
+
+  &__card {
+    background: var(--color-blue-dark);
+    padding: rem(44) rem(82);
+    color: var(--color-light);
+    gap: fluid(130, 0);
+
+    @include mobile-above {
+      border-radius: var(--radius-big);
+    }
+
+    @include mobile {
+      width: 100vw;
+      margin-left: calc(var(--container-padding-x) * -1);
+      padding: rem(20) var(--container-padding-x);
+    }
+  }
+}

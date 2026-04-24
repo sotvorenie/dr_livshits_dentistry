@@ -34,8 +34,23 @@
   }
 
   &__price {
-    @include fluid-text(26, 16);
+    gap: rem(8);
 
-    font-family: var(--font-family-base);
+    h3 {
+      @include fluid-text(26, 16);
+
+      font-family: var(--font-family-base);
+      line-height: 1.15;
+    }
+
+    p {
+      @include fluid-text(14, 12);
+
+      text-decoration: line-through;
+
+      @include mobile-above {
+        line-height: 1.62;
+      }
+    }
   }
 }
