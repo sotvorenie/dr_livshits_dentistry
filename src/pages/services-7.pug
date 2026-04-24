@@ -1,0 +1,152 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/comparison
+include ../components/blocks/advertising
+include ../components/blocks/we-care
+include ../components/blocks/awards
+include ../components/blocks/quote
+include ../components/common/person
+include ../components/blocks/with-love-3
+include ../components/blocks/with-love-4
+include ../components/blocks/patients-say
+include ../components/blocks/check-list
+include ../components/blocks/problems
+include ../components/blocks/familiar-person
+include ../components/blocks/process
+include ../components/blocks/works
+include ../components/blocks/numbers
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation
+include ../components/blocks/other-services
+include ../components/blocks/welcome
+
+block title
+    | Имплантация зубов
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Имплантация зубов"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Имплантация зубов любой степени сложности
+
+                h2.banner__subtitle от опытных стоматологов-хирургов-имплантологов, которые входят в ТОП-5 лучших по СПб!
+                h2.banner__subtitle.color-accent Только проверенные импланты от бюджетных до премиум класса с пожизненной гарантией!
+
+            include ../components/blocks/banner-content
+
+    +comparison('section section-border-block')
+
+    +advertising('section section-border-bottom section-mb-72')
+
+    section.not-offer.section.section-mb-72.is-blue
+        div.not-offer__inner.container
+            h1.not-offer__title.text-w500.section__title
+                | Почему #[span.color-accent.text-w700 мы не предлагаем]
+                br
+                | Вам дешевые импланты?
+
+            ul.not-offer__list.row
+                li.not-offer__item.bordered-item.col-12.mb-col-6
+                    div.icon
+                        div.icon__wrapper.blue.flex-center.accent
+                            img(src="/icons/check.svg")
+
+                    h3.not-offer__name.text-w700 Наиболее значимым и важным параметром любого импланта
+
+                    p.not-offer__text (самого дорогого или самого бюджетного) #[span.color-blue.text-w700 является его приживление в костной ткани,] на месте отсутствующего зуба. И если для известных брендов процент приживления составляет до 99%, то бюджетные варианты имплантов имеют процент существенно ниже, что негативно сказывается на здоровье пациентов и уменьшает шансы на возможность проведения повторной имплантации после отторжения или удаления такого «неприжившегося» импланта.
+
+                    a(href="#").not-offer__link.button.dark.w-250.m-auto Подробнее
+
+                li.not-offer__item.bordered-item.col-12.mb-col-6
+                    div.icon
+                        div.icon__wrapper.blue.flex-center.accent
+                            img(src="/icons/check.svg")
+
+                    h3.not-offer__name.text-w700 Основной фактор риска при установке дешевого импланта
+
+                    p.not-offer__text #[span.color-accent.text-w700 является его отторжение]. Но, совершенно необязательно выбирать «самый дорогой» имплант. При выборе следует руководствоваться информацией о наличии клинических исследований – они должны составлять у бренда имплантов 10-15 лет как минимум до выхода на рынок, а так же срок присутствия на рынке той или иной имплантационной системы должен быть не менее 10 лет. Лишь такой порядок цифр может гарантировать не на словах, а в цифрах количество проведенных операций и отдаленный результат – то есть количество пациентов, у которых все хорошо через 10-15 лет после установки имплантов и количество пациентов, у которых последовали осложнения, отторжения имплантов.
+
+                    a(href="#").not-offer__link.button.dark.w-250.m-auto Подробнее
+
+    section.not-offer.section.section-border-block
+        div.not-offer__inner.container
+            h1.not-offer__title.text-w500.section__title
+                | Почему #[span.color-blue.text-w700 мы не предлагаем]
+                br
+                | Вам металлокерамические коронки?
+
+            ul.not-offer__list.row
+                li.not-offer__item.shadow-item.col-12.mb-col-4
+                    div.icon
+                        div.icon__wrapper.flex-center.accent
+                            img(src="/icons/check.svg")
+
+                    h3.not-offer__name.text-w700 Коронки из металлокерамики по-прежнему создаются вручную
+
+                    p.not-offer__text техниками в лабораторных условиях и сохраняют погрешность в прилегании. То есть под такую коронку могут попадать мельчайшие кусочки пищи и создавать неудобства для пациентов.
+
+                li.not-offer__item.shadow-item.col-12.mb-col-4
+                    div.icon
+                        div.icon__wrapper.flex-center.accent
+                            img(src="/icons/check.svg")
+
+                    h3.not-offer__name.text-w700 Совмещение разнородных металлов
+
+                    p.not-offer__text титановый имплант и коронка  из кобальт-хрома или никель-хрома в жидкой среде полости рта может негативно влиять на состояние слизистой, на состояние ЖКТ.
+
+                li.not-offer__item.shadow-item.col-12.mb-col-4
+                    div.icon
+                        div.icon__wrapper.flex-center.accent
+                            img(src="/icons/check.svg")
+
+                    h3.not-offer__name.text-w700 Поскольку коронка из металла покрывается керамикой поверх,
+
+                    p.not-offer__text то существует вероятность образования сколов керамики с металла, а так же потемнение десны вокруг коронки.
+
+    +we-care('section', '/images/we-care-2.png', false)
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in dentalProstheticsPersons
+                +person(item, index % 2 === 0)
+
+    +with-love-3('section')
+
+    +with-love-4('section-pb-72 section-border-bottom section-mb-72')
+
+    +patients-say('section section-border-block')
+
+    +check-list('section section-mb-72')
+
+    +problems('section section-border-block')
+
+    +familiar-person('section section-border-bottom section-mb-72')
+
+    +process('section section-mb-72')
+
+    +works('section section-border-block', false)
+
+    +numbers('section')
+
+    +recommendations('section section-border-block section-mb-72')
+
+    +complex-cases()
+
+    +consultation('section', '/images/consultation-team-3.png')
+
+    +other-services('section section-border-block section-mb-72')
+
+    +welcome('section', false)
+
+    +consultation('section', '/images/consultation-team-3.png')

@@ -1,0 +1,23 @@
+mixin slider-2(className = '')
+    div.slider.slider-with-line(style="--pos: 50%" class=className).position-relative.w-100.overflow-hidden
+        div.slider__slide.before
+            img(src="icons/slider-from.svg").slider__badge.before
+            div.slider__img
+                img(src="/images/slider-from.jpg" alt="")
+
+        div.slider__slide.after
+            img(src="icons/slider-to.svg").slider__badge.after
+            div.slider__img
+                img(src="/images/slider-to.jpg" alt="")
+
+        input.slider__input.position-absolute.w-100.h-100(
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            oninput="this.parentElement.style.setProperty('--pos', this.value + '%')"
+        )
+
+        div.slider__toggle
+            div.slider__button
+                img(src="/icons/slider-toggle-2.svg" alt="").w-100.h-100

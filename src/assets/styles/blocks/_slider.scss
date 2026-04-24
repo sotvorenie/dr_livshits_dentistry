@@ -10,6 +10,14 @@
     margin-bottom: fluid(24, 17);
   }
 
+  &.slider-with-line {
+
+    .slider__toggle {
+      width: rem(4);
+      background: var(--color-light);
+    }
+  }
+
   &__slide {
     position: absolute;
     inset: 0;
@@ -72,5 +80,10 @@
 
     width: rem(82);
     height: rem(31);
+
+    @include mobile {
+      width: rem(64);
+      height: auto;
+    }
   }
 }

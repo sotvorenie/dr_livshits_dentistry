@@ -1,0 +1,46 @@
+@use '../../helpers' as *;
+
+.process {
+  background: var(--color-blue);
+
+  &__title {
+    max-width: rem(670);
+    margin-inline: auto;
+  }
+
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+  }
+
+  &__number, &__name {
+    font-family: var(--font-family-base);
+  }
+
+  &__number {
+    font-size: rem(54);
+    margin-bottom: rem(24);
+  }
+
+  &__bottom {
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin-bottom: fluid(24, 16);
+    flex-grow: 1;
+  }
+
+  &__text {
+    line-height: 1.625;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: rem(24);
+  }
+
+  &__link {
+    width: min(#{rem(250)}, 100%);
+  }
+}

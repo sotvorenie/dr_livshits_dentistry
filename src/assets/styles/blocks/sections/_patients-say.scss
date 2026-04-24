@@ -28,6 +28,7 @@
 
   &__review, &__message {
     font-family: var(--font-family-base);
+    letter-spacing: 0;
   }
 
   &__review {
@@ -64,8 +65,12 @@
   &__img-container {
     @include flex-center();
 
-    width: 100%;
-    height: rem(45);
+    width: rem(228);
+    aspect-ratio: 228/45;
+
+    @include laptop-s {
+      width: 100%;
+    }
 
     img {
       max-height: 100%;

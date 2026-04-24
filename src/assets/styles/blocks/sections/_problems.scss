@@ -1,0 +1,38 @@
+@use '../../helpers' as *;
+
+.problems {
+
+  &__title {
+    max-width: rem(880);
+    margin-inline: auto;
+  }
+
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+  }
+
+  &__item {
+    background: var(--color-beige);
+    border-radius: var(--radius-big);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-block {
+    padding: rem(24);
+    flex-grow: 1;
+
+    @include mobile {
+      padding: rem(16) rem(16) rem(24);
+    }
+  }
+
+  &__name {
+    @include fluid-text(22, 16);
+
+    flex-grow: 1;
+    line-height: 1.45;
+    margin-bottom: fluid(18, 16);
+  }
+}

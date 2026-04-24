@@ -1,0 +1,45 @@
+mixin advertising(className = '')
+    section.advertising(class=className)
+        div.advertising__inner.container
+            h1.advertising__title.text-w500.text-center.section__title Наверняка, Вам встречается реклама имплантации «под ключ» #[span.text-w700.color-blue от 25 000 до 40 000 ₽]
+
+            div.advertising__top.flex.flex-align-center
+                div.advertising__left.flex
+                    div.advertising__img-container.img-container
+                        img(src="images/advertising-1.jpg")
+
+                    div.advertising__img-container.img-container
+                        img(src="images/advertising-2.jpg")
+
+                div.advertising__right
+                    h4.advertising__right-title.text-w700 А что на самом деле — при посещении клиники?
+
+                    ul.advertising__minuses.flex.flex-column
+                        li.advertising__minus В цену заложен самый бюджетный имплант, который «себе бы врач не поставил»
+                        li.advertising__minus В цену заложена металлокерамическая коронка, которая далеко не под все клинические ситуации пациента подходит
+                        li.advertising__minus Опыт работы врача-имплантолога крайне мал и низкая цена обеспечивает ему поток пациентов для практики
+
+            h3.advertising__subtitle.text-w400.text-center.section__title Но чаще всего причина в том, что Вам показывают #[span.color-blue.text-w500 рекламную] цену на #[span.color-blue.text-w500 рекламное] предложение, а при Вашем визите Вам будет рекомендован и другой имплант, и другая коронка, и другая цена
+
+            div.advertising__cards.flex.flex-column
+                each item in advertising
+                    div.advertising__card.flex
+                        div.advertising__card-left.text-center.flex.flex-column.flex-align-center.flex-justify-between
+                            if item.img
+                                img(src=item.img alt="" loading="lazy").advertising__card-img
+
+                            h3.advertising__card-name.text-w600= item.title
+
+                            h1.advertising__card-price.color-blue= `${item.price} ₽`
+
+                            if item.about
+                                h2.advertising__card-about.text-w600.color-accent= item.about
+
+                        div.advertising__card-right.h-100.flex.flex-column.flex-justify-between
+                            h3.advertising__card-price-on.color-blue Цена включает:
+
+                            ul.advertising__list
+                                each li in item.items
+                                    li.advertising__item.h4.text-w400= li
+
+                            a(href="#").advertising__link.button.dark.w-250 Подробнее

@@ -1,0 +1,38 @@
+mixin process(className = '')
+    section.process(class=className)
+        div.process__inner.container
+            h1.process__title.text-w500.text-center.section__title
+                | Как будет проходить
+                br
+                | #[span.color-blue.text-w700 Ваш процесс] имплантации
+
+            ul.process__list.row
+                li.process__item.col-12.mb-col-4.flex.flex-column
+                    h1.process__number.text-w600.color-accent.text-center 1
+
+                    div.process__bottom.flex.flex-column
+                        h3.process__name.text-w700.text-center Установка импланта
+
+                        p.process__text.text-center Процедура практически безболезненна, проводится под местной анестезией, занимает не более одного часа (включая время ожидания действия анестетика). Представляет из себя установку титанового штифта на место корня утраченного зуба
+
+                    a(href="#").process__link.button.dark.m-auto Подробнее
+
+                li.process__item.col-12.mb-col-4.flex.flex-column
+                    h1.process__number.text-w600.color-accent.text-center 2
+
+                    div.process__bottom.flex.flex-column
+                        h3.process__name.text-w700.text-center Установка формирователя десны
+
+                        p.process__text.text-center В зависимости от вида имплантации и состояния костной ткани пациента процедура может проводиться одновременно с установкой импланта или представлять собой отдельный этап, который наступает через 3-4 месяца после установки. Это необходимо, чтобы впоследствии, при установки коронки, новый зуб выглядел красиво и максимально естественно. Процедура также безболезненна и занимает не более 30-40 минут.
+
+                    a(href="#").process__link.button.dark.m-auto Подробнее
+
+                li.process__item.col-12.mb-col-4.flex.flex-column
+                    h1.process__number.text-w600.color-accent.text-center 3
+
+                    div.process__bottom.flex.flex-column
+                        h3.process__name.text-w700.text-center Протезирование – установка коронки на имплант
+
+                        p.process__text.text-center Установка коронки является завершающим этапом и осуществляется исключительно после того, как врач убедится в том, что имплантат успешно интегрировался в костную ткань пациента. Для этого требуется период от 5 до 6 месяцев с момента установки имплантата.
+
+                    a(href="#").process__link.button.dark.m-auto Подробнее

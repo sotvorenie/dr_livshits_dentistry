@@ -1,0 +1,28 @@
+include ../common/form
+
+mixin with-love-4(className = '')
+    section.with-love-pluses(class=className)
+
+        div.with-love-pluses__header
+            div.container
+               div.with-love-pluses__header-content.flex.flex-align-center
+                   div.with-love-pluses__img-container
+                      img(src="/images/with-love-2.png" alt="" loading="lazy")
+
+                   div.with-love-pluses__right
+                       h3.with-love-pluses__right-title #[span.text-w600.color-blue Имплант бизнес-класса NeoBiotech] (Корея)
+
+                       h3.with-love-pluses__right-about.color-accent.text-w600 коронка из диоксида циркония
+
+                       h1.with-love-pluses__right-price.text-w700.color-blue 48 900 ₽
+
+                       h3.with-love-pluses__right-bottom.text-w700 и никаких «от»!
+
+        div.container
+            div.with-love-pluses__bottom.flex.flex-align-center.flex-justify-between
+                ul.with-love-pluses__list
+                    li.with-love-pluses__item Не заманиваем пациентов скидками и самой низкой ценой, потому что #[span.color-accent.text-w600 несем ответственность] за долгосрочный результат нашей работы!
+                    li.with-love-pluses__item Дешевле имплантацию «под ключ» сделать можно, но #[span.color-accent.text-w600 пострадает качество] и, возможно, здоровье пациента!
+                    li.with-love-pluses__item #[span.color-accent.text-w600 Дороже имплантацию сделать так же можно] – если (при отсутствии клинических показаний) - выбрать имплант известных европейских производителей, переплачивая за бренд, не получая при этом дополнительные гарантии и более высокое качество!
+
+                +form('Запишитесь на консультацию', 'Записаться на консультацию', 'with-love-pluses__form', 'где мы совместно с Вами выберем оптимальный план лечения под Вашу ситуацию', true)

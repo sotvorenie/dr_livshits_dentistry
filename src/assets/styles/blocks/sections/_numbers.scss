@@ -1,0 +1,73 @@
+@use '../../helpers' as *;
+
+.numbers {
+
+  &__content {
+    background: var(--color-beige);
+    padding-inline: rem(94);
+
+    @include tablet-above {
+      border-radius: var(--radius-big);
+    }
+
+    @include tablet {
+      width: 100vw;
+      margin-left: calc(var(--container-padding-x) * -1);
+    }
+
+    @include tablet {
+      padding-inline: var(--container-padding-x);
+    }
+  }
+
+  &__list {
+    --row-gap: #{rem(24)};
+
+    @include tablet-above {
+      --column-gap: #{rem(32)};
+    }
+  }
+
+  &__card {
+    background: var(--color-light);
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    padding: rem(34) rem(75);
+    text-align: center;
+
+    @include tablet {
+      padding: rem(24) rem(32);
+    }
+
+    & * {
+      line-height: 1.4;
+    }
+  }
+
+  &__block {
+
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+      position: relative;
+
+      &::after {
+        @include abs-x;
+
+        content: '';
+        height: 1px;
+        width: min(#{rem(230)}, 100%);
+        background: var(--color-blue-dark);
+        bottom: rem(-24);
+      }
+    }
+  }
+
+  &__number {
+    font-size: rem(51);
+    font-family: var(--font-family-base);
+  }
+
+  &__text {
+    @include fluid-text(20, 14);
+  }
+}

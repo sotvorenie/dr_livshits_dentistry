@@ -1,0 +1,34 @@
+include ../common/slider-2
+
+mixin problems(className = '')
+    section.problems(class=className)
+        div.problems__inner.container
+            h1.problems__title.text-w500.section__title #[span.color-accent.text-w700 В каких случаях необходима] имплантация и как мы сможем Вам помочь
+
+            ul.problems__list.row
+                li.problems__item.col-12.mb-col-6.ls-col-4
+                    div.problems__text-block.flex.flex-column
+                        h3.problems__name.text-w700.text-center Центральный зуб отсутствует и это заметно
+
+                        p.problems__text.text-center Нами установлен имплант и коронка из циркония. Пациентка вновь широко улыбается.
+
+
+                    +slider-2()
+
+                li.problems__item.col-12.mb-col-6.ls-col-4
+                    div.problems__text-block.flex.flex-column
+                        h3.problems__name.text-w700.text-center Отсутствует ряд жевательных зубов
+
+                        p.problems__text.text-center Нами установлено несколько имплантов и коронок из циркония. Пациент вновь ест любимую пищу.
+
+
+                    +slider-2()
+
+                li.problems__item.col-12.mb-col-12.ls-col-4
+                    div.problems__text-block.flex.flex-column
+                        h3.problems__name.text-w700.text-center Большая часть зубов челюсти утрачена или не подлежит лечению
+
+                        p.problems__text.text-center Нами удалены несостоятельные зубы и проведена имплантация с протезированием по методу «All on 4»
+
+
+                    +slider-2()
