@@ -33,7 +33,25 @@
 
   &__list {
     padding-left: rem(20);
-    list-style-type: disc;
+
+    &:not(.number-list) {
+      list-style-type: disc;
+    }
+
+    &.number-list {
+      list-style-type: decimal;
+
+      li::marker {
+        @include fluid-text(18, 14);
+
+        font-weight: 700;
+        color: var(--color-blue-dark);
+      }
+    }
+
+    &.accent-list li::marker {
+      color: var(--color-blue-dark);
+    }
   }
 
   &__item {
