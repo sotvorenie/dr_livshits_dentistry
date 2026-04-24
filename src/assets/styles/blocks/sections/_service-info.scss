@@ -95,4 +95,8 @@
     width: 100%;
     background: var(--color-blue-dark);
   }
+
+  .mb-24:not(:last-child) {
+    margin-bottom: fluid(24, 12);
+  }
 }
