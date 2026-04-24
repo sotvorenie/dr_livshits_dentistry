@@ -42,6 +42,7 @@
   @include flex-center();
 
   overflow: hidden;
+  background: var(--color-gray-bg);
 
   img, video, iframe {
     width: 100%;

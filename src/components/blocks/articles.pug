@@ -1,0 +1,61 @@
+mixin articles(className = '')
+    section.articles(class=className)
+        div.articles__inner.container
+            h1.section__title.color-blue Статьи
+
+            div.articles__slider-container.position-relative
+                div.articles__slider.swiper
+                    div.swiper-wrapper
+                        div.articles__card.swiper-slide
+                            div.articles__img-container.img-container
+                                img(src="" alt="")
+
+                            div.articles__bottom.flex.flex-column
+                                div.articles__text-block
+                                    h3.articles__name.text-w500 #[span.color-accent Лечение] кариеса с микроскопом
+
+                                    p.articles__text В стоматологии лечение среднего или начального поверхностного кариеса является необходимостью, так как это простое на первый взгляд заболевание может привести к осложнениям. Это пульпит, периодонтит и в итоге потеря зуба.
+
+                                a(href="#").articles__link.button.accent.w-250 Читать
+
+                        div.articles__card.swiper-slide
+                            div.articles__img-container.img-container
+                                img(src="" alt="")
+
+                            div.articles__bottom.flex.flex-column
+                                iv.articles__text-block
+                                    h3.articles__name.text-w500 #[span.color-accent Лечение] зубных каналов
+
+                                    p.articles__text Стоматологическая клиника доктора Лившиц имеет в своем распоряжении современное оборудование, материалы и квалифицированных специалистов для проведения лечения и протезирования. Для лечения корневых каналов зуба используется стоматологический микроскоп.
+
+                                a(href="#").articles__link.button.accent.w-250 Читать
+
+                        div.articles__card.swiper-slide
+                            div.articles__img-container.img-container
+                                img(src="" alt="")
+
+                            div.articles__bottom.flex.flex-column
+                                iv.articles__text-block
+                                    h3.articles__name.text-w500 #[span.color-blue Реставрация] передних зубов
+
+                                    p.articles__text Стоматологи клиники доктора Лившиц предлагают процедуры по косметической реставрации передних центральных зубов. Для этого используются современные методы восстановления и современные материалы.
+
+                                a(href="#").articles__link.button.accent.w-250 Читать
+
+                        div.articles__card.swiper-slide
+                            div.articles__img-container.img-container
+                                img(src="" alt="")
+
+                            div.articles__bottom.flex.flex-column
+                                iv.articles__text-block
+                                    h3.articles__name.text-w500 #[span.color-blue Реставрация] передних зубов
+
+                                    p.articles__text Стоматологи клиники доктора Лившиц предлагают процедуры по косметической реставрации передних центральных зубов. Для этого используются современные методы восстановления и современные материалы.
+
+                                a(href="#").articles__link.button.accent.w-250 Читать
+
+
+                button(type="button" aria-label="Предыдущий слайд").articles__btn.prev.swiper-arrow
+                    include ../icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").articles__btn.next.swiper-arrow
+                    include ../icons/swiper-arrow

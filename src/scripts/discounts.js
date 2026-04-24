@@ -2,7 +2,6 @@ import {Swiper} from "swiper";
 import {Navigation} from "swiper/modules";
 
 import 'swiper/css'
-import 'swiper/css/pagination'
 
 document.addEventListener('DOMContentLoaded', () => {
     const swiper = new Swiper('.discounts__slider', {

@@ -1,0 +1,35 @@
+@use '../../helpers' as *;
+
+.articles {
+
+  &__card {
+    background: var(--color-blue);
+    border-radius: var(--radius-big);
+    padding: rem(16);
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  &__img-container {
+    width: 100%;
+    aspect-ratio: 348/238;
+    border-radius: var(--radius-big);
+    margin-bottom: fluid(24, 12);
+  }
+
+  &__bottom {
+    gap: fluid(17, 8);
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  &__text-block {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  &__name {
+    font-family: var(--font-family-base);
+    margin-bottom: rem(8);
+  }
+}

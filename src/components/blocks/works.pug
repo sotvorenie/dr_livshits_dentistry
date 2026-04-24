@@ -1,0 +1,20 @@
+include ../common/product-info
+
+mixin works(className = '')
+    section.works(class=className)
+        div.works__inner.container
+            
+            h1.works__title.text-center.section__title Работы врача
+
+            div.works__slider-container.position-relative
+                div.works__slider.swiper
+                    div.swiper-wrapper
+                        each item in Array(3)
+                            div.swiper-slide
+                                +product-info(true)
+
+
+                button(type="button" aria-label="Предыдущий слайд").works__btn.prev.swiper-arrow
+                    include ../icons/swiper-arrow
+                button(type="button" aria-label="Следующий слайд").works__btn.next.swiper-arrow
+                    include ../icons/swiper-arrow

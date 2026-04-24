@@ -121,7 +121,6 @@
 
   &__img-container {
     border-radius: var(--radius-big);
-    background: var(--color-gray-bg);
     aspect-ratio: 448/306;
 
     @include mobile-above {

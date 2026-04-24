@@ -1,0 +1,173 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+include ../components/blocks/quote
+include ../components/common/person
+include ../components/blocks/works
+include ../components/blocks/principles-operation
+include ../components/blocks/awards
+include ../components/blocks/with-love
+include ../components/blocks/with-love-2
+include ../components/blocks/proud-reviews
+include ../components/blocks/familiar-person
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation-2
+include ../components/blocks/other-services
+include ../components/blocks/articles
+include ../components/blocks/welcome
+include ../components/common/consultation
+include ../components/blocks/contacts
+
+block title
+    | Лечение кариеса
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лечение зубов", "Лечение кариеса"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Бережное лечение кариеса зубов
+
+                h2.banner__subtitle
+                    | с использованием
+                    | #[span.color-accent дентального микроскопа и применением коффердама]
+                h2.banner__subtitle.color-blue от врачей, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    section.service-info.section-mb-72
+        div.service-info__inner.container
+            div.service-info__content
+                div.service-info__header
+                    h2.service-info__subtitle.text-w700 #[span.color-blue Кариес] —
+
+                    p.service-info__about это патологический процесс разрушения твердых тканей зуба (эмали и дентина) под действием кислот, вырабатываемых бактериями зубного налета.
+
+                div.service-info__img-container.img-container.w-100
+                    img(src="/images/article.jpg" alt="")
+
+                div.service-info__block
+                    h2.service-info__name.text-w700 #[span.color-blue Основные] #[span.color-accent причины] #[span.color-blue кариеса:]
+
+                    ul.service-info__list
+                        li.service-info__item неудовлетворительная гигиена полости рта
+                        li.service-info__item избыток сладкой и углеводистой пищи
+                        li.service-info__item недостаток фтора и минералов в эмали
+                        li.service-info__item недостаток фтора и минералов в эмали
+
+                div.service-info__block
+                    h2.service-info__name.text-w700 #[span.color-accent Стадии] #[span.color-blue кариеса:]
+
+                    ul.service-info__list
+                        li.service-info__item начальный кариес (стадия пятна) – белое или темное пятно на эмали.
+                        li.service-info__item поверхностный кариес – поражение эмали без затрагивания дентина.
+                        li.service-info__item средний кариес – разрушение эмали и части дентина.
+                        li.service-info__item глубокий кариес – поражение доходит до околопульпарного дентина, близко к нерву зуба.
+
+                div.service-info__block
+                    h2.service-info__name.text-w700 #[span.color-blue Лечение кариеса] #[span.color-accent с использованием дентального микроскопа] #[span.color-blue –]
+
+                    p.service-info__text это современный стандарт в стоматологии, обеспечивающий максимальную точность и долговечность реставраций (пломб).
+
+                div.service-info__block
+                    div.service__accordion.accordion
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 Дентальный микроскоп – это оптический прибор, #[span.color-accent увеличивающий рабочую область в 20-40 раз], что позволяет врачу:
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list
+                                    li.service-info__item точно диагностировать кариес на ранних стадиях
+                                    li.service-info__item минимально инвазивно удалять пораженные ткани, максимально сохраняя собственные здоровые ткани зуба
+                                    li.service-info__item качественно восстанавливать анатомическую форму зуба
+
+                div.service-info__block
+                    div.service__accordion.accordion
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 #[span.color-blue Преимущества лечения] кариеса под микроскопом:
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list
+                                    li.service-info__item высокая точность – врач видит мельчайшие изменения в тканях зуба.
+                                    li.service-info__item сохранение здоровых тканей – удаляется только поврежденный дентин.
+                                    li.service-info__item лучшее качество пломбирования – идеальное прилегание материала.
+                                    li.service-info__item ранняя диагностика – можно обнаружить скрытый кариес.
+                                    li.service-info__item снижение риска осложнений – меньше вероятность вторичного кариеса.
+
+                div.service-info__block
+                    div.service__accordion.accordion
+                        div.accordion__header.service-info__accordion-header.flex
+                            div.service-info__top.flex.flex-column
+                                div.service-info__line
+
+                                h2.text-w700 Этапы лечения кариеса #[span.color-accent под микроскопом:]
+
+                            button(type="button").accordion__toggle
+                                include ../components/icons/header/header-menu-arrow
+
+                        div.accordion__hidden
+                            div.accordion__hidden-wrapper
+                                ul.service-info__list
+                                    li.service-info__item анестезия
+                                    li.service-info__item удаление пораженных тканей бором с контролем под микроскопом.
+                                    li.service-info__item обработка полости антисептиками.
+                                    li.service-info__item восстановление зуба фотополимерным материалом с анатомической точностью.
+                                    li.service-info__item шлифовка и полировка пломбы.
+
+    +prices('section section-border-block section-mb-72', 'Стоимость удаления зубов', services1Prices, '', '', 'dark', true, true)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in servicesPersons
+                +person(item, index % 2 === 0)
+
+    +works('section section-border-bottom section-mb-72')
+
+    +principles-operation('section section-mb-72')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +with-love('section')
+
+    +with-lowe-2('section-mb-72')
+
+    +proud-reviews('section section-border-block')
+
+    +familiar-person('section')
+
+    +recommendations('section section-border-block section-mb-72')
+
+    +complex-cases()
+
+    +consultation-2('section')
+
+    +other-services('section section-border-block', 'по восстановлению зубов', true)
+
+    +articles('section')
+
+    +welcome('section', false)
+
+    +consultation('section', '/images/consultation-team-3.png')
+
+    +contacts('section-mb-72')

@@ -14,7 +14,6 @@
   &__video {
     aspect-ratio: 190/313;
     border-radius: var(--radius-big);
-    background: var(--color-gray-bg);
 
     @include mobile-above {
       flex: 0 0 rem(190);

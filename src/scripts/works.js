@@ -4,7 +4,7 @@ import {Navigation} from "swiper/modules";
 import 'swiper/css'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.basic-services__slider', {
+    const swiper = new Swiper('.works__slider', {
         modules: [Navigation],
         slidesPerView: 1,
         spaceBetween: 10,
@@ -12,21 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         allowTouchMove: true,
 
         navigation: {
-            nextEl: '.basic-services__btn.next',
-            prevEl: '.basic-services__btn.prev',
+            nextEl: '.works__btn.next',
+            prevEl: '.works__btn.prev',
         },
 
         breakpoints: {
             767: {
                 slidesPerView: 2,
-                spaceBetween: 10
-            },
-            1023: {
-                slidesPerView: 3,
-                spaceBetween: 15
-            },
-            1280: {
-                slidesPerView: 4,
                 spaceBetween: 20
             }
         }
