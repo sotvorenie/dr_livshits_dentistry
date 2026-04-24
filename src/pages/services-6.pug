@@ -1,0 +1,110 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+include ../components/blocks/quote
+include ../components/common/person
+include ../components/blocks/works
+include ../components/blocks/principles-operation
+include ../components/blocks/awards
+include ../components/blocks/with-love
+include ../components/blocks/with-love-2
+include ../components/blocks/proud-reviews
+include ../components/blocks/familiar-person
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation-2
+include ../components/blocks/other-services
+include ../components/blocks/articles
+include ../components/blocks/welcome
+include ../components/common/consultation
+include ../components/blocks/contacts
+
+block title
+    | Лечение кариеса
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лечение зубов", "Лечение кариеса"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Запишитесь на подробную консультацию стоматолога,
+
+                h2.banner__subtitle.color-accent с анализом снимка КЛКТ и составлением комплексного плана лечения
+                h2.banner__subtitle.color-blue от врачей, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    section.service-info.section-mb-72
+        div.service-info__inner.container
+            div.service-info__content
+                div.service-info__header
+                    h2.service-info__title.color-accent.text-w700 Как проходит консультация:
+
+                    h2.service-info__subtitle.text-w700.color-blue На консультации опытный врач-стоматолог-терапевт-ортопед:
+
+                    ul.service-info__list
+                        li.service-info__item проведет осмотр полости рта
+                        li.service-info__item сделает полный фотопротокол полости ртапроанализирует предоставленный снимок КЛКТ
+                        li.service-info__item на большом экране монитора покажет пациенту все имеющиеся проблемы на фото и снимке КЛКТ
+                        li.service-info__item врач сделает устный анализ состояния полости рта на основе проведенного осмотра, фотопротокола и снимков КЛКТ. Понятным пациенту языком будет предоставлено подробное устное объяснение о наличии стоматологических проблем и способах их решения.
+                        li.service-info__item врач составит План лечения, в котором будут указаны названия процедур, метод восстановления зубов и точная стоимость.
+                        li.service-info__item врач ответит на все вопросы относительно Плана лечения.
+                        li.service-info__item при необходимости врач предложит запись на консультацию к смежному специалисту - стоматологу-хирургу-имплантологу.
+                        li.service-info__item самые сложные случаи пациентов всегда выносятся на обсуждение консилиума врачей нескольких специальностей и полный План лечения, в таком случае, составляется на основе мнений и консультаций нескольких специалистов.
+
+                div.service-info__img-container.img-container.w-100
+                    img(src="/images/article.jpg" alt="")
+
+                div.service-info__block
+                    h2.service-info__name.text-w700.color-blue В «Стоматологии доктора Лившиц»,
+
+                    p.service-info__text.text-w700 #[span.color-blue за долгие годы совместной работы,] #[span.color-accent собрана звездная команда из врачей-стоматологов всех специальностей,] #[span.color-blue что позволяет нам, оптимальным для пациента способом,] #[span.color-accent решать стоматологические проблемы любого уровня сложности] #[span.color-blue во имя восстановления и сохранения долгосрочного] #[span.color-accent стоматологического здоровья каждого пациента] #[span.color-blue !]
+
+                div.service-info__block
+                    h2.service-info__name.text-w700.color-accent Выбирайте доктора на нашем сайте,
+
+                    p.service-info__text.text-w700 #[span.color-blue читайте отзывы о нем реальных пациентов, записывайтесь на консультацию, приходите к нам в клинику и Вы убедитесь на собственном примере в том, что] #[span.color-accent для нас здоровье пациента всегда на первом месте!]
+
+    +prices('section section-border-block section-mb-72', 'Стоимость удаления зубов', services1Prices, '', '', 'dark', true, true)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in servicesPersons
+                +person(item, index % 2 === 0)
+
+    +works('section section-border-bottom section-mb-72')
+
+    +principles-operation('section section-mb-72')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +with-love('section')
+
+    +with-lowe-2('section-mb-72')
+
+    +proud-reviews('section section-border-block')
+
+    +familiar-person('section')
+
+    +recommendations('section section-border-block section-mb-72')
+
+    +complex-cases()
+
+    +consultation-2('section')
+
+    +other-services('section section-border-block', 'по восстановлению зубов', true)
+
+    +articles('section')
+
+    +welcome('section', false)
+
+    +consultation('section', '/images/consultation-team-3.png')
+
+    +contacts('section-mb-72')

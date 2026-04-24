@@ -6,14 +6,14 @@
     margin-bottom: fluid(48, 16);
   }
 
-  &__subtitle, &__name {
+  &__title, &__subtitle, &__name {
     @include fluid-text(32, 16);
 
     font-family: var(--font-family-base);
     margin-bottom: fluid(24, 12);
   }
 
-  &__about, &__text, &__list, &__subtitle, &__name {
+  &__title, &__subtitle, &__about, &__text, &__list, &__name {
     max-width: rem(780);
   }
 
@@ -23,12 +23,12 @@
     line-height: 1.66;
   }
 
-  &__img-container {
-    aspect-ratio: 1180/658;
+  &__list, &__block:not(:last-child) {
+    margin-bottom: fluid(40, 16);
   }
 
-  &__block:not(:last-child) {
-    margin-bottom: fluid(40, 16);
+  &__img-container {
+    aspect-ratio: 1180/658;
   }
 
   &__list {
