@@ -1,8 +1,11 @@
-mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '', isBlue = true)
+mixin prices(className = '', titleText = '', arr = [], linksText = '', linksClass = '', btnClass = '', isBlue = true, isAccent = false)
     section.prices(class=[className, isBlue ? 'is-blue' : ''])
         div.prices__inner.container
             if titleText
-                h2.prices__title.color-blue.text-center= titleText
+                if isAccent
+                    h2.prices__title.color-accent.text-center= titleText
+                else
+                    h2.prices__title.color-blue.text-center= titleText
 
             ul.prices__list.flex.flex-column
                 each item in arr
