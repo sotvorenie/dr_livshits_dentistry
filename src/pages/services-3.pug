@@ -1,0 +1,105 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/prices
+include ../components/blocks/quote
+include ../components/common/person
+include ../components/blocks/works
+include ../components/blocks/principles-operation
+include ../components/blocks/awards
+include ../components/blocks/with-love
+include ../components/blocks/with-love-2
+include ../components/blocks/proud-reviews
+include ../components/blocks/familiar-person
+include ../components/blocks/recommendations
+include ../components/blocks/complex-cases
+include ../components/common/consultation-2
+include ../components/blocks/other-services
+include ../components/blocks/articles
+include ../components/blocks/welcome
+include ../components/common/consultation
+include ../components/blocks/contacts
+
+block title
+    | Лечение кариеса
+
+block header
+    +header(1)
+
+block content
+    +breadcrumbs(["Главная", "Услуги", "Лечение зубов", "Лечение кариеса"])
+
+    section.banner.section-mb-72
+        div.banner__inner.container
+            div.banner__text-block.text-center
+                h1.banner__title.color-blue Бережное лечение кариеса зубов методом ICON
+
+                h2.banner__subtitle
+                    | с использованием
+                    | #[span.color-accent дентального микроскопа и применением коффердама]
+                h2.banner__subtitle.color-blue от врачей, которые входят в ТОП-5 лучших стоматологов СПб!
+
+            include ../components/blocks/banner-content
+
+    section.service-info.section-mb-72
+        div.service-info__inner.container
+            div.service-info__content
+                div.service-info__header
+                    h2.service-info__subtitle.text-w700 #[span.color-blue Лечение кариеса] #[span.color-blue методом ICON] #[span.color-blue –]
+
+                    p.service-info__about это современная минимально инвазивная технология, позволяющая устранять кариес на ранних стадиях (стадии белого пятна или поверхностного кариеса) без сверления и пломбирования.
+
+                div.service-info__img-container.img-container.w-100
+                    img(src="/images/article.jpg" alt="")
+
+                div.service-info__block
+                    h2.service-info__name.text-w700.color-blue Суть метода ICON:
+
+                    p.service-info__text Инфильтрация смолой – вместо бормашины используется специальный полимерный материал, который проникает в повреждённую эмаль, укрепляет её и останавливает развитие кариеса.
+
+                div.service-info__block
+                    h2.service-info__name.text-w700.color-accent Преимущества ICON:
+
+                    ul.service-info__list
+                        li.service-info__item безболезненность – не требует анестезии, так как нет сверления.
+                        li.service-info__item сохранение здоровых тканей – удаляется только повреждённый слой, а не весь участок, как при традиционном лечении.
+                        li.service-info__item эстетичный результат (не требует пломб).
+
+    +prices('section section-border-block section-mb-72', 'Стоимость удаления зубов', services1Prices, '', '', 'dark', true, true)
+
+    +quote('section section-mb-72')
+
+    section.person-list.section.section-border-block
+        div.person-list__inner.container
+            each item, index in servicesPersons
+                +person(item, index % 2 === 0)
+
+    +works('section section-border-bottom section-mb-72')
+
+    +principles-operation('section section-mb-72')
+
+    +awards('section section-border-block section-mb-72', false)
+
+    +with-love('section')
+
+    +with-lowe-2('section-mb-72')
+
+    +proud-reviews('section section-border-block')
+
+    +familiar-person('section')
+
+    +recommendations('section section-border-block section-mb-72')
+
+    +complex-cases()
+
+    +consultation-2('section')
+
+    +other-services('section section-border-block', 'по восстановлению зубов', true)
+
+    +articles('section')
+
+    +welcome('section', false)
+
+    +consultation('section', '/images/consultation-team-3.png')
+
+    +contacts('section-mb-72')
