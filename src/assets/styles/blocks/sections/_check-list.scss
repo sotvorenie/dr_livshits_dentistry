@@ -1,6 +1,7 @@
 @use '../../helpers' as *;
 
 .check-list {
+  --bg: '';
 
   &::before, &::after {
     content: '';
@@ -27,13 +28,13 @@
   &::after {
     width: 54%;
     height: calc(100% + #{rem(14)});
-    background: url("/images/check-list-bg.png") right -14px / cover no-repeat;
+    background: var(--bg) right -14px / cover no-repeat;
     right: 0;
     z-index: -2;
 
     @include mobile {
       width: 60%;
-      background: url("/images/check-list-bg.png") 10% -14px / cover no-repeat;
+      background: var(--bg) 10% -14px / cover no-repeat;
     }
   }
 
