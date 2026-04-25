@@ -127,7 +127,7 @@
     }
 
     @include mobile {
-      width: 50%;
+      height: calc(100% - #{rem(8)});
     }
 
     img {
@@ -136,8 +136,10 @@
   }
 
   &__text-block {
-    max-width: 52%;
+    max-width: 57%;
     height: 100%;
+    z-index: 1;
+    position: relative;
   }
 
   &__name {
