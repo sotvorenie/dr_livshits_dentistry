@@ -27,7 +27,7 @@
     @include square(75);
 
     top: 0;
-    left: rem(10);
+    left: 0;
 
     @include mobile {
       @include square(64);
