@@ -20,7 +20,7 @@ mixin footer-top(activeIndex)
                     div.footer__list-bar
                         ul.footer__list
                             each link, index in footer.sections
-                                li.footer__item(class=activeIndex === index ? 'is-here' : '')
+                                li.footer__item(class=[activeIndex === index ? 'is-here' : '', index === footer.sections.length - 1 ? 'color-accent' : ''])
                                     a(href="#").footer__link.text-w500.w-100= link
 
                 div.footer-top__right
@@ -28,8 +28,8 @@ mixin footer-top(activeIndex)
 
                         div.footer__list-bar
                             ul.footer__list
-                                each link in footer.services
+                                each link, index in footer.services
                                     li.footer__item
-                                        a(href="#").footer__link.text-w500.w-100= link
+                                        a(href="#").footer__link.text-w500.w-100(class=index === footer.services.length - 1 ? 'color-accent' : '')= link
 
             a(href="#").footer__policy.line-link Политика конфиденциальности
