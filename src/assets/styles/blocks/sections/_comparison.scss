@@ -1,6 +1,7 @@
 @use '../../helpers' as *;
 
 .comparison {
+  letter-spacing: 0;
 
   &__title {
     margin-bottom: fluid(48, 32);
