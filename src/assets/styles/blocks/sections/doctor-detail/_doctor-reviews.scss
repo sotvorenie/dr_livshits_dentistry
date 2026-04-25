@@ -5,6 +5,7 @@
 
   &__list {
     gap: rem(24);
+    margin-bottom: fluid(48, 40);
   }
 
   .review {
@@ -22,6 +23,27 @@
 
       @include mobile {
         gap: rem(20);
+      }
+    }
+  }
+
+  &__link {
+    gap: rem(25);
+    padding-inline: rem(24);
+    font-family: var(--font-family-accent);
+    min-width: rem(250);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(2);
+    }
+
+    img {
+      height: rem(23);
+      width: auto;
+
+      @include mobile {
+        height: rem(17);
       }
     }
   }
