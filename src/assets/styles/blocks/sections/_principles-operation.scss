@@ -30,6 +30,14 @@
     @include mobile {
       @include square(40);
     }
+
+    img {
+      @include square(36);
+
+      @include mobile {
+        @include square(28);
+      }
+    }
   }
 
   &__name {
