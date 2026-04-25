@@ -70,6 +70,10 @@
 
     svg {
       @include square(24);
+
+      @include mobile {
+        @include square(16);
+      }
     }
   }
 
