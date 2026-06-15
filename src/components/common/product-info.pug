@@ -1,13 +1,16 @@
 mixin product-info(secondVisible = false)
     div.product-info
         div.slider(style="--pos: 50%").position-relative.w-100.overflow-hidden
+            div.slider__label.slider__label--before До
+            div.slider__label.slider__label--after После
+
+            div.slider__line
+
             div.slider__slide.before
-                img(src="icons/slider-from.svg").slider__badge.before
                 div.slider__img
                     img(src="/images/slider-from.jpg" alt="")
 
             div.slider__slide.after
-                img(src="icons/slider-to.svg").slider__badge.after
                 div.slider__img
                     img(src="/images/slider-to.jpg" alt="")
 
@@ -20,8 +23,9 @@ mixin product-info(secondVisible = false)
             )
 
             div.slider__toggle
-                div.slider__button
-                    img(src="/icons/slider-toggle.svg" alt="").w-100.h-100
+                div.slider__button.flex-center
+                    img(src="/icons/slider-arrow.svg" alt="")
+                    img(src="/icons/slider-arrow.svg" alt="")
 
         h3.product-info__title.text-w500 Тотальное восстановление улыбки
 

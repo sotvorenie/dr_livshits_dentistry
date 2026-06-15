@@ -4,10 +4,40 @@
   position: relative;
   aspect-ratio: 580/309;
   background: var(--color-gray-bg);
-  border-radius: 0 0 var(--radius-big) var(--radius-big);
 
   &:not(:last-child) {
     margin-bottom: fluid(24, 17);
+  }
+
+  &__line {
+    @include abs-x;
+
+    top: 0;
+    bottom: 0;
+    left: var(--pos);
+    width: rem(2);
+    background-color: var(--color-light);
+    z-index: 15;
+    pointer-events: none;
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    color: var(--color-light);
+    z-index: 10;
+    pointer-events: none;
+    padding: rem(5) rem(15);
+    min-width: rem(80);
+    text-align: center;
+
+    &--before {
+      background: #6a7380;
+    }
+    &--after {
+      background: #46afd4;
+      right: 0;
+    }
   }
 
   &.slider-with-line {
@@ -44,21 +74,6 @@
     }
   }
 
-  &__badge {
-    @include square(65);
-
-    position: absolute;
-    top: 0;
-    z-index: 10;
-
-    &.before {
-      left: 0;
-    }
-    &.after {
-      right: 0;
-    }
-  }
-
   &__input {
     inset: 0;
     opacity: 0;
@@ -73,17 +88,34 @@
     left: var(--pos);
     z-index: 15;
     pointer-events: none;
+    background: #46afd4;
+
+    img {
+      @include square(14);
+
+      filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.3));
+
+      &:first-child {
+        rotate: 90deg;
+      }
+      &:last-child {
+        rotate: -90deg;
+      }
+    }
   }
 
   &__button {
     @include abs-center;
 
-    width: rem(82);
-    height: rem(31);
+    width: rem(60);
+    height: rem(35);
+    gap: rem(10);
+    background: #46afd4;
 
     @include mobile {
-      width: rem(64);
-      height: auto;
+      width: rem(45);
+      height: rem(30);
+      gap: rem(5);
     }
   }
 }
