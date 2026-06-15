@@ -11,8 +11,8 @@ mixin welcome(className = '', isTransparent = true)
                     br
                     | #[span.text-w500 в нашей уютной клинике!]
 
-            div.welcome__video.img-container.video-player.position-relative.w-100
-                video(src="/videos/video.mp4" playsinline).js-video-player
+            div.welcome__video.img-container.video-player.position-relative.w-100.js-video-modal-trigger(data-video-src="/videos/video.mp4")
+                img(src="/images/video-preview.png" alt="")
 
                 +video-btn()
 

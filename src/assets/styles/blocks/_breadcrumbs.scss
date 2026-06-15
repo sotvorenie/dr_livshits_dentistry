@@ -12,6 +12,7 @@
 
   &__list {
     gap: rem(26);
+    flex-wrap: wrap;
   }
 
   &__item {

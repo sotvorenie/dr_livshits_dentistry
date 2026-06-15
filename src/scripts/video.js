@@ -1,33 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const videoContainers = document.querySelectorAll('.video-player')
+    const modal = document.querySelector('.js-video-modal');
+    const modalVideo = modal?.querySelector('.js-modal-video');
+    const triggers = document.querySelectorAll('.js-video-modal-trigger');
+    const closeButtons = document.querySelectorAll('.js-modal-close');
 
-    videoContainers.forEach(container => {
-        const video = container.querySelector('.js-video-player')
-        const btn = container.querySelector('.js-video-btn')
-        const videoInfo = container.querySelector('.js-video-info')
+    if (!modal || !modalVideo) return
 
-        if (!video || !btn) return
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            modalVideo.src = trigger.dataset.videoSrc
+            modal.classList.add('is-active')
 
-        const toggleVideo = () => {
-            if (video.paused) {
-                video.play();
-                btn.classList.add('is-playing')
-
-                if (videoInfo) videoInfo.style.display = 'none'
-            } else {
-                video.pause();
-                btn.classList.remove('is-playing')
-
-                if (videoInfo) videoInfo.style.display = 'block'
-            }
-        }
-
-        btn.addEventListener('click', toggleVideo)
-
-        video.addEventListener('click', toggleVideo)
-
-        video.addEventListener('ended', () => {
-            btn.classList.remove('is-playing')
+            document.documentElement.classList.add('is-lock')
         })
+    })
+
+    const closeModal = () => {
+        modal.classList.remove('is-active')
+        modalVideo.pause()
+        modalVideo.src = ""
+        document.documentElement.classList.remove('is-lock')
+    }
+
+    closeButtons.forEach(btn => btn.addEventListener('click', closeModal))
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-active')) closeModal()
     })
 })

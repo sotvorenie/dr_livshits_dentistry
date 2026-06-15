@@ -6,11 +6,24 @@
     @include fluid-text(52, 40);
   }
 
-  &__card {
+  &__list {
+    --column-gap: #{rem(20)};
+    --row-gap: #{rem(20)};
+
+    margin-bottom: fluid(72, 40);
+
+    @include tablet {
+      --column-gap: #{rem(15)};
+      --row-gap: #{rem(15)};
+    }
+  }
+
+  &__item {
     background: var(--color-blue);
     border-radius: rem(15);
     display: flex !important;
     flex-direction: column;
+    text-align: center;
   }
 
   &__img-containr {
@@ -42,6 +55,6 @@
   &__link {
     margin-top: auto;
     padding-inline: rem(10);
-    min-width: rem(248);
+    width: min(#{rem(248)}, 100%);
   }
 }

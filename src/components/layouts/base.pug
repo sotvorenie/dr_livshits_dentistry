@@ -10,6 +10,13 @@ html(lang="ru")
             block title
                 | Page title
     body
+        .video-modal.js-video-modal
+            .video-modal__overlay.js-modal-close
+            .video-modal__content
+                button.video-modal__close.js-modal-close(aria-label="Закрыть" title="Закрыть")
+                    include ../icons/header/cross
+                video(controls playsinline).video-modal__video.js-modal-video
+
         block header
             +header
 

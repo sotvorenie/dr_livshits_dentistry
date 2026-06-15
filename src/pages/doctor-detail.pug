@@ -22,8 +22,8 @@ block content
 
     section.about-doctor.section-border-block.section
         div.about-doctor__inner.container.flex.flex-align-center
-            div.about-doctor__video.img-container.video-player.position-relative
-                video(src="/videos/video.mp4" playsinline).js-video-player
+            div.about-doctor__video.img-container.video-player.position-relative.js-video-modal-trigger(data-video-src="/videos/video-2.mp4")
+                img(src="/images/video-preview.png" alt="")
 
                 +video-btn()
 
