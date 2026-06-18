@@ -92,6 +92,7 @@
 
   &__btn-bar {
     gap: fluid(72, 12);
+    margin-top: fluid(72, 40);
 
     @include mobile {
       flex-direction: column;

@@ -4,7 +4,7 @@
 
   &__logo {
     width: rem(295);
-    height: auto;
+    height: fit-content;
 
     @include laptop-s {
       width: rem(200);
@@ -21,6 +21,7 @@
     &_inner {
       gap: fluid(50, 35);
       padding-block: fluid(24, 8);
+      align-items: center;
     }
   }
 
