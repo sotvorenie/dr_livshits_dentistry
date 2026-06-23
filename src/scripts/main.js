@@ -7,6 +7,7 @@ import './video.js'
 import './footer.js'
 import './mask.js'
 import './review.js'
+import './showFullText.js'
 
 import './proudReviews.js'
 import './teamDentists.js'

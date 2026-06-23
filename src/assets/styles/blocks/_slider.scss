@@ -40,14 +40,6 @@
     }
   }
 
-  &.slider-with-line {
-
-    .slider__toggle {
-      width: rem(4);
-      background: var(--color-light);
-    }
-  }
-
   &__slide {
     position: absolute;
     inset: 0;

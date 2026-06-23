@@ -4,7 +4,7 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 680fr 444fr;
+    grid-template-columns: 444fr 680fr;
     gap: rem(56);
 
     @include laptop-s {

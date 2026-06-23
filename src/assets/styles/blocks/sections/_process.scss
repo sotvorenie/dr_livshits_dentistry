@@ -13,6 +13,10 @@
     --row-gap: #{rem(20)};
   }
 
+  &__item {
+    height: fit-content;
+  }
+
   &__number, &__name {
     font-family: var(--font-family-base);
   }
@@ -23,21 +27,29 @@
   }
 
   &__bottom {
-    flex-grow: 1;
+    //flex-grow: 1;
   }
 
   &__name {
     margin-bottom: fluid(24, 16);
-    flex-grow: 1;
+    line-height: 1.625;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    height: calc(3em);
   }
 
   &__text {
     line-height: 1.625;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: rem(24);
+
+    &:not(.is-active) {
+      -webkit-line-clamp: 4;
+    }
   }
 
   &__link {
