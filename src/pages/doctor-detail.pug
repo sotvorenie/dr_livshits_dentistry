@@ -111,8 +111,10 @@ block content
 
     section.doctor-reviews.section.section-border-block
         div.doctor-reviews__inner.container
-            div.doctor-reviews__list.flex
-                div.review.position-relative
+            h2.doctor-reviews__title.text-center Отзывы пациентов о враче на сайте Продокторов
+
+            div.doctor-reviews__list.row
+                div.review.position-relative.col-12.ls-col-6
                     img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.review__img.position-absolute
 
                     div.review__content
@@ -154,7 +156,7 @@ block content
                                         p.text-w500 «Стоматология доктора Лившиц» - ул. Торжковская, д. 13, корп. 1
                             button(type="button").review__more.color-blue.visible-mobile.text-w500 Читать полностью
 
-                div.review.position-relative.hidden-tablet
+                div.review.position-relative.hidden-tablet.col-12.ls-col-6
                     img(src="/images/person-review.png" alt="ПроДокторов" loading="lazy" width="89" height="10").person__review-img.review__img.position-absolute
 
                     div.review__content

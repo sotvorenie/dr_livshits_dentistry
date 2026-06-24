@@ -8,6 +8,8 @@ import './footer.js'
 import './mask.js'
 import './review.js'
 import './showFullText.js'
+import './discountNames.js'
+import './principlesOperationNames.js'
 
 import './proudReviews.js'
 import './teamDentists.js'

@@ -29,4 +29,10 @@
     visibility: hidden;
     pointer-events: none;
   }
+
+  &.small-btn {
+    @include square(32);
+
+    left: rem(40);
+  }
 }
