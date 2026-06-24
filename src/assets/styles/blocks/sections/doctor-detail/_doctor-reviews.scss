@@ -20,6 +20,10 @@
     padding: fluid(24, 12) rem(12);
     border-radius: var(--radius-big);
 
+    &:nth-child(n+3) {
+      @include visually-hidden;
+    }
+
     &__img {
       top: fluid(31, 18);
       right: rem(12);
