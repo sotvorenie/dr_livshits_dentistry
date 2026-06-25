@@ -11,6 +11,8 @@
   }
 
   &__card {
+    --bg: '';
+
     border: var(--border);
     border-radius: var(--radius-big);
     padding: rem(56) rem(76) rem(24);
@@ -30,13 +32,12 @@
       top: rem(-28);
       border: var(--border);
       border-radius: var(--radius-big);
-      background: var(--color-light) url("/icons/index/quote.svg") center/24px no-repeat;
+      background: var(--color-light) var(--bg) center/contain no-repeat;
 
       @include mobile {
         @include square(32);
 
         top: rem(-16);
-        background-size: 12px;
       }
     }
   }

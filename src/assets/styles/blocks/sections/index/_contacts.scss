@@ -56,4 +56,23 @@
       aspect-ratio: 248/147;
     }
   }
+
+  &__soc1als {
+    gap: rem(10);
+  }
+  &__soc1al {
+    @include square(32);
+
+    transition: scale var(--transition-duration);
+
+    @include hover() {
+      scale: 1.05;
+    }
+
+    @include mobile {
+      @include square(28);
+
+      margin-top: rem(5);
+    }
+  }
 }

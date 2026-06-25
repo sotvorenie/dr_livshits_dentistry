@@ -122,9 +122,15 @@
   &__video {
     border-radius: var(--radius-big);
     aspect-ratio: 267/143;
+    background: var(--color-light);
 
     @include mobile-above {
       width: 47%;
+      border: .6em solid var(--color-light);
+
+      video {
+        border-radius: rem(4);
+      }
     }
 
     @include mobile {

@@ -8,7 +8,6 @@
 
   &__text-block:not(:last-child), &__subtitle {
     margin-bottom: fluid(24, 12);
-    margin-bottom: fluid(24, 12);
   }
 
   &__date *, &__about, &__subtitle {
@@ -32,9 +31,15 @@
 
   &__date {
     gap: fluid(32, 16);
+
+    &:not(:has(*)) {
+      margin: 0 !important;
+    }
   }
 
   &__about {
+    @include fluid-text(24, 16);
+
     max-width: rem(880);
     line-height: 1.41;
   }

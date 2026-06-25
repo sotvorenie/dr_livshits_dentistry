@@ -1,18 +1,29 @@
 function equalizeTitlesHeight() {
-    const titles = document.querySelectorAll('.discounts__name');
+    const titles = Array.from(document.querySelectorAll('.discounts__name'));
+
+    // 1. Сбрасываем высоту
+    titles.forEach(title => title.style.height = 'auto');
+
+    // 2. Группируем элементы по их позиции top (это значит, что они в одной строке)
+    const rows = {};
 
     titles.forEach(title => {
-        title.style.height = 'auto';
+        const top = title.getBoundingClientRect().top;
+        if (!rows[top]) rows[top] = [];
+        rows[top].push(title);
     });
 
-    let maxHeight = 0
+    // 3. Для каждой строки находим свой максимум и применяем его
+    Object.values(rows).forEach(rowTitles => {
+        let maxHeight = 0;
 
-    titles.forEach(title => {
-        maxHeight = Math.max(maxHeight, title.offsetHeight)
-    });
+        rowTitles.forEach(title => {
+            maxHeight = Math.max(maxHeight, title.offsetHeight);
+        });
 
-    titles.forEach(title => {
-        title.style.height = `${maxHeight}px`;
+        rowTitles.forEach(title => {
+            title.style.height = `${maxHeight}px`;
+        });
     });
 }
 

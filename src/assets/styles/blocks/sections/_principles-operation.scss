@@ -6,6 +6,18 @@
   &__list {
     --row-gap: #{rem(36)};
     --column-gap: #{rem(20)};
+
+    &.row-5 {
+      grid-template-columns: repeat(5, 1fr);
+
+      @include tablet {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 
   &__item {
