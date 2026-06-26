@@ -36,7 +36,7 @@
 
       content: '';
       position: absolute;
-      background: url("/icons/with-love/before-icon.svg") center/contain no-repeat;
+      background: url("/local/templates/redesign/icons/with-love/before-icon.svg") center/contain no-repeat;
       left: 0;
       top: 0;
 
@@ -131,7 +131,7 @@
         width: calc(100% - #{rem(24)});
         aspect-ratio: 590/251;
         z-index: -1;
-        background: url("/images/with-love-bg.png") center/contain no-repeat;
+        background: url("/local/templates/redesign/images/with-love-bg.png") center/contain no-repeat;
       }
     }
 
@@ -148,7 +148,7 @@
           position: absolute;
           bottom: rem(-23);
           right: 100%;
-          background: url("/icons/plus.svg") center/contain no-repeat;
+          background: url("/local/templates/redesign/icons/plus.svg") center/contain no-repeat;
 
           @include mobile {
             @include square(23);
@@ -205,7 +205,7 @@
         top: rem(5);
         left: 0;
         border-radius: 50%;
-        background: url("/icons/plus-white.svg") center/14px no-repeat, var(--color-blue-dark);
+        background: url("/local/templates/redesign/icons/plus-white.svg") center/14px no-repeat, var(--color-blue-dark);
       }
     }
   }

@@ -51,7 +51,7 @@
     }
   }
 
-  &__item {
+  &__link {
     border-radius: var(--radius-big);
     box-shadow: -2px 8px 20px 0 #4C4C4C1A;
     padding: fluid(16, 8) rem(26);
@@ -60,6 +60,12 @@
     gap: rem(8);
     align-items: center;
     background: var(--color-light);
+    color: var(--color-dark) !important;
+    transition: box-shadow var(--transition-duration);
+
+    @include hover() {
+      box-shadow: -2px 8px 20px 10px #4C4C4C1A;
+    }
   }
 
   &__img-container {

@@ -16,6 +16,20 @@
 
       @include mobile {
         grid-template-columns: 1fr;
+
+        .principles-operation__name {
+            height: auto !important;
+        }
+      }
+
+      .principles-operation__text-block {
+        width: 100%;
+      }
+      .principles-operation__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
     }
   }
@@ -67,5 +81,10 @@
     @include fluid-text(18, 14);
 
     margin-bottom: fluid(16, 8);
+    display: inline-block;
+
+    .awards__stars svg {
+      @include square(24);
+    }
   }
 }

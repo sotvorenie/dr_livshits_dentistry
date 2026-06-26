@@ -38,10 +38,10 @@
     }
 
     &:has(input[name="name"])::before {
-      background: url("/icons/user.svg") center/contain no-repeat;
+      background: url("/local/templates/redesign/icons/user.svg") center/contain no-repeat;
     }
     &:has(input[name="phone"])::before {
-      background: url("/icons/phone.svg") center/contain no-repeat;
+      background: url("/local/templates/redesign/icons/phone.svg") center/contain no-repeat;
     }
 
     &::before {

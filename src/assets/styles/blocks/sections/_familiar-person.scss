@@ -58,7 +58,7 @@
       position: absolute;
       width: rem(16);
       height: rem(12);
-      background: url("/icons/blue-quote.svg") center/contain no-repeat;
+      background: url("/local/templates/redesign/icons/blue-quote.svg") center/contain no-repeat;
 
       @include mobile {
         --left: #{rem(-19)};

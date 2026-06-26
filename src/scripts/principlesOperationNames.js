@@ -18,3 +18,7 @@ function equalizeTitlesHeight() {
 
 window.addEventListener('load', equalizeTitlesHeight);
 window.addEventListener('resize', equalizeTitlesHeight);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const row5Titles = document.querySelectorAll('.principles-operation__list.row-5 .principles-operation__text');
+});

@@ -87,7 +87,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: url("/images/consultation-bg.png") bottom/contain no-repeat;
+      background: url("/local/templates/redesign/images/consultation-bg.png") bottom/contain no-repeat;
 
       @include mobile {
         transform: scaleX(-1);
