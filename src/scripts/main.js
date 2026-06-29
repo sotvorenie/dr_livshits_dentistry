@@ -10,6 +10,7 @@ import './review.js'
 import './showFullText.js'
 import './discountNames.js'
 import './principlesOperationNames.js'
+import './servicesNames.js'
 
 import './proudReviews.js'
 import './teamDentists.js'
@@ -24,3 +25,7 @@ import './recommendations.js'
 import './works.js'
 import './articles.js'
 import './doctorReviews.js'
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img')?.forEach(img => img.removeAttribute('title'))
+})

@@ -27,4 +27,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
+    const secondSwiper = new Swiper('.articles .other-services__slider', {
+        modules: [Navigation],
+        slidesPerView: 1,
+        spaceBetween: 10,
+        simulateTouch: true,
+        allowTouchMove: true,
+
+        navigation: {
+            nextEl: '.articles .other-services__btn.next',
+            prevEl: '.articles .other-services__btn.prev',
+        },
+
+        breakpoints: {
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 15
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            }
+        }
+    })
 })
