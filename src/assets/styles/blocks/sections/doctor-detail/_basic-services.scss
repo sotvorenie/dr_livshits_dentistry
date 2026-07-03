@@ -8,22 +8,42 @@
   }
 
   &__slider {
-    padding-top: rem(32) !important;
+    padding-top: rem(50) !important;
     padding-right: 1px !important;
     padding-bottom: 1px !important;
+
+    @include tablet {
+      padding-top: rem(40) !important;
+    }
   }
 
   &__card {
     background: var(--color-light);
     border: var(--border);
-    padding: rem(56) rem(16) rem(24);
+    padding: rem(76) rem(16) rem(24);
     display: flex !important;
     flex-direction: column;
     gap: fluid(40, 16);
     border-radius: var(--radius-big);
 
     @include mobile {
-      padding: rem(48) rem(16) rem(16);
+      padding: rem(58) rem(16) rem(16);
+    }
+
+    .icon {
+      @include square(100);
+
+      top: rem(-50);
+
+      @include tablet {
+        @include square(80);
+
+        top: rem(-40);
+      }
+
+      img {
+        width: 60%;
+      }
     }
   }
 
