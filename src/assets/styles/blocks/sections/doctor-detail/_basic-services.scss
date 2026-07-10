@@ -8,7 +8,7 @@
   }
 
   &__slider {
-    padding-top: rem(50) !important;
+    padding-top: rem(60) !important;
     padding-right: 1px !important;
     padding-bottom: 1px !important;
 
@@ -20,10 +20,10 @@
   &__card {
     background: var(--color-light);
     border: var(--border);
-    padding: rem(76) rem(16) rem(24);
+    padding: rem(96) rem(16) rem(24);
     display: flex !important;
     flex-direction: column;
-    gap: fluid(40, 16);
+    gap: fluid(20, 16);
     border-radius: var(--radius-big);
 
     @include mobile {
@@ -31,7 +31,7 @@
     }
 
     .icon {
-      @include square(100);
+      @include square(120);
 
       top: rem(-50);
 

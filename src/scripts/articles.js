@@ -51,3 +51,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+function equalizeArticleTitles() {
+    const titles = document.querySelectorAll('.articles__name');
+
+    titles.forEach(title => {
+        title.style.height = 'auto';
+    });
+
+    if (window.innerWidth < 768) return;
+
+    let maxHeight = 0;
+    titles.forEach(title => {
+        maxHeight = Math.max(maxHeight, title.offsetHeight);
+    });
+
+    titles.forEach(title => {
+        title.style.height = `${maxHeight}px`;
+    });
+}
+window.addEventListener('load', equalizeArticleTitles);
+window.addEventListener('resize', equalizeArticleTitles);
