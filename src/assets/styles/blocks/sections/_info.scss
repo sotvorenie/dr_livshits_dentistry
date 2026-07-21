@@ -83,6 +83,10 @@
 
   &__content {
     height: 100%;
+
+    &.flex.flex-align-end:not(:has(.info__text-block a)) {
+      align-items: center !important;
+    }
   }
 
   &__text-block {
@@ -159,7 +163,11 @@
 
     @include mobile {
       line-height: 1.45;
-      padding: rem(32) rem(16) 0;
+      padding: rem(32) rem(16) rem(16);
     }
+  }
+
+  &__name {
+    margin-bottom: rem(10);
   }
 }

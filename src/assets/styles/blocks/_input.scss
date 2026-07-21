@@ -37,10 +37,10 @@
       transform: translateX(-10px);
     }
 
-    &:has(input[name="name"])::before {
+    &:has(input[name="NAME"])::before {
       background: url("/local/templates/redesign/icons/user.svg") center/contain no-repeat;
     }
-    &:has(input[name="phone"])::before {
+    &:has(input[name="PHONE"])::before {
       background: url("/local/templates/redesign/icons/phone.svg") center/contain no-repeat;
     }
 
