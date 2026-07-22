@@ -85,7 +85,14 @@
     height: 100%;
 
     &.flex.flex-align-end:not(:has(.info__text-block a)) {
-      align-items: center !important;
+      align-items: start !important;
+
+      .info__text-block {
+
+        @include mobile-above {
+          padding-top: rem(15);
+        }
+      }
     }
   }
 
