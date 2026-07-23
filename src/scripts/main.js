@@ -26,6 +26,7 @@ import './works.js'
 import './articles.js'
 import './doctorReviews.js'
 import './infoNames.js'
+import './notOfferNames.js'
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('img')?.forEach(img => img.removeAttribute('title'))
