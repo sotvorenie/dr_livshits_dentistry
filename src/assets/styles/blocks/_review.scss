@@ -98,36 +98,20 @@
   &__expandable {
 
     @include mobile {
-
       &:not(.is-expanded) {
-        .review__block:not(:first-child) {
-          display: none;
-        }
-
-        .review__block:first-child {
-          margin-bottom: 0;
-        }
-        .review__block:first-child .review__message {
+        .review__message {
           display: -webkit-box;
-          -webkit-line-clamp: 6;
+          -webkit-line-clamp: 7;
           -webkit-box-orient: vertical;
           overflow: hidden;
-        }
-
-        .review__last-reception {
-          display: none;
         }
       }
 
       &.is-expanded {
-
-        .review__block:not(:first-child) {
-          display: block;
-        }
-
-        .review__block:first-child .review__message {
+        .review__message {
           display: block;
           -webkit-line-clamp: initial;
+          overflow: visible;
         }
       }
     }
