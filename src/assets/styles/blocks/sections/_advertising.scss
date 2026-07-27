@@ -25,7 +25,7 @@
     background: var(--color-beige);
     border-radius: var(--radius-big);
     padding: fluid(32, 16);
-    gap: rem(40);
+    gap: fluid(40, 17);
 
     @include mobile {
       gap: rem(17);
@@ -43,6 +43,7 @@
   }
 
   &__right {
+    gap: rem(12.5);
     background: var(--color-blue);
     padding: fluid(50, 24) fluid(32, 16);
     border-radius: 0 var(--radius-big) var(--radius-big) 0;
@@ -85,6 +86,7 @@
       font-weight: 700;
       border-radius: 50%;
       line-height: 1;
+      padding-left: 1px;
     }
   }
 
@@ -164,6 +166,121 @@
 
     @include mobile {
       margin-inline: auto;
+    }
+  }
+
+  &__block {
+    flex: 0 0 calc(50% - #{rem(20)});
+    border-radius: var(--radius-big);
+    background: var(--color-light);
+    font-family: var(--font-family-message);
+
+    @include mobile {
+      flex: 0 0 calc(50% - #{rem(8.5)});
+    }
+
+    &-tag {
+      color: var(--color-light);
+      text-transform: uppercase;
+      background: rgba(0,0,0,.35);
+      border-radius: var(--radius-regular);
+      padding: rem(4) rem(7);
+      font-size: rem(11);
+      line-height: 1;
+      top: rem(15);
+      left: rem(15);
+      z-index: 1;
+
+      @include mobile {
+        top: rem(10);
+        left: rem(10);
+        font-size: rem(9);
+      }
+    }
+
+    &-img-container {
+      width: 100%;
+    }
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+
+      .advertising__block-img-container {
+        aspect-ratio: 286/236;
+      }
+      .advertising__block-info {
+        @include flex-center();
+
+        flex: 1 0 auto;
+        flex-direction: column;
+      }
+    }
+    &:nth-child(2) {
+
+      .advertising__block-img-container {
+        aspect-ratio: 1/0.93;
+        position: relative;
+      }
+      .advertising__block-info {
+        bottom: 0;
+      }
+    }
+
+    &-content, &-info {
+      padding-inline: rem(15);
+
+      @include mobile {
+        padding-inline: rem(10);
+      }
+    }
+
+    &-content {
+      padding-block: rem(15) rem(10);
+
+      @include mobile {
+        padding-block: rem(10) rem(5);
+      }
+    }
+
+    &-title, &-price {
+      color: #000000;
+    }
+
+    &-title, &-about {
+      @include fluid-text(15, 10);
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-price {
+      @include fluid-text(20, 12);
+
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    &-about {
+      color: #a6a6a6;
+      line-height: 1.2;
+    }
+
+    &-info {
+      @include fluid-text(14, 7);
+
+      width: 100%;
+      padding-block: rem(8);
+      text-transform: uppercase;
+      color: var(--color-light);
+      font-weight: 600;
+      background: rgba(0,0,0,.25);
+      line-height: 1.1;
+
+      @include mobile {
+        padding-block: rem(4);
+      }
     }
   }
 }

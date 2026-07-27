@@ -5,11 +5,34 @@ mixin advertising(className = '')
 
             div.advertising__top
                 div.advertising__left.flex
-                    div.advertising__img-container.img-container
-                        img(src="images/advertising-1.jpg")
+                    div.advertising__block.position-relative.overflow-hidden
+                        span.advertising__block-tag.position-absolute реклама
 
-                    div.advertising__img-container.img-container
-                        img(src="images/advertising-2.jpg")
+                        div.advertising__block-img-container.img-container
+                            img(src="images/advertising-1.png")
+
+                        div.advertising__block-content
+                            p.advertising__block-title Имплант зуба + установка
+                            p.advertising__block-price 26 000 руб.!
+                            p.advertising__block-about Установим все быстро и качественно
+
+                        div.advertising__block-info
+                            p Есть противопоказания.
+                            p Посоветуйтесь с врачом
+
+                    div.advertising__block.position-relative.overflow-hidden
+                        span.advertising__block-tag.position-absolute реклама
+
+                        div.advertising__block-img-container.img-container
+                            img(src="images/advertising-2.png")
+
+                            div.advertising__block-info.position-absolute
+                                p Есть противопоказания.
+                                p Посоветуйтесь с врачом
+
+                        div.advertising__block-content
+                            p.advertising__block-title Установка импланта зуба + осмотр. Выгодно и без проблем. Ждем ВАС.
+                            p.advertising__block-price 32 000 руб.!
 
                 div.advertising__right
                     h4.advertising__right-title.text-w700 А что на самом деле — при посещении клиники?
