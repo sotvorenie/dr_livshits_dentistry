@@ -95,3 +95,9 @@
 .color-blue {
   color: var(--color-blue-dark);
 }
+
+.full-width {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+}
