@@ -95,3 +95,35 @@ button[disabled] {
 .swiper-slide {
   height: auto !important;
 }
+
+.name_item_popup {
+  display: none !important;
+}
+
+.payment_policy a {
+  color: var(--color-blue-dark);
+}
+
+.payment-info *:not(i) {
+  font-family: var(--font-family-additional);
+}
+
+.payment-info .vc_custom_heading {
+  @include fluid-text(48, 28);
+
+  font-weight: 300;
+  margin-bottom: fluid(40, 20);
+}
+
+.payment-info .button.square {
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+
+.sitemap, .sitemap * {
+  & ul[class], & ol[class] {
+    padding-left: fluid(40, 20);
+    list-style: revert;
+  }
+}

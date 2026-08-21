@@ -1,0 +1,112 @@
+@use '../../helpers' as *;
+
+@media only screen and (max-width: 768px) {
+  .title_payment{
+    padding-bottom: 30px;
+  }
+  .title_payment .title_payment_img{
+    width: 100%;
+  }
+  .title_payment .title_payment_img img{
+    max-width: 200px;
+  }
+  .title_payment h1{
+    line-height: 1.4;
+    width: 100%;
+    padding: 20px 0 10px;
+  }
+  .item_payment > p{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .item_payment .inputs_payment{
+    width: 100%;
+  }
+  .payment_policy{
+    padding-top: 20px;
+  }
+  .payment_send_img{
+    display: block;
+    padding-top: 20px;
+  }
+  .payment_footer{
+    margin-bottom: 25px;
+    margin-top: -10px;
+  }
+  .payment_footer p + p{
+    margin-top: 10px;
+  }
+  .form_payment .item_payment_3 .input_payment,
+  .form_payment .item_payment_2 .input_payment{
+    width: 100%;
+    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .item_payment{
+    margin-bottom: 35px;
+  }
+  .form_payment .item_payment.item_payment_2{
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #popup_policy_item .item_popup{
+    width: 100%;
+  }
+  .item_popup {
+    width: 100%;
+  }
+
+  .top_info_boxes .top_info_box {
+    width: 100%;
+    float: left;
+  }
+
+  .top_info_boxes.header_mode_phone {
+    background: #f5f5f5;
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    margin-bottom: 7px;
+  }
+
+  .header_success_stories h2 {
+    width: auto;
+    margin: 0 0 20px;
+  }
+
+  .pp_pic_holder {
+    left: 0 !important;
+    width: 98% !important;
+    margin-left: 1% !important;
+  }
+
+  div.pp_default .pp_content_container .pp_right {
+    padding-right: 21px !important;
+  }
+
+  .pp_content, #pp_full_res img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  div.pp_default .pp_expand{
+    display: none!important;
+  }
+  div.pp_default .pp_content_container .pp_details {
+    margin-top: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%!important;
+    height: 100%!important;
+  }
+  a.pp_close{
+    right: 20px!important;
+    top: 0px!important;
+  }
+}

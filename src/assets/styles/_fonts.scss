@@ -65,6 +65,13 @@
 
 @font-face {
   font-family: 'Roboto';
+  src: url('/local/templates/redesign/assets/woff2/Roboto-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
   src: url('/local/templates/redesign/assets/woff2/Roboto-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
