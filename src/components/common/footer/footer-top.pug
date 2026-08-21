@@ -15,46 +15,33 @@ mixin footer-top(activeIndex)
 
             div.footer-top__content
                 div.footer__about
-                    p.footer__title.text-w700 О нас
+                    p.footer__title.text-w700.color-blue О нас
 
-                    p Наша стоматологическая клиника предоставляет весь спектр услуг в области инновационной стоматологии.Наша гордость - это наши пациенты. Мы смогли своей работой завоевать их доверие и любовь. 95% наших пациентов приходят к нам по рекомендаци. За 14 лет нашими врачами созданны более 15 000 здоровых улыбок
+                    p Наша стоматологическая клиника предоставляет весь спектр услуг в области инновационной стоматологии.Наша гордость - это наши пациенты. Мы смогли своей работой завоевать их доверие и любовь. 95% наших пациентов приходят к нам по рекомендаци. За 19 лет нашими врачами созданны более 20 000 здоровых улыбок
 
                 div.footer-top__left
-                    p.footer__title.text-w700 Разделы
+                    p.footer__title.text-w700.color-blue Разделы
 
                     div.footer__list-bar
                         ul.footer__list
                             each link, index in footer.sections
-                                li.footer__item(class=[activeIndex === index ? 'is-here' : '', index === footer.sections.length - 1 ? 'color-accent' : ''])
+                                li.footer__item
                                     a(href="#").footer__link.text-w500.w-100= link
 
                 div.footer-top__right
-                    p.footer__title.text-w700 Услуги
+                    p.footer__title.text-w700.color-blue Услуги
 
-                        div.footer__list-bar
-                            ul.footer__list
-                                each link, index in footer.services
-                                    li.footer__item
-                                        a(href="#").footer__link.text-w500.w-100(class=index === footer.services.length - 1 ? 'color-accent' : '')= link
+                    div.footer__list-bar
+                        ul.footer__list
+                            each link, index in footer.services
+                                li.footer__item
+                                    a(href="#").footer__link.text-w500.w-100= link
 
-                div.footer__soc1als
-                    div.footer__top
-                        p.footer__title.text-w700 Мы в соцсетях
+                div.footer-top__info
+                    p.footer__title.text-w700.color-blue Информация
 
-                        ul.footer__soc1als-list.flex
-                            li.footer__soc1als-item
-                                a(href="/https://vk.com/kdlspb").footer__soc1als-link.flex-center
-                                    include ../../icons/footer/vk
-
-                    div.footer__bottom
-                        p.footer__title.text-w700 Наш адрес и часы работы
-
-                        div
-                            span 197342, Санкт-Петербург
-                            span Торжковская улица, дом 13, корпус 1
-                            span Ближайшая станция м."Черная речка".
-                            a(href="tel:+78124051001") 8(812)405-10-01
-                            a(href="tel:+79110030101") +7(911)003-01-01
-                            span Понедельник - Воскресенье	9:00 - 21:00
-
-            a(href="#").footer__policy.line-link Политика конфиденциальности
+                    div.footer__list-bar
+                        ul.footer__list
+                            each link, index in footer.info
+                                li.footer__item
+                                    a(href="#").footer__link.text-w500.w-100(class=index === footer.services.length - 1 ? 'color-accent' : '')= link

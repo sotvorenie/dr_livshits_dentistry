@@ -104,3 +104,31 @@ $grid-columns: 12 !default;
 .row .row {
   grid-column: 1 / -1;
 }
+
+$bs-breakpoints: (
+        'xs': 0,
+        'sm': 480px,
+        'md': 767px,
+        'lg': 1023px,
+        'xl': 1440px
+);
+
+$grid-columns: 12 !default;
+
+@each $breakpoint, $value in $bs-breakpoints {
+  @if $value == 0 {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        grid-column: span $i !important;
+      }
+    }
+  } @else {
+    @media (min-width: $value) {
+      @for $i from 1 through $grid-columns {
+        .col-#{$breakpoint}-#{$i} {
+          grid-column: span $i !important;
+        }
+      }
+    }
+  }
+}
