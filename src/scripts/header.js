@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const headerMenu = document.querySelector('.header-menu')
     const headerMenuBtnOpen = document.querySelector('.header__link--has-submenu')
-    const headerMenuBtnClose = document.querySelector('.header-menu__close')
 
     if (!header) return
 
@@ -16,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const setTopToBurgerMenu = () => {
         const height = header.offsetHeight
-        burgerMenu.style.setProperty('--top', `${height / 16}rem`)
-        headerMenu.style.setProperty('--top', `${height / 16}rem`)
+        burgerMenu.style.setProperty('--top', `${(height - 8) / 16}rem`)
+        headerMenu.style.setProperty('--top', `${(height - 8) / 16}rem`)
     }
     setTopToBurgerMenu()
 
@@ -32,18 +31,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const debouncedSetTop = debounce(setTopToBurgerMenu, 250)
     window.addEventListener('resize', debouncedSetTop)
 
+    window.addEventListener('click', (e) => {
+        const headerMenuContent = headerMenu.querySelector('.header-menu__content')
+        const isClickInsideMenu = headerMenuContent.contains(e.target)
+        const isClickOnButton = headerMenuBtnOpen.contains(e.target)
+
+        if (!isClickInsideMenu && !isClickOnButton && headerMenu.classList.contains(classes.isActive)) {
+            headerMenuBtnOpen.click()
+        }
+    })
+
     headerMenuBtnOpen.addEventListener('click', () => {
         headerMenu.classList.toggle(classes.isActive)
 
         if (headerMenu.classList.contains(classes.isActive)) {
             headerMenuBtnOpen.parentElement.classList.add(classes.isOpen)
+            document.documentElement.classList.add(classes.isLock)
         } else {
             headerMenuBtnOpen.parentElement.classList.remove(classes.isOpen)
+            document.documentElement.classList.remove(classes.isLock)
         }
-    })
-    headerMenuBtnClose.addEventListener('click', () => {
-        headerMenu.classList.remove(classes.isActive)
-
-        headerMenuBtnOpen.parentElement.classList.remove(classes.isActive)
     })
 })

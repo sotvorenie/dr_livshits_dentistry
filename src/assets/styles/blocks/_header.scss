@@ -190,14 +190,14 @@
   &-menu {
     --top: 0;
 
-    background: var(--color-light-alt);
     opacity: 0;
-    top: calc(var(--top) + #{rem(24)});
+    top: var(--top);
     transition:
             opacity var(--transition-duration),
             transform var(--transition-duration);
     transform: translateY(-10px);
-    padding-block: rem(16) rem(20);
+    height: calc(100vh - var(--top));
+    overflow-y: auto;
 
     &:not(.is-active) {
       pointer-events: none;
@@ -208,31 +208,37 @@
       transform: translateY(0);
     }
 
-    &__close {
-      @include square(16);
+    &__columns {
+      display: flex;
+      background: var(--color-blue);
+    }
 
-      top: rem(-16);
-      right: 0;
-      padding: 0;
+    &__column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-inline: var(--border-alt);
     }
 
     &__list {
-      --row-gap: #{rem(24)};
-      --column-gap: #{rem(20)};
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      break-inside: avoid;
     }
 
     &__head {
       padding: rem(8) rem(16);
       line-height: 1.57;
       transition: background var(--transition-duration);
-
-      @include hover() {
-        background: var(--color-blue);
-      }
-    }
-
-    &__toggle {
-      color: var(--color-blue-dark);
+      background: var(--color-blue-dark);
+      color: var(--color-light);
+      pointer-events: none;
     }
 
     &__top {
@@ -246,19 +252,40 @@
       border-radius: var(--radius-regular);
     }
 
-    &__link {
-      padding-right: rem(28);
+    &__hidden {
+      font-weight: 500;
     }
 
-    &__hidden {
-      --padding-top: #{rem(8)};
-
-      font-size: rem(12);
+    &__link {
+      pointer-events: auto;
     }
 
     &__links {
-      gap: rem(8);
-      padding-left: rem(60);
+
+      &-item {
+        padding-inline: rem(20);
+        border-bottom: var(--border-alt);
+
+        .header-menu__links-link {
+          padding-block: rem(10);
+        }
+        &:first-child {
+
+          .header-menu__links-link {
+            padding-top: rem(20);
+          }
+        }
+        &:last-child {
+
+          .header-menu__links-link {
+            padding-bottom: rem(20);
+          }
+        }
+      }
+
+      &-link {
+        text-decoration: none !important;
+      }
     }
   }
 }
