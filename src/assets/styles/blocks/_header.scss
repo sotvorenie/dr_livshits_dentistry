@@ -3,6 +3,21 @@
 .header {
   position: relative;
 
+  &:has(.header__item--has-submenu:hover) .header-menu,
+  &:has(.header-menu__content:hover) .header-menu {
+    opacity: 1;
+
+    & * {
+      pointer-events: auto !important;
+    }
+  }
+
+  &:has(.header__item--has-submenu:hover) .header__item--has-submenu,
+  &:has(.header-menu__content:hover) .header__item--has-submenu {
+    background: var(--color-blue-dark);
+    color: var(--color-light);
+  }
+
   &__logo {
     width: rem(295);
     height: fit-content;
@@ -103,11 +118,24 @@
       color: var(--color-light);
     }
 
-    &--has-submenu svg {
-      @include abs-y;
+    &--has-submenu {
+      position: relative;
 
-      position: absolute;
-      right: rem(20);
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: rem(20);
+        top: 100%;
+        left: 0;
+      }
+
+      svg {
+        @include abs-y;
+
+        position: absolute;
+        right: rem(20);
+      }
     }
   }
 
@@ -193,20 +221,12 @@
 
     opacity: 0;
     top: calc(100% - 8px);
-    transition:
-            opacity var(--transition-duration),
-            transform var(--transition-duration);
-    transform: translateY(-10px);
+    transition: opacity var(--transition-duration);
     overflow-y: auto;
     height: calc(100vh - var(--top));
 
-    &:not(.is-active) {
-      pointer-events: none;
-    }
-
-    &.is-active {
-      opacity: 1;
-      transform: translateY(0);
+    &, & * {
+      pointer-events: none !important;
     }
 
     &__columns {
