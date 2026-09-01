@@ -1,6 +1,7 @@
 @use '../helpers' as *;
 
 .header {
+  position: relative;
 
   &__logo {
     width: rem(295);
@@ -74,7 +75,7 @@
     box-shadow: var(--shadow);
 
     &_inner {
-      padding-block: rem(8);
+      padding-block: rem(17);
       gap: rem(15);
 
       @include laptop-s {
@@ -191,13 +192,13 @@
     --top: 0;
 
     opacity: 0;
-    top: var(--top);
+    top: calc(100% - 8px);
     transition:
             opacity var(--transition-duration),
             transform var(--transition-duration);
     transform: translateY(-10px);
-    height: calc(100vh - var(--top));
     overflow-y: auto;
+    height: calc(100vh - var(--top));
 
     &:not(.is-active) {
       pointer-events: none;

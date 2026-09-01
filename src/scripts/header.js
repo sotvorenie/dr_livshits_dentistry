@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const setTopToBurgerMenu = () => {
-        const height = header.offsetHeight
-        burgerMenu.style.setProperty('--top', `${(height - 8) / 16}rem`)
-        headerMenu.style.setProperty('--top', `${(height - 8) / 16}rem`)
+        const rect = headerMenu.getBoundingClientRect()
+        headerMenu.style.setProperty('--top', `${rect.top / 16}rem`)
     }
     setTopToBurgerMenu()
 
