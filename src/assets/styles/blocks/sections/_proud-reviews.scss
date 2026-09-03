@@ -55,6 +55,7 @@
 
   &__img-container {
     height: rem(54);
+    flex-grow: 1;
   }
 
   &__rating, &__place, &__link, &__counter {
