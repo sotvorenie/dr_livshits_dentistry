@@ -1,0 +1,46 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+
+block title
+    | Частые вопросы наших пациентов
+
+block header
+    +header(0)
+
+block content
+    +breadcrumbs(["Главная", "Частые вопросы наших пациентов"])
+
+    section.prices-page
+        div.prices-page__inner.container
+            h1.prices-page__title.section-mb-72.color-accent.text-center Частые вопросы наших пациентов
+
+            div.prices-page__links.section-mb-72
+                each item, index in pricesPageList
+                    a(href=item.href).prices-page__link(class= index === 0 ? 'is-active accent' : 'dark').button.text-upper.w-100= item.title
+
+            div.prices-page__header.flex.flex-align-center
+                h3.prices-page__subtitle.color-blue.text-upper.text-w600 Лечение зубов под микроскопом
+
+                div.prices-page__line
+
+    section.questions.section-mb-72
+        div.questions__inner.container
+            ul.questions__list.flex.flex-column
+                each item, index in questions
+                    li.questions__item
+                        details.questions__details(open=index === 0)
+                            summary.questions__header.flex.flex-align-center.flex-justify-between.cursor-pointer
+                                span.questions__title-wrap
+                                    each titleLine in item.title
+                                        span.questions__title.flex= titleLine
+
+                                span.questions__icon
+                            div.questions__content.flex.flex-column
+                                each paragraph in item.text
+                                    if paragraph.startsWith('<ol')
+                                        div!= paragraph
+                                    else
+                                        p= paragraph
+
+            a(href="#").questions__btn.button.dark.m-auto Задать вопрос

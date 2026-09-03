@@ -55,6 +55,8 @@
 @use 'blocks/sections/problems';
 @use 'blocks/sections/process';
 @use 'blocks/sections/numbers';
+@use 'blocks/sections/payment';
+@use 'blocks/sections/questions';
 
 @use 'blocks/sections/index/dr-livshits';
 @use 'blocks/sections/index/quote';
@@ -75,5 +77,3 @@
 @use 'blocks/sections/article/article';
 
 @use 'blocks/sections/prices-page/prices-page';
-
-@use 'blocks/sections/payment';

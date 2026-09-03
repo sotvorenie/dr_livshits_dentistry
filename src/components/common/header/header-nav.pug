@@ -8,11 +8,21 @@ mixin header-nav(activeIndex)
                             link.hasSubmenu ? 'header__item--has-submenu' : '',
                             index === activeIndex && index === 1 ? 'is-active' : '',
                             index === activeIndex && index !== 1 ? 'is-here' : '',
+
+                            link.hasPagesMenu && 'header__item--has-pages-menu',
                         ]
                     ).position-relative
                         if link.hasSubmenu
                             button(type="button" class=link.hasSubmenu ? 'header__link--has-submenu' : '').header__link.hover-color-accent.text-nowrap.text-upper.text-w500= link.title
                                 include ../../icons/header/menu-item-arrow
+                        else if link.hasPagesMenu
+                            a(href=link.href).header__link.header__link--has-pages-menu.hover-color-accent.text-nowrap.text-upper.text-w500= link.title
+                                include ../../icons/header/menu-item-arrow
+
+                            ul.header-dropdown.position-fixed.z-100
+                                each dropLink in headerDropdownLinks
+                                    li.header-dropdown__item
+                                        a(href=dropLink.href).header-dropdown__link.text-w500.text-nowrap= dropLink.title
                         else
                             a(href=link.href).header__link.text-nowrap.text-upper.text-w500= link.title
 
