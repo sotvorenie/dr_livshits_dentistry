@@ -19,7 +19,7 @@ mixin header-nav(activeIndex)
                             a(href=link.href).header__link.header__link--has-pages-menu.hover-color-accent.text-nowrap.text-upper.text-w500= link.title
                                 include ../../icons/header/menu-item-arrow
 
-                            ul.header-dropdown.position-fixed.z-100
+                            ul.header-dropdown.position-absolute.z-100
                                 each dropLink in headerDropdownLinks
                                     li.header-dropdown__item
                                         a(href=dropLink.href).header-dropdown__link.text-w500.text-nowrap= dropLink.title

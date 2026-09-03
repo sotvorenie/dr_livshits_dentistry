@@ -1,7 +1,7 @@
 @use 'helpers' as *;
 
 html {
-  &.is-lock, &:has(.header__item--has-submenu:hover, .header-menu__content:hover), &:has(.header__item--has-pages-menu:hover, .header-dropdown:hover) {
+  &.is-lock, &:has(.header__item--has-submenu:hover, .header-menu__content:hover) {
     overflow: hidden;
   }
 }

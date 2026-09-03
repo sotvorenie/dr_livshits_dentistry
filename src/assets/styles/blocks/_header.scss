@@ -12,8 +12,8 @@
     }
   }
 
-  &:has(.header__item--has-submenu:hover) .header__item--has-submenu,
-  &:has(.header-menu__content:hover) .header__item--has-submenu {
+  &:has(.header__item--has-submenu:hover) .header__item--has-submenu button,
+  &:has(.header-menu__content:hover) .header__item--has-submenu button {
     background: var(--color-blue-dark);
     color: var(--color-light);
   }
@@ -90,7 +90,6 @@
     box-shadow: var(--shadow);
 
     &_inner {
-      padding-block: rem(16);
       gap: rem(15);
 
       @include laptop-s {
@@ -108,36 +107,20 @@
   }
 
   &__item {
-    border-radius: var(--radius-medium);
     transition:
             background var(--transition-duration),
             color var(--transition-duration);
+    padding-block: rem(16);
 
-    &.is-active, &.is-open, &.is-here {
-      background: var(--color-blue-dark);
-      color: var(--color-light);
+    &.is-active, &.is-here {
+
+      a, button {
+        background: var(--color-blue-dark);
+        color: var(--color-light);
+      }
     }
 
     &--has-submenu, &--has-pages-menu {
-      position: relative;
-
-      @include hover() {
-
-        &:after {
-          display: block;
-        }
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 0;
-        display: none;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
 
       svg {
         @include abs-y;
@@ -151,16 +134,20 @@
 
       @include hover() {
 
+        & > a {
+          background: var(--color-blue-dark);
+          color: var(--color-light);
+        }
+
         .header-dropdown {
           opacity: 1;
           pointer-events: auto !important;
         }
       }
+    }
 
-      &:hover, &:has(.header-dropdown:hover) {
-        background: var(--color-blue-dark);
-        color: var(--color-light);
-      }
+    a, button {
+      border-radius: var(--radius-medium);
     }
   }
 
@@ -184,7 +171,9 @@
   }
 
   &__btn {
-    font-size: rem(14);
+    @include fluid-text(14, 12);
+
+    white-space: nowrap;
     color: var(--color-light) !important;
     padding: rem(10) rem(12);
     background: var(--color-accent);
@@ -340,12 +329,9 @@
   }
 
   &-dropdown {
-    --top: 0;
-
     min-width: rem(257);
     background: var(--color-blue);
-    position: relative;
-    top: calc(var(--top) + #{rem(12)});
+    top: calc(100% + #{rem(12)});
     opacity: 0;
     transition: opacity var(--transition-duration);
     pointer-events: none !important;
@@ -355,6 +341,14 @@
     }
 
     &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(12);
+      bottom: 100%;
+    }
+
+    &::after {
       width: rem(14);
       height: rem(12);
       content: '';
