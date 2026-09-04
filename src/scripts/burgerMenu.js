@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
         isLock: 'is-lock',
     }
 
-    openBtn.addEventListener('click', () => {
+    openBtn?.addEventListener('click', () => {
         burgerMenu.classList.add(classes.isOpen)
         document.documentElement.classList.add(classes.isLock)
     })
-    closeBtn.addEventListener('click', () => {
+    closeBtn?.addEventListener('click', () => {
         burgerMenu.classList.remove(classes.isOpen)
         document.documentElement.classList.remove(classes.isLock)
     })
