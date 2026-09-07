@@ -116,6 +116,10 @@
     @include tablet {
       padding-inline: rem(10);
     }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__btn {
@@ -127,5 +131,12 @@
   &__discount {
     text-decoration: line-through;
     margin-right: rem(3);
+  }
+
+  &__more {
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
