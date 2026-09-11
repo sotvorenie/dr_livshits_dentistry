@@ -380,4 +380,21 @@
       color: var(--color-dark);
     }
   }
+
+  &-links {
+    gap: rem(10);
+
+    &__item {
+      @include square(23);
+    }
+
+    &__link {
+      display: block;
+      transition: transform var(--transition-duration);
+
+      @include hover() {
+        transform: scale(1.1);
+      }
+    }
+  }
 }

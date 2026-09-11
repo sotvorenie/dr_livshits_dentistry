@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.links {
+  position: fixed;
+  z-index: 100;
+  right: rem(20);
+  bottom: rem(20);
+
+  &__list {
+    display: flex;
+    gap: rem(7);
+  }
+
+  &__item {
+
+    &:nth-child(1) .links__text {
+      background: #8733e1;
+    }
+    &:nth-child(2) .links__text {
+      background: #2AABEE;
+    }
+    &:nth-child(3) .links__text {
+      background: #2ad348;
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(7);
+
+    @include hover() {
+
+      .links__img {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__img {
+    @include square(46);
+
+    transition: transform var(--transition-duration);
+
+    @include mobile {
+      @include square(36);
+    }
+  }
+
+  &__text {
+    @include fluid-text(13, 11);
+
+    color: var(--color-light);
+    padding: rem(1) rem(8);
+    border-radius: rem(3);
+  }
+}
