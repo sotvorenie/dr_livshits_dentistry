@@ -3,6 +3,17 @@
 .principles-operation {
   background: var(--color-blue);
 
+  &.bg-white {
+
+    .principles-operation__item, .principles-operation__icon {
+      border: none;
+    }
+
+    .principles-operation__item {
+      background: transparent;
+    }
+  }
+
   &__list {
     --row-gap: #{rem(36)};
     --column-gap: #{rem(20)};

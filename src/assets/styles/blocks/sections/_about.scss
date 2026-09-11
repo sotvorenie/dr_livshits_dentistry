@@ -1,0 +1,51 @@
+@use '../../helpers' as *;
+
+.about {
+  background: var(--color-blue);
+
+  &__inner {
+    --padding-inline: #{fluid(86, 0)};
+
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2 - var(--padding-inline) * 2);
+  }
+
+  &__doctor {
+    position: relative;
+
+    &_left {
+
+      @include mobile-above {
+        width: 68%;
+      }
+    }
+
+    &_title {
+      @include fluid-text(32, 16);
+    }
+
+    &_person {
+      height: calc(100% + #{fluid(72, 40)} * 2 - #{rem(12)});
+      max-height: none;
+      right: 0;
+      bottom: calc(#{fluid(72, 40)} * -1);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: rem(13);
+
+    &.max-w-580 {
+      width: 100%;
+
+      @include mobile-above {
+        max-width: rem(580);
+      }
+    }
+  }
+
+  &__text {
+    @include fluid-text(18, 14);
+  }
+}

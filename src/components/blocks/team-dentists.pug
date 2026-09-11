@@ -1,15 +1,17 @@
-mixin team-dentists(className = '', isFull = true)
+mixin team-dentists(className = '', isFull = true, visibleTitle = true)
     section.team-dentists(class=className)
         div.team-dentists__inner.container
             if isFull
-                h3.team-dentists__title.text-center.text-w600
-                    | Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
-                    br
-                    | Вас будут лечить врачи мирового уровня!
+                if visibleTitle
+                    h3.team-dentists__title.text-center.text-w600
+                        | Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
+                        br
+                        | Вас будут лечить врачи мирового уровня!
 
                 h1.team-dentists__subtitle.text-center Знакомьтесь! #[span.color-accent Наши врачи – наша гордость!]
             else
-                h3.team-dentists__title.text-center.text-w600 Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
+                if visibleTitle
+                    h3.team-dentists__title.text-center.text-w600 Мы собрали, пожалуй, лучшую команду стоматологов в Санкт-Петербурге!
 
                 h1.team-dentists__subtitle.text-center
                     | Знакомьтесь!

@@ -113,3 +113,15 @@
 .mb-30-20 {
   margin-bottom: fluid(30, 20);
 }
+
+.mb-24-12 {
+  margin-bottom: fluid(24, 12);
+}
+
+.mb-48-20 {
+  margin-bottom: fluid(48, 20);
+}
+
+.bg-white {
+  background: var(--color-light-alt) !important;
+}

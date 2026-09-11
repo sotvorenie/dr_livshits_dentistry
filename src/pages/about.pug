@@ -1,0 +1,85 @@
+extends ../components/layouts/base.pug
+
+include ../components/common/breadcrumbs
+include ../components/blocks/awards
+include ../components/blocks/principles-operation
+include ../components/blocks/team-dentists
+include ../components/blocks/proud-reviews
+include ../components/blocks/welcome
+include ../components/blocks/contacts
+
+block title
+    | Статьи
+
+block header
+    +header(0)
+
+block content
+    +breadcrumbs(["Главная", "О нас", "О клинике"])
+
+    section.about.section.section-border-block
+        div.about__inner.container
+            div.about__doctor
+                div.about__doctor_left
+                    div.about__block.mb-48-20
+                        h1.about__doctor_title.color-blue Меня зовут Татьяна Львовна Лившиц
+
+                        p.about__text.text-w700.color-blue Я врач-стоматолог с 30-летним стажем и Главный врач клиники «Стоматология доктора Лившиц».
+
+                    div.about__block.max-w-580
+                        p.about__text Я выросла в семье стоматологов. Мама работала стоматологом-терапевтом в простой советской поликлинике, папа работал зубным техником. Поэтому вопрос «Кем быть?» для меня не стоял в юности вообще.
+                        p.about__text Клиника «Стоматология доктора Лившиц» была открыта мной в 2007 года. Это почти 20 лет назад и за это время мы, с нашей дружной и высокопрофессиональной командой стоматологов разных специальностей, смогли помочь восстановить стоматологическое здоровье 20 000 наших пациентов!
+
+                img(src="images/index/dr-livshits-person.png" alt="доктор Лившиц").about__doctor_person.position-absolute.hidden-mobile
+
+    +awards('section')
+
+    section.about.section
+        div.about__inner.container
+            div.about__block.max-w-580
+                p.about__text.text-w700.color-blue В настоящее время «Стоматология доктора Лившиц» - это полностью цифровая стоматология, использующая в своей работе исключительно цифровой протокол.
+                p.about__text Каждый кабинет нашей клиники оснащен дентальным микроскопом, что позволяет нам лечить зубы с высокой точностью, используя 25-кратное увеличение.
+                p.about__text Мы давно отказались от снятия слепков при помощи ложек со слепочной массой. Эту технологию заменило сканирование зубов при помощи бесконтактных интраоральных 3D сканеров последнего поколения.
+                p.about__text А собственная цифровая лаборатория позволяет нам быстро, качественно и недорого изготавливать идеальной формы и эстетики коронки из керамики или циркония
+
+    +principles-operation('section section-border-block bg-white')
+
+    section.about.section
+        div.about__inner.container
+            div.about__block.max-w-580.mb-24-12
+                p.about__text.text-w700.color-blue Но лечат людей не технологии, микроскопы или сканеры, лечат людей врачи!
+
+            div.about__block.max-w-580
+                p.about__text Мы собрали лучшую команду высококлассных специалистов и мы искренне гордимся не только их работой и теми результатами, которые получают наши пациенты, но и той атмосферой доверия и понимания, которые создаются каждым нашим врачом с каждым пациентом!
+
+    +team-dentists('section section-border-block bg-white', true, false)
+
+    section.about.section
+        div.about__inner.container
+            div.about__block.max-w-580.mb-24-12
+                p.about__text.text-w700.color-blue Самое главное в профессии врача – это любовь к людям и желание им помочь.
+
+            div.about__block.max-w-580
+                p.about__text Именно по этому принципу собирался весь коллектив клиники: от врача до администратора. Только такая единая команда неравнодушных, высокопрофессиональных людей может действительно быть обречена на успех.
+                p.about__text В нашей клинике не только высокие стандарты качества предоставления стоматологических услуг, но и высокие стандарты общего сервиса, направленные на пациентов. Как результат – у нас не бывает недовольных полученным результатом работы пациентов.
+                p.about__text Мы не навязываем и не продаем стоматологические услуги и планы лечения, мы всегда открыты для наших пациентов и всегда проводим первый диагностический прием на понятном для пациента языке, вместе вырабатываем план лечения и обсуждаем его.
+
+    +proud-reviews('section section-border-block')
+
+    section.about.section
+        div.about__inner.container
+            div.about__block.mb-24-12.max-w-580
+                p.about__text.text-w700.color-blue Именно эта искренняя забота дает нам право гордиться тем, что уже 19 лет 95% наших пациентов приходят к нам по рекомендации!
+
+            div.about__block.mb-40-20.max-w-580
+                p.about__text Для нас лучший показатель успешности нашей клиники – это количество здоровых красивых улыбок и количество благодарных отзывов от наших пациентов, которым мы сохранили или продлили жизнь их зубов и общее здоровье.
+
+            div.about__block.mb-24-12.max-w-580
+                p.about__text.text-w700.color-blue Мы ценим доверие наших пациентов и отвечаем им любовью и заботой об их долгосрочном здоровье!
+
+            div.about__block.max-w-580
+                p.about__text И, конечно, мы ждем новых пациентов, которым мы сможем вернуть или сохранить красивые здоровые зубы и радостные улыбки!
+
+    +welcome('section section-border-block')
+
+    +contacts('section')
