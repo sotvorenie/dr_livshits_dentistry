@@ -19,6 +19,7 @@
 
     .person__text-block {
       text-align: right;
+      align-items: end;
       margin-left: auto;
     }
 
@@ -213,7 +214,7 @@
   &__awards {
     gap: rem(12);
 
-    @include mobile-above {
+    @include tablet-above {
       margin-left: rem(12);
       margin-top: rem(12);
       height: 100%;
@@ -237,6 +238,11 @@
     display: flex;
     align-items: center;
 
+    @include tablet-above {
+      width: calc(100% - #{rem(12)});
+      height: calc(100% - #{rem(12)});
+    }
+
     @include mobile-above {
       flex: 0 0 calc(50% - #{rem(6)});
     }
@@ -252,6 +258,69 @@
       position: absolute;
       top: 0;
       right: rem(10);
+
+      @include mobile {
+        right: rem(16);
+      }
+    }
+  }
+
+  &__combined-award {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    position: relative;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius-big);
+    padding: rem(16);
+    font-weight: 500;
+    font-family: var(--font-family-accent);
+    min-height: rem(72);
+    align-items: center;
+
+    @include tablet-above {
+      width: calc(100% - #{rem(12)});
+      height: calc(100% - #{rem(12)});
+      margin-left: rem(12);
+      margin-top: rem(12);
+    }
+
+    @include mobile {
+      padding-top: rem(55);
+    }
+
+    &_name {
+      max-width: 60%;
+
+      @include laptop {
+        max-width: 50%;
+      }
+
+      @include mobile {
+        max-width: none;
+      }
+    }
+
+    &_images {
+      display: flex;
+      position: absolute;
+      top: 0;
+
+      @include mobile-above {
+        right: rem(10);
+      }
+
+      @include mobile {
+        @include abs-x;
+      }
+    }
+
+    &_img {
+      @include square(64);
+
+      @include laptop {
+        @include square(48);
+      }
 
       @include mobile {
         right: rem(16);

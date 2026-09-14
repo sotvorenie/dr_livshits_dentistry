@@ -1,4 +1,4 @@
-mixin person(item, isLeft = true, hasAwards = false)
+mixin person(item, isLeft = true, hasAwards = false, combinedAwards = false)
     div.person(class= [isLeft ? '' : 'is-right', hasAwards ? 'has-awards' : ''])
         div.person__card.flex
             div.person__info.position-relative
@@ -64,7 +64,17 @@ mixin person(item, isLeft = true, hasAwards = false)
 
                             button(type="button").person__review-more.review__more.color-blue.visible-mobile.text-w500 Читать полностью
 
-                if hasAwards
+                if combinedAwards
+                    div.person__combined-award
+                        p.person__combined-award_name Гран-при ПроДокторов 2023: клиники
+
+                        div.person__combined-award_images
+                            img(src="images/index/honor-2.svg").person__combined-award_img
+                            img(src="images/index/honor-2.svg").person__combined-award_img
+                            img(src="images/index/honor-2.svg").person__combined-award_img
+                            img(src="images/index/honor-2.svg").person__combined-award_img
+
+                else if hasAwards
                     ul.person__awards.flex
                         li.person__award
                             img(src="images/index/honor-2.svg").person__award-img

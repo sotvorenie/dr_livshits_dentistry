@@ -1,0 +1,47 @@
+@use '../../helpers' as *;
+
+.core-services {
+  background: var(--color-blue);
+
+  &__subtitle {
+    @include fluid-text(22, 16);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(20, 10);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    gap: fluid(24, 12);
+    border-radius: var(--radius-big);
+    padding: fluid(16, 14);
+    background: var(--color-light);
+  }
+
+  &__img-container {
+    aspect-ratio: 548/306;
+    border-radius: var(--radius-big);
+  }
+
+  &__name {
+    @include fluid-text(21, 16);
+  }
+
+  &__description {
+    flex-grow: 1;
+  }
+
+  &__link {
+    width: 100%;
+
+    @include mobile-above {
+      max-width: rem(250);
+    }
+  }
+}

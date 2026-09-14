@@ -1,0 +1,18 @@
+mixin core-services(className = '')
+    section.core-services(class=className)
+        div.core-services__inner.container
+            h1.core-services__title.text-center.text-w700.mb-24-12 Наши #[span.color-accent.text-w700 основные услуги]
+
+            p.core-services__about.section__title.text-center.text-w700.color-blue Мы специализируемся на имплантации, протезировании и терапевтическом лечении зубов с использованием дентального микроскопа.
+
+            ul.core-services__list
+                each item in coreServices
+                    li.core-services__item.flex.flex-column.flex-align-center.text-center
+                        div.core-services__img-container.img-container.w-100
+                            img(src='/images/advertising-2.png')
+
+                        p.core-services__name.color-blue.text-w700= item.title
+
+                        p.core-services__description= item.description
+
+                        a(href="#").core-services__link.button.dark Подробнее

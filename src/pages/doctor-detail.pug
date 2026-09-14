@@ -18,7 +18,7 @@ block content
     section.person-list.section-mb-72
         div.person-list__inner.container
             each item, index in doctorDetailPersons
-                +person(item, index % 2 === 0, true)
+                +person(item, index % 2 === 0, true, true)
 
     section.about-doctor.section-border-block.section
         div.about-doctor__inner.container.flex.flex-align-center

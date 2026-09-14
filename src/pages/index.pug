@@ -7,6 +7,7 @@ include ../components/blocks/team-dentists
 include ../components/blocks/principles-operation
 include ../components/blocks/proud-reviews
 include ../components/blocks/contacts
+include ../components/blocks/core-services
 
 block title
     | Главная
@@ -25,6 +26,8 @@ block content
     +team-dentists('section section-border-block')
 
     include ../components/blocks/index/honors
+
+    +core-services('section section-border-bottom')
 
     +consultation('section')
 
