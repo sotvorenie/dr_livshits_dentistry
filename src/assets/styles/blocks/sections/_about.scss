@@ -43,9 +43,20 @@
         max-width: rem(580);
       }
     }
+    &.max-w-680 {
+      width: 100%;
+
+      @include mobile-above {
+        max-width: rem(680);
+      }
+    }
   }
 
   &__text {
     @include fluid-text(18, 14);
+  }
+
+  .color-blue {
+    font-family: var(--font-family-accent);
   }
 }
