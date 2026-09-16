@@ -7,7 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modal || !modalVideo) return
 
     triggers.forEach(trigger => {
-        trigger.addEventListener('click', () => {
+        trigger.addEventListener('click', (e) => {
+            const videoSrc = trigger.dataset.videoSrc
+
+            if (!videoSrc) {
+                e.preventDefault()
+                return
+            }
+
             modalVideo.src = trigger.dataset.videoSrc
             modal.classList.add('is-active')
 

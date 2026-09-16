@@ -29,6 +29,13 @@
         margin-left: rem(157);
       }
     }
+
+    .person__awards {
+
+      @include tablet-above {
+        margin-left: rem(12);
+      }
+    }
   }
 
   &.is-right {
@@ -51,6 +58,14 @@
       @include tablet-above {
         margin-right: rem(157);
         margin-left: auto;
+      }
+    }
+
+    .person__awards {
+
+      @include tablet-above {
+        justify-content: end;
+        margin-right: rem(12);
       }
     }
   }
@@ -215,7 +230,6 @@
     gap: rem(12);
 
     @include tablet-above {
-      margin-left: rem(12);
       margin-top: rem(12);
       height: 100%;
     }

@@ -18,4 +18,4 @@ block content
     section.person-list.section-mb-72
         div.person-list__inner.container
             each item, index in ourDoctorsPersons
-                +person(item, index % 2 === 0)
+                +person(item, index % 2 === 0, true)
