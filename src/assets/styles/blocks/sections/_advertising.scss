@@ -95,7 +95,7 @@
   }
 
   &__cards {
-    gap: fluid(48, 32);
+    gap: fluid(48, 15);
   }
 
   &__card {
@@ -106,6 +106,7 @@
 
     @include mobile {
       grid-template-columns: 1fr;
+      padding-block: rem(5);
     }
 
     &-left {
@@ -281,6 +282,13 @@
       @include mobile {
         padding-block: rem(4);
       }
+    }
+  }
+
+  &__under-price {
+
+    @include mobile {
+      text-align: center;
     }
   }
 }

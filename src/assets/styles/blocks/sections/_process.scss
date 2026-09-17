@@ -26,10 +26,6 @@
     margin-bottom: rem(24);
   }
 
-  &__bottom {
-    //flex-grow: 1;
-  }
-
   &__name {
     margin-bottom: fluid(24, 16);
     line-height: 1.625;
@@ -37,7 +33,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     -webkit-line-clamp: 2;
-    height: calc(3em);
+
+    @include mobile-above {
+      height: calc(3em);
+    }
   }
 
   &__text {

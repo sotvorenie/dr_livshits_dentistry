@@ -8,8 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modules: [Navigation],
         slidesPerView: 1,
         spaceBetween: 10,
-        simulateTouch: true,
-        allowTouchMove: true,
+        allowTouchMove: false,
 
         navigation: {
             nextEl: '.works__btn.next',

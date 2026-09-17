@@ -139,4 +139,11 @@
       width: 100%;
     }
   }
+
+  &__under-price {
+
+    @include mobile {
+      text-align: center;
+    }
+  }
 }

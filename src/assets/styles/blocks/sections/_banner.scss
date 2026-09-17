@@ -11,7 +11,10 @@
   }
 
   &__title {
-    @include fluid-text(52, 40);
+    @include fluid-text(52, 25);
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
   
   &__subtitle {

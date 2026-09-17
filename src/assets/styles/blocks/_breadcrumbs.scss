@@ -3,15 +3,17 @@
 .breadcrumbs {
   @include fluid-text(14, 10);
 
-  top: fluid(40, 16);
-  left: 0;
+  margin-top: fluid(40, 16);
+  margin-bottom: fluid(48, 40);
+  position: relative !important;
 
   @include mobile {
     color: #000000;
   }
 
   &__list {
-    gap: rem(26);
+    column-gap: rem(26);
+    row-gap: rem(8);
     flex-wrap: wrap;
   }
 
