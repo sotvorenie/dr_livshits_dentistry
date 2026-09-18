@@ -3,11 +3,21 @@
 .header {
   position: relative;
 
-  &:has(.header__item--has-submenu:hover) .header-menu,
-  &:has(.header-menu__content:hover) .header-menu {
-    opacity: 1;
+  &:has(.header__item--has-submenu:hover),
+  &:has(.header-menu__content:hover) {
 
-    & * {
+    .header-menu {
+      opacity: 1;
+
+      & * {
+        pointer-events: auto !important;
+      }
+    }
+
+    .header__item--has-submenu::after {
+      opacity: 1;
+    }
+    .header__item--has-submenu::before, .header__item--has-submenu::after {
       pointer-events: auto !important;
     }
   }
@@ -130,6 +140,36 @@
       }
     }
 
+    &--has-submenu {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: rem(12);
+        top: 100%;
+        left: 0;
+        z-index: 11;
+        pointer-events: none;
+      }
+      &::after {
+        @include abs-x;
+
+        width: rem(14);
+        height: rem(12);
+        content: '';
+        top: 100%;
+        background: var(--color-blue-dark);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-duration);
+        z-index: 11;
+        pointer-events: none;
+      }
+    }
+
     &--has-pages-menu {
 
       @include hover() {
@@ -234,11 +274,14 @@
     }
   }
 
+  &-menu, &-dropdown {
+    top: calc(100% + #{rem(12)});
+  }
+
   &-menu {
     --top: 0;
 
     opacity: 0;
-    top: calc(100% - 8px);
     transition: opacity var(--transition-duration);
     overflow-y: auto;
     height: calc(100vh - var(--top));
@@ -331,7 +374,6 @@
   &-dropdown {
     min-width: rem(257);
     background: var(--color-blue);
-    top: calc(100% + #{rem(12)});
     opacity: 0;
     transition: opacity var(--transition-duration);
     pointer-events: none !important;
