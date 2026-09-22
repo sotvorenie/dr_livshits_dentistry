@@ -4,20 +4,46 @@ div.burger-menu.position-fixed.visible-tablet.w-100.z-100
         button(type="button" title="Закрыть меню" aria-label="Закрыть меню").burger-menu__close.hover-color-accent.position-absolute
             include ../../icons/header/cross
 
-        div.burger-menu__pages.accordion.mb-50-30
-            div.accordion__header.burger-menu__header.flex.flex-align-center
-                div.burger-menu__top.flex.flex-align-center
-                    a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 О нас
+        div.burger-menu__pages.mb-40-20
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 О нас
 
-                button(type="button").accordion__toggle
-                    include ../../icons/header/header-menu-arrow
+                    button(type="button").accordion__toggle
+                        include ../../icons/header/header-menu-arrow
 
-            div.accordion__hidden
-                div.accordion__hidden-wrapper
-                    ul.burger-menu__links
-                        each page in burgerMenuPages
-                            li.burger-menu__links-item
-                                a.burger-menu__links-link.w-100.text-w500.line-link(href="#")= page.title
+                div.accordion__hidden
+                    div.accordion__hidden-wrapper
+                        ul.burger-menu__links
+                            each page in burgerMenuPages
+                                li.burger-menu__links-item
+                                    a.burger-menu__links-link.w-100.text-w500.line-link(href="#")= page.title
+
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 Цены
+
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 Врачи
+
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 Наши работы
+
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 Акции и скидки
+
+            div.accordion
+                div.accordion__header.burger-menu__header.flex.flex-align-center
+                    div.burger-menu__top.flex.flex-align-center
+                        a(href="#").burger-menu__link.accordion__control.text-upper.text-w500 Контакты
 
         ul.burger-menu__list
             each link in headerMenuLinks
